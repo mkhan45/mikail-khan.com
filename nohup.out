@@ -1,0 +1,44 @@
+hs-server-two-exe: Network.Socket.bind: resource busy (Address already in use)
+hs-server-two-exe: Network.Socket.bind: resource busy (Address already in use)
+[36mGET[0m /memes/-4
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000207053s
+[36mGET[0m /memes/-5
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000103417s
+[36mGET[0m /memes/-6
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000110768s
+[36mGET[0m /memes/-7
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000113517s
+[36mGET[0m /memes/-8
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000136764s
+[36mGET[0m /memes/-9
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000150393s
+[36mGET[0m /memes/-10
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000102852s
+[36mGET[0m /memes/-10
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000102748s
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000285222s
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000429278s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000044962s
+[36mGET[0m /memes
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[33m302 Found[0m 0.000062805s
+[36mGET[0m /memes/0
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000106561s
+[36mGET[0m /resume
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000050323s
