@@ -24,11 +24,14 @@ dependencies:
 - blaze-html
 - scotty
 - text
+- wai
 - wai-extra
-- strict
 - wai-middleware-static
+- strict
 - bytestring
 - bcrypt
+- warp
+- warp-tls
 
 library:
   source-dirs: src

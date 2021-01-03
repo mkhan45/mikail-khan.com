@@ -4,10 +4,11 @@ module Lib
     ( server
     ) where
 
-import           Prelude hiding (readFile)
 import           Web.Scotty
+import           Network.Wai (Application)
 import           Network.Wai.Middleware.RequestLogger
 import           Network.Wai.Middleware.Static
+import           Network.Wai.Handler.Warp (defaultSettings, setPort)
 import           Text.Blaze.Html (Html)
 import qualified Text.Blaze.Html5 as H
 import           Text.Blaze.Html.Renderer.Text (renderHtml)
@@ -15,8 +16,7 @@ import qualified Data.Text as T
 import           Data.Monoid ((<>))
 import           Control.Monad.IO.Class (liftIO)
 
-import           System.IO hiding (readFile)
-import           System.IO.Strict (readFile)
+import qualified System.IO.Strict as SIO
 
 import           Views.Index
 import           Views.Resume.ResumeView
@@ -31,12 +31,14 @@ updateVisitCount visitCount = do
 
 getVisitCount :: IO Int
 getVisitCount = do
-    contents <- readFile "visitCount.txt"
+    contents <- SIO.readFile "visitCount.txt"
     let visitCount = read contents :: Int
     return visitCount
 
-server :: IO ()
-server = scotty 3000 $ do
+server :: IO Application
+server = scottyApp $ do
+    let config = setPort 443 defaultSettings
+
     middleware logStdoutDev
     middleware $ staticPolicy (noDots >-> addBase "static")
     get "/" $ do

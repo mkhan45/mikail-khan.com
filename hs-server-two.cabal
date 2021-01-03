@@ -43,8 +43,11 @@ library
     , scotty
     , strict
     , text
+    , wai
     , wai-extra
     , wai-middleware-static
+    , warp
+    , warp-tls
   default-language: Haskell2010
 
 executable hs-server-two-exe
@@ -63,8 +66,11 @@ executable hs-server-two-exe
     , scotty
     , strict
     , text
+    , wai
     , wai-extra
     , wai-middleware-static
+    , warp
+    , warp-tls
   default-language: Haskell2010
 
 test-suite hs-server-two-test
@@ -84,6 +90,9 @@ test-suite hs-server-two-test
     , scotty
     , strict
     , text
+    , wai
     , wai-extra
     , wai-middleware-static
+    , warp
+    , warp-tls
   default-language: Haskell2010
