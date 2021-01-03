@@ -1,6 +1,7 @@
 <html>
     <head>
         <title> Mikail Khan </title>
+        <link rel="stylesheet" href="/CSS/Resume.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/evil-icons@1.9.0/assets/evil-icons.min.css">
         <script src="https://cdn.jsdelivr.net/npm/evil-icons@1.9.0/assets/evil-icons.min.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,21 +14,23 @@
                     <h1> Mikail Khan </h1>
                     <h2> Math + CS @ Purdue </h2>
                     <a href="https://github.com/mkhan45">
-                        <div data-icon="ei-sc-github" data-size="m">Github</div>
+                        <div class="icon-btn" data-icon="ei-sc-github" data-size="m">Github</div>
                     </a>
                     <a href="https://www.linkedin.com/in/mikail-khan-6121921a1/">
-                        <div data-icon="ei-sc-linkedin" data-size="m">LinkedIn</div>
+                        <div class="icon-btn" data-icon="ei-sc-linkedin" data-size="m">LinkedIn</div>
                     </a>
                 </div>
                 <div class="body-center">
                     <span class="align-center"><h1> Projects </h1></span>
                     <div class="project-grid">
                         <div class="project">
-                            <span class="align-center"><h1> SIMple Mechanics </h1></span>
-                            <img src="https://mikail-khan.com/img/mech.png"></img>
-                            <div class="project-desc">
-                                A 2D rigidbody simulator made to help learn and teach physics online.
-                            </div>
+                            <a href="https://github.com/mkhan45/SIMple-Mechanics">
+                                <span class="align-center"><h1> SIMple Mechanics </h1></span>
+                                <img src="https://mikail-khan.com/img/mech.png"></img>
+                                <div class="project-desc">
+                                    A 2D rigidbody simulator made to help learn and teach physics online.
+                                </div>
+                            </a>
                         </div>
                         <div class="project">
                             <span class="align-center"><h1> mikail-khan.com </h1></span>
@@ -70,107 +73,3 @@
         </div>
     </body>
 </html>
-
-<style>
-html, body {
-    margin: 0;
-    padding: 0;
-    background: #FC6261;
-    font-family: sans-serif;
-}
-
-.flex-parent {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.header {
-    margin-left: 10vw;
-    margin-right: 10vw;
-    padding: 2em;
-    padding-top: 20vh;
-    text-align: center;
-}
-
-.header h1 {
-    font-size: 2.75em;
-}
-
-.header .icon {
-    fill: #F6F5F4;
-}
-
-.header .glyphicon {
-    font-size: 3em;
-}
-
-.body-center {
-    margin-left: 5vw;
-    margin-right: 5vw;
-    padding: 2em;
-}
-
-.body-center h1 {
-    font-size: 2em;
-}
-
-.body-center p {
-    font-size: 1.5em;
-}
-
-.align-center {
-    text-align: center;
-}
-
-h1, h2, h3, p {
-    color: #F6F5F4;
-}
-
-.project-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    row-gap: 1em;
-}
-
-.project {
-    margin: 1em;
-    background: #FFFFFF;
-    flex-basis: 25em;
-    overflow: hidden;
-    border-radius: 0.2em;
-    border-style: solid;
-    border-width: 0.075rem;
-    border-color: #d6d6d6;
-    box-shadow: 5px; 
-    transition: all 200ms ease;
-}
-
-.project h1 {
-    color: black;
-    font-size: 1.5em;
-}
-
-.project img {
-    display: block;
-    width: 100%;
-    height: auto;
-    box-sizing: content-box;
-}
-
-.project .project-desc {
-    padding: 0.5em;
-}
-
-.project .project-desc {
-    margin: auto;
-    color: black;
-    font-size: 1.25em;
-    text-align: center;
-}
-
-.project:hover {
-    transform: scale(1.05);
-}
-</style>
