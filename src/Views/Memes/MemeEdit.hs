@@ -61,6 +61,5 @@ genHash :: T.Text -> IO (Maybe BS.ByteString)
 genHash p = hashPasswordUsingPolicy (policy) (BS.pack $ T.unpack p)
             where policy = HashingPolicy 11 $ BS.pack "$2y$"
 
-checkPass :: String -> Bool
-checkPass = validatePassword passHash . BS.pack
-            where passHash = BS.pack "***REMOVED***"
+checkPass :: String -> String -> Bool
+checkPass passHash = validatePassword (BS.pack passHash) . BS.pack

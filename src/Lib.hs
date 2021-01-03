@@ -24,6 +24,8 @@ import           Views.Memes.MemeData
 import           Views.Memes.MemeView
 import           Views.Memes.MemeEdit
 
+import 		 System.Environment
+
 updateVisitCount :: Int -> IO ()
 updateVisitCount visitCount = do
     writeFile "visitCount.txt" (show $ visitCount + 1)
@@ -55,7 +57,8 @@ server = scottyApp $ do
         title <- param "title"
         url <- param "url"
         passwd <- param "password"
-        if checkPass passwd then do
+	passHash <- liftIO $ getEnv "PASSHASH"
+        if (checkPass passwd passHash) then do
             liftIO $ addMeme (T.pack ty) title url
             redirect "/memes/edit"
         else
