@@ -1,10 +1,10 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.33.0.
+-- This file has been generated from package.yaml by hpack version 0.34.2.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 81ddb36adeb906355c5ff4b39a89215d13a2f45161dd6471027f84dc94886795
+-- hash: 9e6421246ef503a44dfd782b2432312786ce070a6e355d78568cf9ba83579d2f
 
 name:           hs-server-two
 version:        0.1.0.0
@@ -32,6 +32,8 @@ library
       Views.Memes.MemeData
       Views.Memes.MemeEdit
       Views.Memes.MemeView
+      Views.Resume.Projects
+      Views.Resume.ResumeData
       Views.Resume.ResumeView
   other-modules:
       Paths_hs_server_two
