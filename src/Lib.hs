@@ -43,11 +43,11 @@ server = scottyApp $ do
 
     middleware logStdoutDev
     middleware $ staticPolicy (noDots >-> addBase "static")
+    --get "/" $ do
+    --    visitCount <- liftIO getVisitCount
+    --    html $ renderHtml $ index (visitCount + 1)
+    --    liftIO $ updateVisitCount visitCount
     get "/" $ do
-        visitCount <- liftIO getVisitCount
-        html $ renderHtml $ index (visitCount + 1)
-        liftIO $ updateVisitCount visitCount
-    get "/resume" $ do
         html $ renderHtml resume
     get "/memes/edit" $ do
         memes <- liftIO $ readMemeFile 0

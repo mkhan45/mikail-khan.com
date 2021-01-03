@@ -26,10 +26,10 @@ projectEntry (Project { projName=name, projectURL=url, projectThumbnail=thumbnai
         H.span ! class_ "align-center" $ h1 nameHtml
         img ! src thumbnailV
         H.div ! class_ "project-desc" $ discHtml
-            where urlV = H.toValue url
-                  nameHtml = H.toHtml name
-                  thumbnailV = H.toValue thumbnail
-                  discHtml = H.toHtml projectDisc
+    where urlV = H.toValue url
+          nameHtml = H.toHtml name
+          thumbnailV = H.toValue thumbnail
+          discHtml = H.toHtml projectDisc
 
 resume :: H.Html
 resume = 

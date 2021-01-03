@@ -332,3 +332,154 @@ hs-server-two-exe: Network.Socket.bind: resource busy (Address already in use)
 [36mGET[0m /memes/edit
 [37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
 [37m  Status: [0m[32m200 OK[0m 0.000095408s
+[36mGET[0m /memes/
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[33m302 Found[0m 0.000058191s
+[36mGET[0m /memes/0
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000111813s
+[36mGET[0m /CSS/Memes.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000033998s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000045893s
+[36mGET[0m /memes/0
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000112687s
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000283234s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000049149s
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000297703s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000049613s
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000291657s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000048654s
+[36mGET[0m /resume
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000066961s
+[36mGET[0m /CSS/Resume.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000032215s
+[36mGET[0m /img/mech.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000009902s
+[36mGET[0m /img/site.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.00001276s
+[36mGET[0m /img/gravity.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000009247s
+[36mGET[0m /img/pumice.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000007769s
+[36mGET[0m /img/tetrs.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000021035s
+[36mGET[0m /img/ssshmup.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000008916s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000046601s
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000293091s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000048238s
+[36mGET[0m /resume
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00041548s
+[36mGET[0m /img/mech.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000850081s
+[36mGET[0m /img/site.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000018758s
+[36mGET[0m /img/gravity.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000020954s
+[36mGET[0m /img/pumice.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000014873s
+[36mGET[0m /img/tetrs.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000014049s
+[36mGET[0m /img/ssshmup.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000014485s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000058796s
+[36mGET[0m /resume
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00005077s
+[36mGET[0m /CSS/Resume.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000034736s
+[36mGET[0m /img/mech.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000030685s
+[36mGET[0m /img/site.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000009094s
+[36mGET[0m /img/gravity.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000009892s
+[36mGET[0m /img/pumice.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000016752s
+[36mGET[0m /img/tetrs.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000012583s
+[36mGET[0m /img/ssshmup.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000008441s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000045172s
+[36mGET[0m /memes
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[33m302 Found[0m 0.000067101s
+[36mGET[0m /memes/0
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000118457s
+[36mGET[0m /CSS/Memes.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000078015s
+[36mGET[0m /resume
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000049063s
+[36mGET[0m /img/site.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000033061s
+[36mGET[0m /memes
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[33m302 Found[0m 0.000054742s
+[36mGET[0m /memes/0
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000117328s
+[36mGET[0m /resume
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000048743s
+[36mGET[0m /memes
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[33m302 Found[0m 0.000056525s
+[36mGET[0m /memes/0
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00010593s
+[36mGET[0m /resume
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00005149s
+HandshakeFailed (Error_Packet_unexpected "Alert13 [(AlertLevel_Fatal,BadCertificate)]" " expected: handshake 13")
