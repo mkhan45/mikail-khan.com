@@ -30,6 +30,7 @@ library
       Views.Memes.MemeData
       Views.Memes.MemeEdit
       Views.Memes.MemeView
+      Views.Resume.ResumeView
   other-modules:
       Paths_hs_server_two
   hs-source-dirs:
