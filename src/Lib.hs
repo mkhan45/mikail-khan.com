@@ -19,6 +19,7 @@ import           System.IO hiding (readFile)
 import           System.IO.Strict (readFile)
 
 import           Views.Index
+import           Views.Resume.ResumeView
 import           Views.Memes.MemeData
 import           Views.Memes.MemeView
 import           Views.Memes.MemeEdit
@@ -42,6 +43,8 @@ server = scotty 3000 $ do
         visitCount <- liftIO getVisitCount
         html $ renderHtml $ index (visitCount + 1)
         liftIO $ updateVisitCount visitCount
+    get "/resume" $ do
+        html $ renderHtml resume
     get "/memes/edit" $ do
         memes <- liftIO $ readMemeFile 0
         html $ renderHtml $ memeEditHTML memes
