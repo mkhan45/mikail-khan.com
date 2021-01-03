@@ -43,7 +43,7 @@ projects = [
                 },
                 Project {
                     projName = "mikail-khan.com",
-                    projectURL = "https://mikail-khan.com",
+                    projectURL = "https://github.com/mkhan45/mikail-khan.com",
                     projectThumbnail = "https://mikail-khan.com/img/site.png",
                     projectDisc = "My personal website. Built with Haskell's Scotty and Blaze-HTML"
                 },
