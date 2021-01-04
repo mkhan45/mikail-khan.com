@@ -31,8 +31,8 @@ projectEntry (Project { projName=name, projectURL=url, projectThumbnail=thumbnai
           thumbnailV = H.toValue thumbnail
           discHtml = H.toHtml projectDisc
 
-resume :: H.Html
-resume = 
+resume :: [Project] -> H.Html
+resume projects = 
     html $ do
         H.head $ do
             H.title "Mikail Khan"

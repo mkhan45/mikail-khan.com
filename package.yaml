@@ -32,6 +32,10 @@ dependencies:
 - bcrypt
 - warp
 - warp-tls
+- aeson
+- htoml
+- unordered-containers
+- vector
 
 library:
   source-dirs: src

@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 9e6421246ef503a44dfd782b2432312786ce070a6e355d78568cf9ba83579d2f
+-- hash: 20e52b7bea5b5136e88a22fd9b4e938d8139826387ddf435ceca6262f5fcd8c1
 
 name:           hs-server-two
 version:        0.1.0.0
@@ -40,13 +40,17 @@ library
   hs-source-dirs:
       src
   build-depends:
-      base >=4.7 && <5
+      aeson
+    , base >=4.7 && <5
     , bcrypt
     , blaze-html
     , bytestring
+    , htoml
     , scotty
     , strict
     , text
+    , unordered-containers
+    , vector
     , wai
     , wai-extra
     , wai-middleware-static
@@ -62,14 +66,18 @@ executable hs-server-two-exe
       app
   ghc-options: -threaded -rtsopts -with-rtsopts=-N -O2
   build-depends:
-      base >=4.7 && <5
+      aeson
+    , base >=4.7 && <5
     , bcrypt
     , blaze-html
     , bytestring
     , hs-server-two
+    , htoml
     , scotty
     , strict
     , text
+    , unordered-containers
+    , vector
     , wai
     , wai-extra
     , wai-middleware-static
@@ -86,14 +94,18 @@ test-suite hs-server-two-test
       test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
-      base >=4.7 && <5
+      aeson
+    , base >=4.7 && <5
     , bcrypt
     , blaze-html
     , bytestring
     , hs-server-two
+    , htoml
     , scotty
     , strict
     , text
+    , unordered-containers
+    , vector
     , wai
     , wai-extra
     , wai-middleware-static
