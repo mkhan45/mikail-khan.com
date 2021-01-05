@@ -10,12 +10,12 @@ import GHC.Generics
 data IconBtn = IconBtn { 
                             iconText :: T.Text,
                             iconURL :: T.Text,
-                            icon :: T.Text 
+                            iconID :: T.Text 
                        }
 
 data Project = Project { 
-                            projName :: T.Text,
+                            projectName :: T.Text,
                             projectURL :: T.Text,
                             projectThumbnail :: T.Text,
-                            projectDisc :: T.Text 
+                            projectDesc :: T.Text 
                        }

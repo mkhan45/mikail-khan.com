@@ -17,7 +17,7 @@ import           Crypto.BCrypt
 import           Views.Memes.MemeData
 
 memeRowHTML :: Meme -> H.Html
-memeRowHTML (Meme {ty=ty, title=title, url=url}) =
+memeRowHTML (Meme {memeTy=ty, memeTitle=title, memeURL=url}) =
     H.tr $ do
         H.th $ H.toHtml $ show ty
         H.th $ H.toHtml title

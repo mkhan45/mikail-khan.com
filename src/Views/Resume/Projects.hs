@@ -25,8 +25,8 @@ parseProject (Object o) = do
     let String name = o ! T.pack "projName"
         String url = o ! T.pack "projectURL"
         String thumbnail = o ! T.pack "projectThumbnail"
-        String disc = o ! T.pack "projectDisc"
-    return Project { projName=name, projectURL=url, projectThumbnail=thumbnail, projectDisc=disc }
+        String desc = o ! T.pack "projectDesc"
+    return Project { projectName=name, projectURL=url, projectThumbnail=thumbnail, projectDesc=desc }
 
 readProjects :: IO [Project]
 readProjects = do

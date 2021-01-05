@@ -7,17 +7,17 @@ import qualified Text.Blaze.Html5               as H
 
 data MemeType = Image | MP4 | Youtube deriving Show
 
-data Meme = Meme { ty :: MemeType, title :: T.Text, url :: T.Text }
+data Meme = Meme { memeTy :: MemeType, memeTitle :: T.Text, memeURL :: T.Text }
 
 readMeme :: T.Text -> Meme
 readMeme line = readSplit $ T.splitOn " " $ line
     where readTy :: T.Text -> MemeType
           readTy "image" = Image 
-          readTy "MP4" = MP4
-          readTy "Youtube" = Youtube
+          readTy "mp4" = MP4
+          readTy "youtube" = Youtube
           readTy _ = Image
           readSplit :: [T.Text] -> Meme
-          readSplit [ty, title, url] = Meme {ty=readTy $ T.strip $ ty,title=title, url=url}
+          readSplit [ty, title, url] = Meme {memeTy=readTy $ T.strip $ T.toLower ty, memeTitle=title, memeURL=url}
 
 readMemes :: [T.Text] -> Int -> Int -> [Meme]
 readMemes ls start num

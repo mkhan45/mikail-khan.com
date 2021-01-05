@@ -14,22 +14,22 @@ import           Views.Resume.Projects
 
 
 iconBtn :: IconBtn -> H.Html
-iconBtn (IconBtn { iconText=text, iconURL=url, icon=icon }) = 
-    a ! href urlV $ H.div ! class_ "icon-btn" ! dataAttribute "icon" iconV ! dataAttribute "size" "m" $ textV
-        where urlV = H.toValue url
-              iconV = H.toValue icon
-              textV = H.toHtml text
+iconBtn icon = 
+    a ! href url $ H.div ! class_ "icon-btn" ! dataAttribute "icon" id ! dataAttribute "size" "m" $ textFallback
+        where url = H.toValue $ iconURL icon
+              id = H.toValue $ iconID icon
+              textFallback = H.toHtml $ iconText icon
 
 projectEntry :: Project -> H.Html
-projectEntry (Project { projName=name, projectURL=url, projectThumbnail=thumbnail, projectDisc=projectDisc }) = 
-    H.div ! class_ "project" $ a ! href urlV $ do
+projectEntry project = 
+    H.div ! class_ "project" $ a ! href url $ do
         H.span ! class_ "align-center" $ h1 nameHtml
-        img ! src thumbnailV
+        img ! src thumbnail
         H.div ! class_ "project-desc" $ discHtml
-    where urlV = H.toValue url
-          nameHtml = H.toHtml name
-          thumbnailV = H.toValue thumbnail
-          discHtml = H.toHtml projectDisc
+    where url = H.toValue $ projectURL project
+          nameHtml = H.toHtml $ projectName project
+          thumbnail = H.toValue $ projectThumbnail project
+          discHtml = H.toHtml $ projectDesc project
 
 resume :: [Project] -> H.Html
 resume projects = 
@@ -44,9 +44,9 @@ resume projects =
             H.div ! class_ "header" $ do
                 h1 "Mikail Khan"
                 h2 "Math + CS @ Purdue"
-                iconBtn (IconBtn { iconText="GitHub", iconURL="https://github.com/mkhan45", icon="ei-sc-github" })
-                iconBtn (IconBtn { iconText="LinkedIn", iconURL="https://www.linkedin.com/in/mikail-khan-6121921a1/", icon="ei-sc-linkedin" })
-                iconBtn (IconBtn { iconText="Blog", iconURL="https://mkhan45.github.io", icon="ei-pencil" })
+                iconBtn (IconBtn { iconText="GitHub", iconURL="https://github.com/mkhan45", iconID="ei-sc-github" })
+                iconBtn (IconBtn { iconText="LinkedIn", iconURL="https://www.linkedin.com/in/mikail-khan-6121921a1/", iconID="ei-sc-linkedin" })
+                iconBtn (IconBtn { iconText="Blog", iconURL="https://mkhan45.github.io", iconID="ei-pencil" })
             H.div ! class_ "body-center" $ do
                 H.span ! class_ "align-center" $ h1 "Projects"
                 H.div ! class_ "project-grid" $ do 

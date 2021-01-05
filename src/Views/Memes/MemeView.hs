@@ -22,30 +22,31 @@ navButtons pageNum =
 
 memeContentHTML :: Meme -> H.Html
 
-memeContentHTML Meme { ty=ty, title=title, url=url } =
+memeContentHTML meme =
     case ty of
       Image -> 
-          H.a ! A.id titleVal ! href urlVal $ do
-              H.img ! class_ "meme" ! src urlVal ! A.alt "meme"
+          H.a ! A.id title ! href url $ do
+              H.img ! class_ "meme" ! src url ! A.alt "meme"
 
       MP4 -> 
-          H.video ! A.id titleVal ! class_ "meme" ! A.controls "bar" $ do
-              H.source ! src urlVal ! A.type_ "video/mp4"
+          H.video ! A.id title ! class_ "meme" ! A.controls "bar" $ do
+              H.source ! src url ! A.type_ "video/mp4"
               tToHTML "Unsupported browser for videos"
 
       Youtube ->
-          H.iframe ! A.id titleVal ! A.title "Youtube Video" ! class_ "meme" ! src urlVal $ do
+          H.iframe ! A.id title ! A.title "Youtube Video" ! class_ "meme" ! src url $ do
               tToHTML "Youtube Video"
     where 
-        urlVal = H.toValue url
-        titleVal = (H.toValue title) <> "_meme"
+        ty = memeTy meme
+        url = H.toValue $ memeURL meme
+        title = (H.toValue $ memeTitle meme) <> "_meme"
 
 memeGrid :: Meme -> H.Html
-memeGrid meme@(Meme { ty=ty, title=title, url=url }) =
+memeGrid meme@(Meme { memeTitle=title }) =
     H.div ! class_ "grid-entry" $ do
         H.h2 $ H.a ! A.id titleVal ! href ("#" <> titleVal) $ H.toHtml title
         memeContentHTML meme
-    where titleVal = H.toValue title
+    where titleVal = H.toValue $ memeTitle meme
 
 memeHTML :: Int -> [Meme] -> H.Html
 memeHTML pageNum memes =
