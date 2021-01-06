@@ -38,5 +38,6 @@ index =
                 iconBtn (IconBtn { iconText="LinkedIn", iconURL="https://www.linkedin.com/in/mikail-khan-6121921a1/", iconID="ei-sc-linkedin" })
                 iconBtn (IconBtn { iconText="Blog", iconURL="https://mkhan45.github.io", iconID="ei-pencil" })
             H.div ! class_ "body-center menu" $ do
-                H.span $ linkButton "/portfolio" "Portfolio"
-                H.span $ linkButton "/resume" "Resume"
+                H.div $ do
+                    linkButton "/portfolio" "Portfolio"
+                    linkButton "/resume" "Resume"

@@ -58,6 +58,7 @@ html, body {
 
 .resumeContainer h1 {
     flex-basis: 60vw;
+    text-align: center;
 }
 
 h1, h2, h3, p {
@@ -130,6 +131,7 @@ a {
     flex-wrap: wrap;
     line-height: 4em;
     justify-content: center;
+    text-align: center;
 }
 
 .linkButton {
