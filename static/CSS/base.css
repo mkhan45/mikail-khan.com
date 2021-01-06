@@ -11,11 +11,16 @@ html, body {
     flex-direction: column;
 }
 
+.resumeHeader {
+    text-align: center;
+    flex-basis: 50vw;
+    line-height: 1em;
+}
+
 .header {
     margin-left: 10vw;
     margin-right: 10vw;
     padding: 2em;
-    padding-top: 20vh;
     text-align: center;
 }
 
@@ -23,12 +28,8 @@ html, body {
     font-size: 2.75em;
 }
 
-.header .icon {
-    fill: #F6F5F4;
-}
-
-.header .glyphicon {
-    font-size: 3em;
+.icon-btn {
+    fill: #F6F5F4 !important;
 }
 
 .body-center {

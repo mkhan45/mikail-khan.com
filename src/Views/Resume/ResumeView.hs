@@ -12,6 +12,7 @@ import qualified Text.Blaze.Html5.Attributes    as A
 import           Control.Monad                  (forM_)
 
 import           Views.Resume.ResumeData
+import           Views.Index                    (githubIconBtn, linkedinIconBtn)
 
 repeatStars :: Int -> H.Html
 repeatStars n = H.span $ forM_ [1..n] (\_ -> starHTML)
@@ -85,8 +86,11 @@ resumeHTML (Resume skills experiences educations) =
             script ! src "https://cdn.jsdelivr.net/npm/evil-icons@1.9.0/assets/evil-icons.min.js" $ mempty
             meta ! name "viewport" ! content "width=device-width, initial-scale=1.0"
         body ! A.class_ "resumeContainer flex-center" $ do
-            H.br
-            H.h1 "Mikail Khan"
+            H.div ! class_ "resumeHeader" $ do
+                H.h1 "Mikail Khan"
+                H.h3 "mikail [at] mikail-khan [dot] com"
+                githubIconBtn
+                linkedinIconBtn
             H.div ! A.class_ "resume" $ do
                 skillsHTML skills
                 experiencesHTML experiences
