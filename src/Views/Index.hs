@@ -17,6 +17,15 @@ iconBtn icon =
               id = H.toValue $ iconID icon
               textFallback = H.toHtml $ iconText icon
 
+githubIconBtn :: H.Html
+githubIconBtn = iconBtn (IconBtn { iconText="GitHub", iconURL="https://github.com/mkhan45", iconID="ei-sc-github" })
+
+linkedinIconBtn :: H.Html
+linkedinIconBtn = iconBtn (IconBtn { iconText="LinkedIn", iconURL="https://www.linkedin.com/in/mikail-khan-6121921a1/", iconID="ei-sc-linkedin" })
+
+blogIconBtn :: H.Html
+blogIconBtn = iconBtn (IconBtn { iconText="Blog", iconURL="https://mkhan45.github.io", iconID="ei-pencil" })
+
 linkButton :: T.Text -> T.Text -> H.Html
 linkButton url text = do
     a ! class_ "linkButton" ! href (H.toValue url) $ H.toHtml text
@@ -31,12 +40,12 @@ index =
             script ! src "https://cdn.jsdelivr.net/npm/evil-icons@1.9.0/assets/evil-icons.min.js" $ mempty
             meta ! name "viewport" ! content "width=device-width, initial-scale=1.0"
         body $ H.div ! class_ "flex-parent" $ H.div ! class_ "section" $ do
-            H.div ! class_ "header" $ do
+            H.div ! class_ "header center-page" $ do
                 h1 "Mikail Khan"
                 h2 "Math + CS @ Purdue"
-                iconBtn (IconBtn { iconText="GitHub", iconURL="https://github.com/mkhan45", iconID="ei-sc-github" })
-                iconBtn (IconBtn { iconText="LinkedIn", iconURL="https://www.linkedin.com/in/mikail-khan-6121921a1/", iconID="ei-sc-linkedin" })
-                iconBtn (IconBtn { iconText="Blog", iconURL="https://mkhan45.github.io", iconID="ei-pencil" })
+                githubIconBtn
+                linkedinIconBtn
+                blogIconBtn
             H.div ! class_ "body-center menu" $ do
                 H.div $ do
                     linkButton "/portfolio" "Portfolio"
