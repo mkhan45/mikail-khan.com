@@ -67,7 +67,7 @@ server = scottyApp $ do
         url <- param "url"
         passwd <- param "password"
         passHash <- liftIO $ getEnv "PASSHASH"
-        if (checkPass passwd passHash) then do
+        if checkPass passwd passHash then do
             liftIO $ addMeme (T.pack ty) title url
             redirect "/memes/edit"
         else

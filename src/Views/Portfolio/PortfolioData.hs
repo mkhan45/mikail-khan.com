@@ -1,5 +1,3 @@
-{-# LANGUAGE DeriveGeneric #-}
-
 module Views.Portfolio.PortfolioData where
 
 import Data.Aeson

@@ -17,7 +17,7 @@ sieve :: (a -> Bool) -> [a] -> ([a], [a])
 sieve f ls = go f ls ([], [])
     where go :: (a -> Bool) -> [a] -> ([a], [a]) -> ([a], [a])
           go _ []     (lhs, rhs) = (lhs, rhs)
-          go f (x:xs) (lhs, rhs) = if (f x) then go f xs (x:lhs, rhs)
+          go f (x:xs) (lhs, rhs) = if f x then go f xs (x:lhs, rhs)
                                             else go f xs (lhs, x:rhs)
 
 skillsHTML :: [Skill] -> H.Html
@@ -25,11 +25,11 @@ skillsHTML skills = do
     H.div ! A.class_ "resumeSection skills" $ do
         H.h2 "Skills"
         H.hr
-        H.span $ H.toHtml ("5+ Years: " <> (skillString five_year))
+        H.span $ H.toHtml ("5+ Years: " <> skillString five_year)
         H.br
-        H.span $ H.toHtml ("3+ Years: " <> (skillString three_year))
+        H.span $ H.toHtml ("3+ Years: " <> skillString three_year)
         H.br
-        H.span $ H.toHtml ("1+ Years: " <> (skillString one_year))
+        H.span $ H.toHtml ("1+ Years: " <> skillString one_year)
     where 
         (five_year, less_five) = sieve ((>=5) . skillExperience) skills
         (three_year, less_three) = sieve ((>=3) . skillExperience) less_five

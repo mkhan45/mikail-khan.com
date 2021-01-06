@@ -17,8 +17,8 @@ navButtons pageNum =
     H.div ! style "display: flex; justify-content: space-between; width: 98vw" $ do
         H.a ! href prevPage ! class_ "btn" $ tToHTML "Previous Page"
         H.a ! href nextPage ! class_ "btn" $ tToHTML "Next Page"
-    where nextPage = H.toValue $ "/memes/" <> (show $ pageNum + 1)
-          prevPage = H.toValue $ "/memes/" <> (show $ pageNum - 1)
+    where nextPage = H.toValue $ "/memes/" <> show (pageNum + 1)
+          prevPage = H.toValue $ "/memes/" <> show (pageNum - 1)
 
 memeContentHTML :: Meme -> H.Html
 
@@ -39,7 +39,7 @@ memeContentHTML meme =
     where 
         ty = memeTy meme
         url = H.toValue $ memeURL meme
-        title = (H.toValue $ memeTitle meme) <> "_meme"
+        title = H.toValue (memeTitle meme) <> "_meme"
 
 memeGrid :: Meme -> H.Html
 memeGrid meme@(Meme { memeTitle=title }) =

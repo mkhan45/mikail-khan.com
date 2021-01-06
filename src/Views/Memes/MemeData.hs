@@ -10,7 +10,7 @@ data MemeType = Image | MP4 | Youtube deriving Show
 data Meme = Meme { memeTy :: MemeType, memeTitle :: T.Text, memeURL :: T.Text }
 
 readMeme :: T.Text -> Meme
-readMeme line = readSplit $ T.splitOn " " $ line
+readMeme line = readSplit $ T.splitOn " " line
     where readTy :: T.Text -> MemeType
           readTy "image" = Image 
           readTy "mp4" = MP4
@@ -21,7 +21,7 @@ readMeme line = readSplit $ T.splitOn " " $ line
 
 readMemes :: [T.Text] -> Int -> Int -> [Meme]
 readMemes ls start num
-  | start >= 0 = map readMeme (take num $ drop start $ ls)
+  | start >= 0 = map readMeme (take num $ drop start ls)
   | otherwise = map readMeme (take num $ drop (-start - num) $ reverse ls)
 
 readMemeFile :: Int -> IO [Meme]

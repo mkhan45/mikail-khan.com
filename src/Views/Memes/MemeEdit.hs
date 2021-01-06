@@ -17,7 +17,7 @@ import           Crypto.BCrypt
 import           Views.Memes.MemeData
 
 memeRowHTML :: Meme -> H.Html
-memeRowHTML (Meme {memeTy=ty, memeTitle=title, memeURL=url}) =
+memeRowHTML Meme {memeTy=ty, memeTitle=title, memeURL=url} =
     H.tr $ do
         H.th $ H.toHtml $ show ty
         H.th $ H.toHtml title
@@ -52,13 +52,13 @@ memeEditHTML memes =
 addMeme :: T.Text -> T.Text -> T.Text -> IO ()
 addMeme ty title url = do
     let memeLS = map T.unpack [ty, title, url]
-    let memeStr = L.intercalate " " memeLS
+    let memeStr = unwords memeLS
     file <- S.readFile "static/Assets/memes.txt"
     writeFile "static/Assets/memes.txt" (concat [memeStr, "\n", file])
 
 -- use through `stach ghci` to make new password
 genHash :: T.Text -> IO (Maybe BS.ByteString)
-genHash p = hashPasswordUsingPolicy (policy) (BS.pack $ T.unpack p)
+genHash p = hashPasswordUsingPolicy policy (BS.pack $ T.unpack p)
             where policy = HashingPolicy 11 $ BS.pack "$2y$"
 
 checkPass :: String -> String -> Bool
