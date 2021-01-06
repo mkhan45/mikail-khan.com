@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 20e52b7bea5b5136e88a22fd9b4e938d8139826387ddf435ceca6262f5fcd8c1
+-- hash: 346833b968362b53a663f5f2bfe92feaea91cfa59ffc2cde5331ddc467900b15
 
 name:           hs-server-two
 version:        0.1.0.0
@@ -32,7 +32,9 @@ library
       Views.Memes.MemeData
       Views.Memes.MemeEdit
       Views.Memes.MemeView
-      Views.Resume.Projects
+      Views.Portfolio.PortfolioData
+      Views.Portfolio.PortfolioView
+      Views.Portfolio.Projects
       Views.Resume.ResumeData
       Views.Resume.ResumeView
   other-modules:
@@ -46,6 +48,7 @@ library
     , blaze-html
     , bytestring
     , htoml
+    , scientific
     , scotty
     , strict
     , text
@@ -73,6 +76,7 @@ executable hs-server-two-exe
     , bytestring
     , hs-server-two
     , htoml
+    , scientific
     , scotty
     , strict
     , text
@@ -101,6 +105,7 @@ test-suite hs-server-two-test
     , bytestring
     , hs-server-two
     , htoml
+    , scientific
     , scotty
     , strict
     , text

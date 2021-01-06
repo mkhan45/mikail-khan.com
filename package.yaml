@@ -36,6 +36,7 @@ dependencies:
 - htoml
 - unordered-containers
 - vector
+- scientific
 
 library:
   source-dirs: src

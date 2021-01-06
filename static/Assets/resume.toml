@@ -1,0 +1,198 @@
+name = "Mikail Khan"
+
+[[skills]]
+name = "Java"
+categories = ["Programming Language", "Object Oriented"]
+years_experience = 5
+
+[[skills]]
+name = "Python"
+categories = ["Programming Language", "Object Oriented"]
+years_experience = 5
+
+[[skills]]
+name = "JavaScript"
+categories = ["Programming Language", "Web Development"]
+years_experience = 5
+
+[[skills]]
+name = "HTML"
+categories = ["Web Development"]
+years_experience = 5
+
+[[skills]]
+name = "CSS"
+categories = ["Web Development"]
+years_experience = 5
+
+[[skills]]
+name = "Linux"
+categories = []
+years_experience = 5
+
+[[skills]]
+name = "Flask"
+categories = ["Python", "Web Development"]
+years_experience = 3
+
+[[skills]]
+name = "Golang"
+categories = ["Programming Language", "Web Development"]
+years_experience = 3
+
+[[skills]]
+name = "Rust"
+categories = ["Programming Language"]
+years_experience = 3
+
+[[skills]]
+name = "Artificial Intelligence"
+categories = []
+years_experience = 3
+
+[[skills]]
+name = "Test Driven Development"
+categories = []
+years_experience = 3
+
+[[skills]]
+name = "REST API Development"
+categories = ["Web Development"]
+years_experience = 3
+
+[[skills]]
+name = "TypeScript"
+categories = ["Web Development"]
+years_experience = 1
+
+[[skills]]
+name = "ReactJS"
+categories = ["Web Development"]
+years_experience = 1
+
+[[skills]]
+name = "ExpressJS"
+categories = ["Web Development"]
+years_experience = 1
+
+[[skills]]
+name = "C"
+categories = []
+years_experience = 1
+
+[[skills]]
+name = "C++"
+categories = ["Object Oriented"]
+years_experience = 1
+
+[[skills]]
+name = "Haskell"
+categories = []
+years_experience = 1
+
+[[skills]]
+name = "PyTorch"
+categories = ["Python", "Machine Learning"]
+years_experience = 1
+
+[[skills]]
+name = "AWS"
+categories = ["Web Development"]
+years_experience = 1
+
+[[skills]]
+name = "SQL"
+categories = ["Web Development"]
+years_experience = 1
+
+[[skills]]
+name = "Numpy"
+categories = ["Python"]
+years_experience = 1
+
+[[skills]]
+name = "Django"
+categories = ["Python", "Web Development"]
+years_experience = 1
+
+[[experience]]
+name = "Co-founder, Krypton Tutors"
+categories = ["Web Development", "Teaching", "Management"]
+description = [
+    """
+    Organized an online platform which connects tutors with students. 
+    I was encouraged by the demand for Middle and High School Students
+    to have the opportunity to be taught by tutors who offer fresh and 
+    practical perspectives of current topics not offered by traditional 
+    tutoring business and tutors.
+    """,
+
+    "Manage technical aspects of marketing, and development of our website.",
+
+    "Interview students, parents, and tutors to identify needs and design curriculum.",
+
+    "Tutor AP Computer Science, Competition Math, and English.",
+]
+
+[[experience]]
+name = "Founder, SIMple Physics"
+categories = ["Simulation Development", "Rust", "Physics"]
+description = [
+    """
+    Architected and developed a set of physics simulators designed
+    to help teach physics. Each simulator helps teachers teach concepts
+    intuitively and conduct educational labs without expensive equipment.
+    """,
+
+    "Written in Rust using extensive Linear Algebra and Differential Equations.",
+
+    "Open source: https://mkhan45.github.io/SIMple-Physics/tabs/about."
+]
+
+[[experience]]
+name = "Software Engineer, Indy Autonomous Challenge Research"
+categories = ["Simulation Development", "Machine Learning", "Unity", "C#"]
+description = [
+    "Working with a team of students from the undergraduate to PhD level to design a self driving car that will avoid obstacles and overtake other cars at high speeds.",
+    "Primarily write software, including simulator work along with convolutional and recurrent neural networks using Python and PyTorch."
+]
+
+[[experience]]
+name = "President, Assistive Technology Club"
+categories = ["Arduino", "C++", "Leadership"]
+description = [
+    "Collaborated to create products to help special ed children. Skills used include HTML/CSS/JavaScript, Arduino, and C++.",
+    "Organized meetings, recruited members, and worked with Fairfax County Public School officials and special ed teachers."
+]
+
+[[education]]
+name = "Purdue University"
+description = [
+    "Math + Computer Science Major",
+    "4.0 GPA"
+]
+
+[[education]]
+name = "MIT Beaver Works Cog*Works"
+description = [
+    "MIT summer program requiring an eight week long online class admission process",
+    "Advanced machine learning including audio recognition, image classification, and natural language processing, primarily in Python.",
+    "4 weeks, 160+ hours of in class lecture and hands-on projects."
+]
+
+[[education]]
+name = "Thomas Jefferson High School for Science and Technology"
+description = []
+
+[[education]]
+name = "Relevant Coursework"
+description = [
+    """
+    Past: AP Computer Science A + Datastructures, Web + Mobile App Development, 
+    Artificial Intelligence, Multivariable Calculus, Analog + Digital Electronics
+    """,
+
+    "Fall: Statistics for Undergraduates, Physics 172 Mechanics",
+
+    "Spring: Programming I, Discrete Math"
+]

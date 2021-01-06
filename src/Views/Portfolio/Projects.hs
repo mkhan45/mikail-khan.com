@@ -1,9 +1,8 @@
 {-# LANGUAGE OverloadedStrings #-}
 
-module Views.Resume.Projects where
+module Views.Portfolio.Projects where
 
 import qualified Data.Text as T
-import Views.Resume.ResumeData
 import qualified System.IO.Strict as SIO
 
 import Text.Toml
@@ -14,8 +13,10 @@ import Data.Aeson.Types
 import Data.HashMap.Strict
 import qualified Data.Vector as V
 
-getTOML :: IO Table
-getTOML = do
+import Views.Portfolio.PortfolioData
+
+getProjectsTOML :: IO Table
+getProjectsTOML = do
     contents <- SIO.readFile "static/Assets/projects.toml"
     let Right t = parseTomlDoc "" $ T.pack contents
     return t
@@ -30,7 +31,7 @@ parseProject (Object o) = do
 
 readProjects :: IO [Project]
 readProjects = do
-    tomlIn <- getTOML
+    tomlIn <- getProjectsTOML
     let Object jsObj = toJSON tomlIn
         Array jsArr = jsObj ! T.pack "projects"
     projects <- mapM parseProject jsArr

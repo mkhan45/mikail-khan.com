@@ -19,8 +19,10 @@ import           Control.Monad.IO.Class (liftIO)
 import qualified System.IO.Strict as SIO
 
 import           Views.Index
-import           Views.Resume.Projects
+import           Views.Portfolio.Projects
+import           Views.Portfolio.PortfolioView
 import           Views.Resume.ResumeView
+import           Views.Resume.ResumeData
 import           Views.Memes.MemeData
 import           Views.Memes.MemeView
 import           Views.Memes.MemeEdit
@@ -49,8 +51,13 @@ server = scottyApp $ do
     --    html $ renderHtml $ index (visitCount + 1)
     --    liftIO $ updateVisitCount visitCount
     get "/" $ do
+        html $ renderHtml index
+    get "/portfolio" $ do
         projects <- liftIO readProjects
-        html $ renderHtml $ resume projects
+        html $ renderHtml $ portfolio projects
+    get "/resume" $ do
+        resume <- liftIO readResume
+        html $ renderHtml $ resumeHTML resume
     get "/memes/edit" $ do
         memes <- liftIO $ readMemeFile 0
         html $ renderHtml $ memeEditHTML memes
