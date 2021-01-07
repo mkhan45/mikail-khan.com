@@ -20,27 +20,53 @@ repeatStars n = H.span $ forM_ [1..n] (\_ -> starHTML)
           starHTML :: H.Html
           starHTML = H.span ! class_ "star-icon" ! dataAttribute "icon" starID ! dataAttribute "size" "s" $ "★"
 
+skillsTab :: T.Text -> (Skill -> Bool) -> [Skill] -> Bool -> H.Html
+skillsTab name pred skillsUnfiltered isDefault = 
+    H.div ! A.class_ "skillTab" $ do
+        H.input ! A.type_ "radio" ! A.id tabID ! A.name "skill-tabs" ! checked
+        H.label ! A.for tabID $ H.toHtml name
+        H.div ! A.class_ "skillTabContent" $ do
+            if not $ null five_year then
+                H.ul $ do
+                    H.li $ H.h3 $ repeatStars 5
+                    H.li $ H.toHtml $ skillString five_year
+            else mempty
+
+            if not $ null three_year then
+                H.ul $ do
+                    H.li $ H.h3 $ repeatStars 4
+                    H.li $ H.toHtml $ skillString three_year
+            else mempty
+
+            if not $ null one_year then
+                H.ul $ do
+                    H.li $ H.h3 $ repeatStars 3
+                    H.li $ H.toHtml $ skillString one_year
+            else mempty
+
+    where tabID = H.toValue $ name <> "_tab"
+          skills = filter pred skillsUnfiltered
+
+          (five_year, less_five) = partition ((>=5) . skillExperience) skills
+          (three_year, less_three) = partition ((>=3) . skillExperience) less_five
+          one_year = filter ((>=1) . skillExperience) less_three
+
+          skillString :: [Skill] -> T.Text
+          skillString ls = T.intercalate ", " $ map skillName ls
+
+          checked = if isDefault then A.checked mempty
+                                 else mempty
+
 skillsHTML :: [Skill] -> H.Html
 skillsHTML skills = do
     H.div ! A.class_ "resumeSection skills" $ do
         H.h2 "Skills"
         H.hr
-        H.ul $ do
-            H.li $ H.h3 $ repeatStars 5
-            H.li $ H.toHtml $ skillString five_year
-        H.ul $ do
-            H.li $ H.h3 $ repeatStars 3
-            H.li $ H.toHtml $ skillString three_year
-        H.ul $ do
-            H.li $ H.h3 $ repeatStars 1
-            H.li $ H.toHtml $ skillString one_year
-    where 
-        (five_year, less_five) = partition ((>=5) . skillExperience) skills
-        (three_year, less_three) = partition ((>=3) . skillExperience) less_five
-        one_year = filter ((>=1) . skillExperience) less_three
-
-        skillString :: [Skill] -> T.Text
-        skillString ls = T.intercalate ", " $ map skillName ls
+        H.div ! A.class_ "skillTabs" $ do
+            skillsTab "All" (const True) skills True
+            skillsTab "Programming Languages" ((elem ProgLanguage) . skillCategories) skills False
+            skillsTab "Object Oriented" ((elem ObjectOriented) . skillCategories) skills False
+            skillsTab "Web Dev" ((elem WebDev) . skillCategories) skills False
 
 descEntry :: T.Text -> H.Html
 descEntry desc = do

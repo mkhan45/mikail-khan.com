@@ -262,6 +262,62 @@ h3 .timeframe {
     padding-left: 1em;
 }
 
+.skillTabs {
+    position: relative;
+    min-height: 20em;
+    clear: both;
+    margin: 1em 0;
+}
+
+.skillTab {
+    float: left;
+}
+
+.skillTab label {
+    display: inline-block;
+    min-width: 5em;
+    text-align: center;
+    background: white;
+    padding: 0.25em;
+    margin-right: 0.5em;
+    position: relative;
+    font-size: 1.1em;
+    border-style: solid;
+    border-color: var(--main);
+    border-radius: 0.25em;
+    transition: all 200ms ease;
+}
+
+.skillTab label:hover {
+    transform: scale(1.05);
+}
+
+.skillTab [type=radio] {
+    display: none;
+}
+
+.skillTabContent {
+    position: absolute;
+    background: white;
+    top: 3em;
+    left: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 500ms ease;
+}
+
+[type=radio]:checked ~ label ~ .skillTabContent {
+    z-index: 1;
+    opacity: 1;
+    transition: all 500ms ease;
+}
+
+[type=radio]:checked ~ label {
+    z-index: 2;
+    background: var(--main);
+    color: white;
+}
+
 @media only screen and (max-width: 768px) {
     .resume .resumeSection {
         margin-left: 0;

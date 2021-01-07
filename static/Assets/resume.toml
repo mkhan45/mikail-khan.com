@@ -97,114 +97,129 @@ description = [
 [[skills]]
 name = "Java"
 categories = ["Programming Language", "Object Oriented"]
-years_experience = 5
+skill_level = 5
 
 [[skills]]
 name = "Python"
 categories = ["Programming Language", "Object Oriented"]
-years_experience = 5
+skill_level = 5
 
 [[skills]]
 name = "JavaScript"
-categories = ["Programming Language", "Web Development"]
-years_experience = 5
+categories = ["Programming Language", "Web Development", "Object Oriented"]
+skill_level = 5
 
 [[skills]]
 name = "HTML"
 categories = ["Web Development"]
-years_experience = 5
+skill_level = 5
 
 [[skills]]
 name = "CSS"
 categories = ["Web Development"]
-years_experience = 5
+skill_level = 5
 
 [[skills]]
 name = "Linux"
 categories = []
-years_experience = 5
+skill_level = 5
 
 [[skills]]
 name = "Flask"
 categories = ["Python", "Web Development"]
-years_experience = 3
+skill_level = 3
 
 [[skills]]
 name = "Golang"
 categories = ["Programming Language", "Web Development"]
-years_experience = 3
+skill_level = 3
 
 [[skills]]
 name = "Rust"
 categories = ["Programming Language"]
-years_experience = 3
+skill_level = 3
 
 [[skills]]
 name = "Artificial Intelligence"
 categories = []
-years_experience = 3
+skill_level = 3
 
 [[skills]]
 name = "Test Driven Development"
 categories = []
-years_experience = 3
+skill_level = 3
 
 [[skills]]
 name = "REST API Development"
 categories = ["Web Development"]
-years_experience = 3
+skill_level = 3
 
 [[skills]]
 name = "TypeScript"
-categories = ["Web Development"]
-years_experience = 1
+categories = ["Web Development", "Programming Language", "Object Oriented"]
+skill_level = 1
 
 [[skills]]
 name = "ReactJS"
 categories = ["Web Development"]
-years_experience = 1
+skill_level = 1
 
 [[skills]]
 name = "ExpressJS"
 categories = ["Web Development"]
-years_experience = 1
+skill_level = 1
 
 [[skills]]
 name = "C"
-categories = []
-years_experience = 1
+categories = ["Programming Language"]
+skill_level = 3
 
 [[skills]]
 name = "C++"
-categories = ["Object Oriented"]
-years_experience = 1
+categories = ["Object Oriented", "Programming Language"]
+skill_level = 1
+
+[[skills]]
+name = "C#"
+categories = ["Object Oriented", "Programming Language"]
+skill_level = 1
 
 [[skills]]
 name = "Haskell"
-categories = []
-years_experience = 1
+categories = ["Programming Language"]
+skill_level = 1
 
 [[skills]]
 name = "PyTorch"
 categories = ["Python", "Machine Learning"]
-years_experience = 1
+skill_level = 1
 
 [[skills]]
 name = "AWS"
 categories = ["Web Development"]
-years_experience = 1
+skill_level = 1
 
 [[skills]]
 name = "SQL"
 categories = ["Web Development"]
-years_experience = 1
+skill_level = 1
 
 [[skills]]
 name = "Numpy"
 categories = ["Python"]
-years_experience = 1
+skill_level = 1
 
 [[skills]]
 name = "Django"
 categories = ["Python", "Web Development"]
-years_experience = 1
+skill_level = 1
+
+[[skills]]
+name = "Android Development"
+categories = ["Mobile Development"]
+skill_level = 1
+
+[[skills]]
+name = "Git"
+categories = []
+skill_level = 5

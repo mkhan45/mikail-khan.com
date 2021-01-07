@@ -15,7 +15,7 @@ import qualified System.IO.Strict as SIO
 import Text.Toml
 import Text.Toml.Types
 
-data Category = WebDev | ObjectOriented | Python | Misc deriving Show
+data Category = WebDev | ObjectOriented | Python | ProgLanguage | Misc deriving (Show, Eq)
 
 data Skill = Skill {
                         skillName :: T.Text,
@@ -44,18 +44,19 @@ parseCategory :: Value -> Category
 parseCategory (String "Object Oriented") = ObjectOriented
 parseCategory (String "Python") = Python
 parseCategory (String "Web Development") = WebDev
+parseCategory (String "Programming Language") = ProgLanguage
 parseCategory _ = Misc
 
 parseSkill :: Value -> Skill
 parseSkill (Object o) =
     let String  name            = o ! T.pack "name"
         Array   categoriesText  = o ! T.pack "categories"
-        Number  expSci          = o ! T.pack "years_experience"
-        Right   experience      = floatingOrInteger expSci
+        Number  levelSci        = o ! T.pack "skill_level"
+        Right   skillLevel      = floatingOrInteger levelSci
     in  
         Skill {
                 skillName = name,
-                skillExperience = experience,
+                skillExperience = skillLevel,
                 skillCategories = map parseCategory (V.toList categoriesText)
         }
 
