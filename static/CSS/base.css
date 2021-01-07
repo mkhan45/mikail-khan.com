@@ -264,7 +264,7 @@ h3 .timeframe {
 
 .skillTabs {
     position: relative;
-    min-height: 20.5em;
+    min-height: 18em;
     clear: both;
     margin: 1em 0;
     transition: min-height 200ms ease;
@@ -321,6 +321,12 @@ h3 .timeframe {
     color: white;
 }
 
+@media only screen and (max-width: 1000px) {
+    .skillTabs {
+        min-height: 20.5em;
+    }
+}
+
 @media only screen and (max-width: 768px) {
     .resume .resumeSection {
         margin-left: 0;
@@ -336,6 +342,24 @@ h3 .timeframe {
     }
 
     .skillTabContent {
-        top: -0.25em;
+        top: -0.5em;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .skillTabs {
+        min-height: 18em;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .skillTabs {
+        min-height: 19em;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .skillTabs {
+        min-height: 23.5em;
     }
 }
