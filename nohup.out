@@ -483,3 +483,1516 @@ hs-server-two-exe: Network.Socket.bind: resource busy (Address already in use)
 [37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
 [37m  Status: [0m[32m200 OK[0m 0.00005149s
 HandshakeFailed (Error_Packet_unexpected "Alert13 [(AlertLevel_Fatal,BadCertificate)]" " expected: handshake 13")
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.002671336s
+[36mGET[0m /CSS/Resume.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000401278s
+[36mGET[0m /img/mech.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000793139s
+[36mGET[0m /img/site.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000019101s
+[36mGET[0m /img/gravity.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000013833s
+[36mGET[0m /img/tetrs.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000043165s
+[36mGET[0m /img/ssshmup.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.00001236s
+[36mGET[0m /img/pumice.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000023459s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000059379s
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000960464s
+[36mGET[0m /img/mech.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000033051s
+[36mGET[0m /img/site.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000012831s
+[36mGET[0m /img/gravity.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000010088s
+[36mGET[0m /img/pumice.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.00000915s
+[36mGET[0m /img/tetrs.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000011049s
+[36mGET[0m /img/ssshmup.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000008976s
+[36mGET[0m /memes/
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[33m302 Found[0m 0.00008549s
+[36mGET[0m /memes/0
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000126599s
+[36mGET[0m /CSS/Memes.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000052797s
+[33mPOST[0m /api/jsonws/invoke
+[37m  Accept: [0m
+[37m  Status: [0m[31m404 Not Found[0m 0.000060737s
+[33mPOST[0m /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+[37m  Params: [0m[("<?","md5(\"phpunit\")?>")]
+[37m  Request Body: [0m<?=md5("phpunit")?>
+[37m  Accept: [0m
+[37m  Status: [0m[31m404 Not Found[0m 0.000054073s
+[36mGET[0m /index.php
+[37m  Params: [0m[("s","/Index/\\think\\app/invokefunction"),("function","call_user_func_array"),("vars[0]","md5"),("vars[1][]","HelloThinkPHP21")]
+[37m  Accept: [0m
+[37m  Status: [0m[31m404 Not Found[0m 0.00005465s
+[36mGET[0m /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+[37m  Request Body: [0m<?=md5("phpunit")?>
+[37m  Accept: [0m
+[37m  Status: [0m[31m404 Not Found[0m 0.000058812s
+[33mPOST[0m /mifs/.;/services/LogService
+[37m  Request Body: [0mc H 
+[37m  Accept: [0m
+[37m  Status: [0m[31m404 Not Found[0m 0.000059272s
+[36mGET[0m /
+[37m  Params: [0m[("XDEBUG_SESSION_START","phpstorm")]
+[37m  Accept: [0m
+[37m  Status: [0m[32m200 OK[0m 0.000965705s
+[36mGET[0m /wp-content/plugins/wp-file-manager/readme.txt
+[37m  Accept: [0m
+[37m  Status: [0m[31m404 Not Found[0m 0.000067831s
+[33mPOST[0m /Autodiscover/Autodiscover.xml
+[37m  Request Body: [0m<!DOCTYPE xxe [
+<!ELEMENT name ANY >
+<!ENTITY xxe SYSTEM "file:///etc/passwd">]>
+<Autodiscover xmlns="http://schemas.microsoft.com/exchange/autodiscover/outlook/responseschema/2006a">
+<Request>
+<EMailAddress>aaaaa</EMailAddress>
+<AcceptableResponseSchema>&xxe;</AcceptableResponseSchema>
+</Request>
+</Autodiscover>
+[37m  Accept: [0m
+[37m  Status: [0m[31m404 Not Found[0m 0.000057248s
+[36mGET[0m /console/
+[37m  Accept: [0m
+[37m  Status: [0m[31m404 Not Found[0m 0.000061297s
+HandshakeFailed (Error_Protocol ("client version SSL3 is not supported",True,ProtocolVersion))
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.001176699s
+[36mGET[0m /CSS/Resume.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000048045s
+[36mGET[0m /img/mech.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000012433s
+[36mGET[0m /img/site.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000009226s
+[36mGET[0m /img/gravity.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000008425s
+[36mGET[0m /img/pumice.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000011019s
+[36mGET[0m /img/tetrs.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000009377s
+[36mGET[0m /img/ssshmup.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000009139s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000049228s
+[36mGET[0m /owa/auth/logon.aspx
+[37m  Params: [0m[("url","https://1/ecp/")]
+[37m  Accept: [0m*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000096928s
+[36mGET[0m /
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.001081373s
+[36mGET[0m /
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.001059838s
+HandshakeFailed (Error_Packet_unexpected "Alert [(AlertLevel_Fatal,ProtocolVersion)]" " expected: handshake")
+[36mGET[0m /
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.001121116s
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.001120076s
+[36mGET[0m /CSS/Resume.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000036973s
+[36mGET[0m /img/mech.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000013955s
+[36mGET[0m /img/site.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000011835s
+[36mGET[0m /img/gravity.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000008099s
+[36mGET[0m /img/pumice.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000028522s
+[36mGET[0m /img/tetrs.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000010104s
+[36mGET[0m /img/ssshmup.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000008715s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000043624s
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.001142869s
+[36mGET[0m /CSS/Resume.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000039319s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000045292s
+[36mGET[0m /
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.001085657s
+HandshakeFailed (Error_Packet_unexpected "Alert [(AlertLevel_Warning,CloseNotify)]" " expected: handshake")
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.001133491s
+[36mGET[0m /robots.txt
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+[37m  Status: [0m[31m404 Not Found[0m 0.000061155s
+InsecureConnectionDenied
+[36mGET[0m /img/ssshmup.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000038765s
+[36mGET[0m /img/tetrs.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000038576s
+[36mGET[0m /img/pumice.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000014136s
+[36mGET[0m /img/gravity.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000022044s
+[36mGET[0m /img/site.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000009913s
+[36mGET[0m /img/mech.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000011993s
+[36mGET[0m /img/mech.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000036344s
+[36mGET[0m /img/site.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000010692s
+[36mGET[0m /img/pumice.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000010208s
+[36mGET[0m /img/tetrs.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000009024s
+[36mGET[0m /img/gravity.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000009348s
+[36mGET[0m /img/ssshmup.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000014158s
+HandshakeFailed (Error_Protocol ("bad record mac",True,BadRecordMac))
+HandshakeFailed (Error_Protocol ("bad record mac",True,BadRecordMac))
+HandshakeFailed (Error_Protocol ("bad record mac",True,BadRecordMac))
+HandshakeFailed (Error_Protocol ("bad record mac",True,BadRecordMac))
+HandshakeFailed (Error_Protocol ("bad record mac",True,BadRecordMac))
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.001118658s
+[36mGET[0m /CSS/Resume.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000037123s
+[36mGET[0m /img/mech.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000012747s
+[36mGET[0m /img/site.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000010156s
+[36mGET[0m /img/gravity.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000007956s
+[36mGET[0m /img/pumice.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000011847s
+[36mGET[0m /img/tetrs.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000008954s
+[36mGET[0m /img/ssshmup.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.00000876s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000050588s
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+[37m  Status: [0m[32m200 OK[0m 0.001077041s
+[36mGET[0m /CSS/Resume.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.00003724s
+[36mGET[0m /img/mech.png
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000019891s
+[36mGET[0m /img/site.png
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000031268s
+[36mGET[0m /img/gravity.png
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000025186s
+[36mGET[0m /img/pumice.png
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000010938s
+[36mGET[0m /img/tetrs.png
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000009263s
+[36mGET[0m /img/ssshmup.png
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00000861s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/*,*/*;q=0.8
+[37m  Status: [0m[31m404 Not Found[0m 0.000046408s
+[36mGET[0m /
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.001036815s
+data: end of file
+data: end of file
+data: end of file
+data: end of file
+data: end of file
+data: end of file
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.001186491s
+HandshakeFailed Error_EOF
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.0011276s
+[36mGET[0m /CSS/Resume.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000035609s
+[36mGET[0m /img/mech.png
+[37m  Accept: [0mimage/webp,image/png,image/svg+xml,image/*;q=0.8,video/*;q=0.8,*/*;q=0.5
+[37m  Status: [0m[32m200 OK[0m 0.000021443s
+[36mGET[0m /img/site.png
+[37m  Accept: [0mimage/webp,image/png,image/svg+xml,image/*;q=0.8,video/*;q=0.8,*/*;q=0.5
+[37m  Status: [0m[32m200 OK[0m 0.00001298s
+[36mGET[0m /img/gravity.png
+[37m  Accept: [0mimage/webp,image/png,image/svg+xml,image/*;q=0.8,video/*;q=0.8,*/*;q=0.5
+[37m  Status: [0m[32m200 OK[0m 0.000019858s
+[36mGET[0m /img/pumice.png
+[37m  Accept: [0mimage/webp,image/png,image/svg+xml,image/*;q=0.8,video/*;q=0.8,*/*;q=0.5
+[37m  Status: [0m[32m200 OK[0m 0.000008502s
+[36mGET[0m /img/tetrs.png
+[37m  Accept: [0mimage/webp,image/png,image/svg+xml,image/*;q=0.8,video/*;q=0.8,*/*;q=0.5
+[37m  Status: [0m[32m200 OK[0m 0.000007941s
+[36mGET[0m /img/ssshmup.png
+[37m  Accept: [0mimage/webp,image/png,image/svg+xml,image/*;q=0.8,video/*;q=0.8,*/*;q=0.5
+[37m  Status: [0m[32m200 OK[0m 0.000008332s
+[36mGET[0m /dns-query
+[37m  Params: [0m[("dns","AAABAAABAAAAAAAAA3d3dwViYWlkdQNjb20AAAEAAQ")]
+[37m  Accept: [0mapplication/dns-message
+[37m  Status: [0m[31m404 Not Found[0m 0.000054177s
+HandshakeFailed Error_EOF
+data: end of file
+data: end of file
+data: end of file
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+[37m  Status: [0m[32m200 OK[0m 0.001200421s
+[36mGET[0m /CSS/Resume.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000035319s
+[36mGET[0m /img/mech.png
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000031357s
+[36mGET[0m /img/site.png
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000031402s
+[36mGET[0m /img/gravity.png
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000010628s
+[36mGET[0m /img/pumice.png
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000009238s
+[36mGET[0m /img/tetrs.png
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000009557s
+[36mGET[0m /img/ssshmup.png
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000017604s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/*,*/*;q=0.8
+[37m  Status: [0m[31m404 Not Found[0m 0.00004777s
+data: end of file
+data: end of file
+[36mGET[0m /img/gravity.png%22
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+[37m  Status: [0m[31m404 Not Found[0m 0.000067662s
+[36mGET[0m /img/
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+[37m  Status: [0m[31m404 Not Found[0m 0.000064821s
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+[37m  Status: [0m[32m200 OK[0m 0.000972351s
+[36mGET[0m /memes
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+[37m  Status: [0m[33m302 Found[0m 0.000053299s
+[36mGET[0m /memes/0
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+[37m  Status: [0m[32m200 OK[0m 0.000114236s
+[36mGET[0m /CSS/Memes.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000033451s
+[36mGET[0m /memes/-1
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+[37m  Status: [0m[32m200 OK[0m 0.000112969s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/*,*/*;q=0.8
+[37m  Status: [0m[31m404 Not Found[0m 0.000046308s
+[36mGET[0m /memes/-2
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+[37m  Status: [0m[32m200 OK[0m 0.000114297s
+[36mGET[0m /memes/-2
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+[37m  Status: [0m[32m200 OK[0m 0.000102749s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/*,*/*;q=0.8
+[37m  Status: [0m[31m404 Not Found[0m 0.000046796s
+[36mGET[0m /memes/-3
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+[37m  Status: [0m[32m200 OK[0m 0.000101447s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/*,*/*;q=0.8
+[37m  Status: [0m[31m404 Not Found[0m 0.000052353s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/*,*/*;q=0.8
+[37m  Status: [0m[31m404 Not Found[0m 0.000044214s
+[36mGET[0m /memes/-4
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+[37m  Status: [0m[32m200 OK[0m 0.000108289s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/*,*/*;q=0.8
+[37m  Status: [0m[31m404 Not Found[0m 0.000063959s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/*,*/*;q=0.8
+[37m  Status: [0m[31m404 Not Found[0m 0.000047272s
+data: end of file
+[36mGET[0m /
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.001087289s
+data: end of file
+data: end of file
+data: end of file
+data: end of file
+data: end of file
+HandshakeFailed (Error_Protocol ("no cipher in common with the client",True,HandshakeFailure))
+HandshakeFailed (Error_Protocol ("no cipher in common with the client",True,HandshakeFailure))
+HandshakeFailed (Error_Packet_unexpected "Alert [(AlertLevel_Warning,CloseNotify)]" " expected: handshake")
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000945932s
+data: end of file
+data: end of file
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+[37m  Status: [0m[32m200 OK[0m 0.001152503s
+data: end of file
+data: end of file
+data: end of file
+data: end of file
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.001171795s
+[36mGET[0m /CSS/Resume.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000043409s
+[36mGET[0m /img/mech.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000013624s
+[36mGET[0m /img/site.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000010306s
+[36mGET[0m /img/gravity.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000009267s
+[36mGET[0m /img/pumice.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000012266s
+[36mGET[0m /img/tetrs.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000009751s
+[36mGET[0m /img/ssshmup.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000008861s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000072112s
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.001080432s
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.001136332s
+[36mGET[0m /CSS/Resume.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000036256s
+[36mGET[0m /img/mech.png
+[37m  Accept: [0mimage/webp,image/png,image/svg+xml,image/*;q=0.8,video/*;q=0.8,*/*;q=0.5
+[37m  Status: [0m[32m200 OK[0m 0.000019403s
+[36mGET[0m /img/site.png
+[37m  Accept: [0mimage/webp,image/png,image/svg+xml,image/*;q=0.8,video/*;q=0.8,*/*;q=0.5
+[37m  Status: [0m[32m200 OK[0m 0.000012238s
+[36mGET[0m /img/gravity.png
+[37m  Accept: [0mimage/webp,image/png,image/svg+xml,image/*;q=0.8,video/*;q=0.8,*/*;q=0.5
+[37m  Status: [0m[32m200 OK[0m 0.000009075s
+[36mGET[0m /img/tetrs.png
+[37m  Accept: [0mimage/webp,image/png,image/svg+xml,image/*;q=0.8,video/*;q=0.8,*/*;q=0.5
+[37m  Status: [0m[32m200 OK[0m 0.000007582s
+[36mGET[0m /img/pumice.png
+[37m  Accept: [0mimage/webp,image/png,image/svg+xml,image/*;q=0.8,video/*;q=0.8,*/*;q=0.5
+[37m  Status: [0m[32m200 OK[0m 0.00000862s
+[36mGET[0m /img/ssshmup.png
+[37m  Accept: [0mimage/webp,image/png,image/svg+xml,image/*;q=0.8,video/*;q=0.8,*/*;q=0.5
+[37m  Status: [0m[32m200 OK[0m 0.000008033s
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.001179588s
+[36mGET[0m /
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.001094109s
+InsecureConnectionDenied
+HandshakeFailed (Error_Protocol ("bad record mac",True,BadRecordMac))
+HandshakeFailed Error_EOF
+[36mGET[0m /
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.001087447s
+data: end of file
+[36mGET[0m /img/mech.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.00003395s
+[36mGET[0m /img/site.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.00001564s
+[36mGET[0m /img/gravity.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000014339s
+[36mGET[0m /img/pumice.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000008905s
+[36mGET[0m /img/tetrs.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000009487s
+[36mGET[0m /img/ssshmup.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000010454s
+[36mGET[0m /img/
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+[37m  Status: [0m[31m404 Not Found[0m 0.000043744s
+data: end of file
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.001194617s
+[36mGET[0m /CSS/Resume.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000036386s
+[36mGET[0m /img/mech.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000012928s
+[36mGET[0m /img/site.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000009945s
+[36mGET[0m /img/gravity.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000009934s
+[36mGET[0m /img/pumice.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000015761s
+[36mGET[0m /img/tetrs.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000010172s
+[36mGET[0m /img/ssshmup.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000008746s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000047136s
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00116999s
+[36mGET[0m /img/ssshmup.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000035973s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000043842s
+HandshakeFailed (Error_Protocol ("client version SSL3 is not supported",True,ProtocolVersion))
+[36mGET[0m /dns-query
+[37m  Params: [0m[("dns","AAABAAABAAAAAAAAA3d3dwViYWlkdQNjb20AAAEAAQ")]
+[37m  Accept: [0mapplication/dns-message
+[37m  Status: [0m[31m404 Not Found[0m 0.000044489s
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000065076s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000073051s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000096257s
+[36mGET[0m /resume
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000254862s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000060844s
+[36mGET[0m /portfolio
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.001429852s
+[36mGET[0m /img/mech.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000069119s
+[36mGET[0m /img/site.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000019409s
+[36mGET[0m /img/gravity.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000014792s
+[36mGET[0m /img/pumice.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000012116s
+[36mGET[0m /img/tetrs.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000016477s
+[36mGET[0m /img/ssshmup.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000013651s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000010619s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000049552s
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000044851s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000042847s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000046814s
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000056807s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000044516s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000059756s
+[36mGET[0m /resume
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000202461s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.00004798s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000048449s
+[36mGET[0m /static/assets/resume.toml
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[31m404 Not Found[0m 0.000070131s
+[36mGET[0m /
+[37m  Params: [0m[("XDEBUG_SESSION_START","phpstorm")]
+[37m  Accept: [0m
+[37m  Status: [0m[32m200 OK[0m 0.000074452s
+[33mPOST[0m /mifs/.;/services/LogService
+[37m  Request Body: [0mc H 
+[37m  Accept: [0m
+[37m  Status: [0m[31m404 Not Found[0m 0.000050996s
+[36mGET[0m /assets/resume.toml
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[31m404 Not Found[0m 0.000067962s
+[33mPOST[0m /api/jsonws/invoke
+[37m  Accept: [0m
+[37m  Status: [0m[31m404 Not Found[0m 0.000058768s
+[36mGET[0m /wp-content/plugins/wp-file-manager/readme.txt
+[37m  Accept: [0m
+[37m  Status: [0m[31m404 Not Found[0m 0.000086694s
+[36mGET[0m /console/
+[37m  Accept: [0m
+[37m  Status: [0m[31m404 Not Found[0m 0.000062082s
+[33mPOST[0m /Autodiscover/Autodiscover.xml
+[37m  Request Body: [0m<!DOCTYPE xxe [
+<!ELEMENT name ANY >
+<!ENTITY xxe SYSTEM "file:///etc/passwd">]>
+<Autodiscover xmlns="http://schemas.microsoft.com/exchange/autodiscover/outlook/responseschema/2006a">
+<Request>
+<EMailAddress>aaaaa</EMailAddress>
+<AcceptableResponseSchema>&xxe;</AcceptableResponseSchema>
+</Request>
+</Autodiscover>
+[37m  Accept: [0m
+[37m  Status: [0m[31m404 Not Found[0m 0.000051779s
+[36mGET[0m /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+[37m  Request Body: [0m<?=md5("phpunit")?>
+[37m  Accept: [0m
+[37m  Status: [0m[31m404 Not Found[0m 0.000088233s
+[36mGET[0m /index.php
+[37m  Params: [0m[("s","/Index/\\think\\app/invokefunction"),("function","call_user_func_array"),("vars[0]","md5"),("vars[1][]","HelloThinkPHP21")]
+[37m  Accept: [0m
+[37m  Status: [0m[31m404 Not Found[0m 0.000058757s
+[33mPOST[0m /vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php
+[37m  Params: [0m[("<?","md5(\"phpunit\")?>")]
+[37m  Request Body: [0m<?=md5("phpunit")?>
+[37m  Accept: [0m
+[37m  Status: [0m[31m404 Not Found[0m 0.000054417s
+[36mGET[0m /Assets/resume.toml
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000043648s
+[36mGET[0m /.well-known/security.txt
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+[37m  Status: [0m[31m404 Not Found[0m 0.000084814s
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000044348s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.0000379s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000050987s
+[36mGET[0m /resume
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000194154s
+[36mGET[0m /portfolio
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.001080151s
+[36mGET[0m /img/mech.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000033996s
+[36mGET[0m /img/site.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000009902s
+[36mGET[0m /img/gravity.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000012205s
+[36mGET[0m /img/pumice.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000009588s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000049642s
+[36mGET[0m /resume
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000219721s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000046968s
+[36mGET[0m /portfolio
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000957605s
+[36mGET[0m /resume
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000193351s
+[36mGET[0m /portfolio
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000998078s
+[36mGET[0m /img/mech.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000032429s
+[36mGET[0m /img/site.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.00001152s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000036007s
+[36mGET[0m /resume
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000187384s
+[36mGET[0m /
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.000042957s
+[36mGET[0m /actuator/health
+[37m  Accept: [0m*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.00006562s
+HandshakeFailed Error_EOF
+[36mGET[0m /
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.000044258s
+data: end of file
+[36mGET[0m /
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.00004208s
+[36mGET[0m /dns-query
+[37m  Params: [0m[("dns","AAABAAABAAAAAAAAA3d3dwViYWlkdQNjb20AAAEAAQ")]
+[37m  Accept: [0mapplication/dns-message
+[37m  Status: [0m[31m404 Not Found[0m 0.000065272s
+[36mGET[0m /
+[37m  Accept: [0m
+[37m  Status: [0m[32m200 OK[0m 0.000060353s
+[36mGET[0m /
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.000060058s
+[36mGET[0m /
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.000042512s
+[36mGET[0m /
+[37m  Accept: [0m
+[37m  Status: [0m[32m200 OK[0m 0.000059586s
+[36mGET[0m /blog/
+[37m  Accept: [0m
+[37m  Status: [0m[31m404 Not Found[0m 0.000065823s
+InsecureConnectionDenied
+HandshakeFailed (Error_Protocol ("client version SSL3 is not supported",True,ProtocolVersion))
+[36mGET[0m /robots.txt
+[37m  Accept: [0m*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000060827s
+[36mGET[0m /
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.000042122s
+HandshakeFailed (Error_Packet_unexpected "Alert [(AlertLevel_Fatal,ProtocolVersion)]" " expected: handshake")
+[36mGET[0m /
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.000043197s
+[36mGET[0m /robots.txt
+[37m  Accept: [0mtext/plain,text/html,*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000050101s
+[36mGET[0m /ads.txt
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+[37m  Status: [0m[31m404 Not Found[0m 0.000059263s
+[36mGET[0m /sitemap_index.xml
+[37m  Accept: [0m*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000074848s
+[36mGET[0m /CSS/Resume.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[31m404 Not Found[0m 0.000088569s
+[36mGET[0m /img/mech.png
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000015581s
+[36mGET[0m /img/site.png
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.0000361s
+[36mGET[0m /img/gravity.png
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000015459s
+[36mGET[0m /img/pumice.png
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000009988s
+[36mGET[0m /img/tetrs.png
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000008418s
+[36mGET[0m /img/ssshmup.png
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/*,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000008812s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/avif,image/webp,image/apng,image/*,*/*;q=0.8
+[37m  Status: [0m[31m404 Not Found[0m 0.000048482s
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+[37m  Status: [0m[32m200 OK[0m 0.000043102s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000032759s
+[36mGET[0m /portfolio
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+[37m  Status: [0m[32m200 OK[0m 0.001131485s
+[36mGET[0m /resume
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+[37m  Status: [0m[32m200 OK[0m 0.000189288s
+[36mGET[0m /portfolio
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+[37m  Status: [0m[32m200 OK[0m 0.000979306s
+data: end of file
+[36mGET[0m /
+[37m  Accept: [0m
+[37m  Status: [0m[32m200 OK[0m 0.000043932s
+[36mGET[0m /resume
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+[37m  Status: [0m[32m200 OK[0m 0.000212019s
+data: end of file
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000060495s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000048479s
+[36mGET[0m /resume
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00024021s
+data: end of file
+data: end of file
+data: end of file
+data: end of file
+data: end of file
+data: end of file
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000042726s
+[36mGET[0m /portfolio
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+[37m  Status: [0m[32m200 OK[0m 0.001065793s
+data: end of file
+data: end of file
+data: end of file
+data: end of file
+data: end of file
+[36mGET[0m /admin//config.php
+[37m  Accept: [0m*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000068183s
+data: end of file
+data: end of file
+[36mGET[0m /wp-login.php
+[37m  Accept: [0m
+[37m  Status: [0m[31m404 Not Found[0m 0.000082154s
+data: end of file
+data: end of file
+data: end of file
+data: end of file
+data: end of file
+data: end of file
+[36mGET[0m /robots.txt
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+[37m  Status: [0m[31m404 Not Found[0m 0.000047969s
+data: end of file
+data: end of file
+[36mGET[0m /
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.000042994s
+[36mGET[0m /
+[37m  Accept: [0m
+[37m  Status: [0m[32m200 OK[0m 0.000043783s
+[36mGET[0m /
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.000089124s
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000044267s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.00003684s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000063986s
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000057583s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000046026s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000048512s
+[36mGET[0m /resume
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000198964s
+[36mGET[0m /img/mech.png
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.00003376s
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000043828s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.00003611s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.00004956s
+[36mGET[0m /resume
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000185852s
+[36mGET[0m /system_api.php
+[37m  Accept: [0m*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000060153s
+[36mGET[0m /c/version.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000062746s
+[36mGET[0m /streaming/clients_live.php
+[37m  Accept: [0m*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000085833s
+[36mGET[0m /stalker_portal/c/version.js
+[37m  Accept: [0m*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000067139s
+[36mGET[0m /client_area/
+[37m  Accept: [0m*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000061544s
+[36mGET[0m /stalker_portal/c/
+[37m  Accept: [0m*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000070312s
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000044382s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000037741s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000076147s
+[36mGET[0m /portfolio
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.001001224s
+[36mGET[0m /img/mech.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000036482s
+[36mGET[0m /img/site.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000009353s
+[36mGET[0m /img/gravity.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000009779s
+[36mGET[0m /img/pumice.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000012679s
+[36mGET[0m /img/tetrs.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.0000089s
+[36mGET[0m /img/ssshmup.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000008956s
+[36mGET[0m /memes/
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[33m302 Found[0m 0.000083928s
+[36mGET[0m /memes/0
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000177255s
+[36mGET[0m /CSS/Memes.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000053315s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000049359s
+[36mGET[0m /memes/-1
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00010373s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000050378s
+[36mGET[0m /memes/2
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000103439s
+[36mGET[0m /memes/1
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000155674s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000049891s
+[36mGET[0m /memes/2
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000106505s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.00005243s
+[36mGET[0m /memes/3
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000103212s
+[36mGET[0m /memes/8
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00010968s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000058955s
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000047605s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000037576s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000032057s
+[36mGET[0m /resume
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000194796s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000049473s
+[36mGET[0m /memes/9
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000107412s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000053736s
+[36mGET[0m /memes/10
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000113258s
+[36mGET[0m /
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.000042065s
+[36mGET[0m /.env
+[37m  Accept: [0m*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000059765s
+[33mPOST[0m /
+[37m  Params: [0m[("0x[]","androxgh0st")]
+[37m  Request Body: [0m0x%5B%5D=androxgh0st
+[37m  Accept: [0m*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000037718s
+[36mGET[0m /
+[37m  Accept: [0m
+[37m  Status: [0m[32m200 OK[0m 0.000041949s
+[36mGET[0m /
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.000043255s
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000431082s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000044788s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000057588s
+[36mGET[0m /portfolio
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000982807s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000035149s
+[36mGET[0m /img/mech.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000031934s
+[36mGET[0m /img/site.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000044177s
+[36mGET[0m /img/gravity.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000009859s
+[36mGET[0m /img/pumice.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000013151s
+[36mGET[0m /img/tetrs.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000009736s
+[36mGET[0m /img/ssshmup.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.00001025s
+[36mGET[0m /resume
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000221952s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000040798s
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000071318s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000036758s
+[36mGET[0m /resume
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000190279s
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000043026s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000035837s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000048151s
+[36mGET[0m /resume
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000189238s
+[36mGET[0m /resume
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000179475s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000035925s
+data: end of file
+[36mGET[0m /
+[37m  Accept: [0m*/*
+[37m  Status: [0m[32m200 OK[0m 0.000042865s
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000043425s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.00003503s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000048593s
+[36mGET[0m /resume
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000184061s
+[36mGET[0m /resume
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.001340877s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000036392s
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00004408s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000036267s
+[36mGET[0m /portfolio
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000945528s
+[36mGET[0m /img/mech.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000068713s
+[36mGET[0m /img/ssshmup.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.0000323s
+[36mGET[0m /resume
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00027558s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000042265s
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000050845s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000039153s
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00004583s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000031278s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000064088s
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000043202s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000036014s
+[36mGET[0m /resume
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000181595s
+[36mGET[0m /portfolio
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.001066459s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000034414s
+[36mGET[0m /img/mech.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000014572s
+[36mGET[0m /img/site.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000032397s
+[36mGET[0m /img/gravity.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000009984s
+[36mGET[0m /img/pumice.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000015344s
+[36mGET[0m /img/tetrs.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.00000913s
+[36mGET[0m /img/ssshmup.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000007886s
+[36mGET[0m /resume
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00018339s
+[36mGET[0m /portfolio
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.001239542s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000037237s
+[36mGET[0m /resume
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000313192s
+[36mGET[0m /portfolio
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.001002859s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000032475s
+[36mGET[0m /resume
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000207277s
+[36mGET[0m /resume
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000196086s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.00003695s
+[36mGET[0m /favicon.ico
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.00035839s
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00004504s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000034017s
+[36mGET[0m /resume
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000187396s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000037896s
+[36mGET[0m /portfolio
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.001049519s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000036063s
+[36mGET[0m /img/pumice.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000033085s
+[36mGET[0m /img/tetrs.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000012714s
+[36mGET[0m /img/ssshmup.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000009606s
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00004467s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000032182s
+[36mGET[0m /portfolio
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000960332s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.00003104s
+[36mGET[0m /resume
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00020544s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000035009s
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00007215s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000036078s
+[36mGET[0m /resume
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00020619s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000036177s
+[36mGET[0m /portfolio
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000981922s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000034961s
+[36mGET[0m /resume
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000187932s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000032412s
+[36mGET[0m /portfolio
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.001041755s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000033177s
+[36mGET[0m /portfolio
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000934996s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000033395s
+[36mGET[0m /img/mech.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000034793s
+[36mGET[0m /img/site.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000033295s
+[36mGET[0m /img/gravity.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000014125s
+[36mGET[0m /img/pumice.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000009497s
+[36mGET[0m /img/tetrs.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.00000847s
+[36mGET[0m /img/ssshmup.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000011051s
+[36mGET[0m /resume
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000184051s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000034108s
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00004532s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000033144s
+[36mGET[0m /resume
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000184198s
+[36mGET[0m /portfolio
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000984281s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000032195s
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000043908s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000031809s
+[36mGET[0m /
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000044942s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000034436s
+[36mGET[0m /resume
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.00018434s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000032124s
+[36mGET[0m /portfolio
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000943901s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000033577s
+[36mGET[0m /portfolio
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.001253972s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000035977s
+[36mGET[0m /portfolio
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000998876s
+[36mGET[0m /img/ssshmup.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000036953s
+[36mGET[0m /img/mech.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000033198s
+[36mGET[0m /img/site.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000012424s
+[36mGET[0m /img/gravity.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000008718s
+[36mGET[0m /img/pumice.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000010529s
+[36mGET[0m /img/tetrs.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000010462s
+[36mGET[0m /owa/auth/logon.aspx
+[37m  Params: [0m[("url","https://1/ecp/")]
+[37m  Accept: [0m*/*
+[37m  Status: [0m[31m404 Not Found[0m 0.000067219s
+[36mGET[0m /portfolio
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.001004113s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000033146s
+[36mGET[0m /img/site.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000033169s
+[36mGET[0m /portfolio
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.001017294s
+[36mGET[0m /img/mech.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000035497s
+[36mGET[0m /img/site.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000032449s
+[36mGET[0m /img/gravity.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000010069s
+[36mGET[0m /img/pumice.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000008884s
+[36mGET[0m /img/tetrs.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000012795s
+[36mGET[0m /img/ssshmup.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000010095s
+[36mGET[0m /portfolio
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000953787s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000031353s
+[36mGET[0m /img/site.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000034166s
+[36mGET[0m /resume
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000198955s
+[36mGET[0m /portfolio
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000983968s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000032584s
+[36mGET[0m /img/site.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000033481s
+[36mGET[0m /portfolio
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.001068436s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000042295s
+[36mGET[0m /img/site.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000042572s
+[36mGET[0m /portfolio
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.001406437s
+[36mGET[0m /CSS/base.css
+[37m  Accept: [0mtext/css,*/*;q=0.1
+[37m  Status: [0m[32m200 OK[0m 0.000046056s
+[36mGET[0m /img/mech.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000043066s
+[36mGET[0m /img/site.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000039639s
+[36mGET[0m /img/gravity.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000010541s
+[36mGET[0m /img/pumice.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.00001473s
+[36mGET[0m /img/tetrs.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.00001092s
+[36mGET[0m /img/ssshmup.png
+[37m  Accept: [0mimage/webp,*/*
+[37m  Status: [0m[32m200 OK[0m 0.000010153s
+[36mGET[0m /resume
+[37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
+[37m  Status: [0m[32m200 OK[0m 0.000188924s
