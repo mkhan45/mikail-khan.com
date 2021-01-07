@@ -46,6 +46,14 @@ descEntry :: T.Text -> H.Html
 descEntry desc = do
     H.li $ H.toHtml desc
 
+linkIcon :: H.Html
+linkIcon = H.span ! A.class_ "link-icon" ! dataAttribute "icon" "ei-link" ! dataAttribute "size" "s" $ "Click: "
+
+addLink :: Maybe T.Text -> H.Html -> H.Html
+addLink (Just url) h = H.span ! A.class_ "lift" $
+                        H.a ! A.href (H.toValue url) $ (h <> linkIcon)
+addLink Nothing h = h
+
 experiencesHTML :: [Experience] -> H.Html
 experiencesHTML experiences = do
     H.div ! A.class_ "resumeSection experienceList" $ do
@@ -57,7 +65,7 @@ experienceEntry :: Experience -> H.Html
 experienceEntry experience = do
     H.div ! A.class_ "experienceEntry" $ do
         H.ul $ do
-            H.li $ H.h3 name
+            H.li $ H.h3 $ addLink (experienceURL experience) $ H.toHtml name
             mapM_ descEntry (experienceDescription experience)
     where name = H.toHtml $ experienceName experience
 
@@ -72,7 +80,7 @@ educationEntry :: Education -> H.Html
 educationEntry education = do
     H.div ! A.class_ "educationEntry" $ do
         H.ul $ do
-            H.li $ H.h3 name
+            H.li $ H.h3 $ addLink (educationURL education) $ H.toHtml name
             mapM_ descEntry (educationDescription education)
     where name = H.toHtml $ educationName education
 

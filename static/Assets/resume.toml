@@ -1,4 +1,5 @@
 name = "Mikail Khan"
+email = "mikail [at] mikail-khan [dot] com"
 
 [[skills]]
 name = "Java"
@@ -117,6 +118,7 @@ years_experience = 1
 
 [[experience]]
 name = "Co-founder, Krypton Tutors"
+url = "https://kryptontutors.com"
 categories = ["Web Development", "Teaching", "Management"]
 description = [
     """
@@ -136,6 +138,7 @@ description = [
 
 [[experience]]
 name = "Founder, SIMple Physics"
+url = "https://mkhan45.github.io/SIMple-Physics/tabs/about/"
 categories = ["Simulation Development", "Rust", "Physics"]
 description = [
     """
@@ -145,12 +148,11 @@ description = [
     """,
 
     "Written in Rust using extensive Linear Algebra and Differential Equations.",
-
-    "Open source: https://mkhan45.github.io/SIMple-Physics/tabs/about."
 ]
 
 [[experience]]
 name = "Software Engineer, Indy Autonomous Challenge Research"
+url = "https://engineering.purdue.edu/AMP/"
 categories = ["Simulation Development", "Machine Learning", "Unity", "C#"]
 description = [
     "Working with a team of students from the undergraduate to PhD level to design a self driving car that will avoid obstacles and overtake other cars at high speeds.",
@@ -167,6 +169,7 @@ description = [
 
 [[education]]
 name = "Purdue University"
+url = "https://www.purdue.edu/"
 description = [
     "Math + Computer Science Major",
     "4.0 GPA"
@@ -174,6 +177,7 @@ description = [
 
 [[education]]
 name = "MIT Beaver Works Cog*Works"
+url = "https://beaverworks.ll.mit.edu/CMS/bw/BWSI_Course_Autonomous_Cognitive_Assistance"
 description = [
     "MIT summer program requiring an eight week long online class admission process",
     "Advanced machine learning including audio recognition, image classification, and natural language processing, primarily in Python.",
@@ -182,6 +186,7 @@ description = [
 
 [[education]]
 name = "Thomas Jefferson High School for Science and Technology"
+url = "https://tjhsst.fcps.edu/"
 description = []
 
 [[education]]

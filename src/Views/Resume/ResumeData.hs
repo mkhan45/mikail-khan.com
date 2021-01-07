@@ -3,6 +3,7 @@
 module Views.Resume.ResumeData where
 
 import qualified Data.Text as T
+import Prelude hiding (lookup)
 
 import Data.Aeson.Types
 import Data.Scientific
@@ -25,12 +26,14 @@ data Skill = Skill {
 data Experience = Experience {
                         experienceName :: T.Text,
                         experienceDescription :: [T.Text],
-                        experienceCategories :: [Category]
+                        experienceCategories :: [Category],
+                        experienceURL :: Maybe T.Text
                   } deriving Show
 
 data Education = Education {
                         educationName :: T.Text,
-                        educationDescription :: [T.Text]
+                        educationDescription :: [T.Text],
+                        educationURL :: Maybe T.Text
                  } deriving Show
 
 data Resume = Resume [Skill] [Experience] [Education] deriving Show
@@ -54,26 +57,34 @@ parseSkill (Object o) =
                 skillCategories = map parseCategory (V.toList categoriesText)
         }
 
+getJsonURL :: Object -> Maybe T.Text
+getJsonURL o = maybe Nothing (\(String u) -> Just u) urlValue
+                   where urlValue = lookup (T.pack "url") o
+
 parseExperience :: Value -> Experience
 parseExperience (Object o) =
     let String  name            = o ! T.pack "name"
-        Array   categoriesText  = o ! T.pack "category"
+        Array   categoriesText  = o ! T.pack "categories"
         Array   descriptionText = o ! T.pack "description"
-    in  
+        url                     = getJsonURL o
+     in  
         Experience {
                 experienceName        = name,
                 experienceCategories  = map parseCategory (V.toList categoriesText),
-                experienceDescription = map (\(String s) -> s) (V.toList descriptionText)
+                experienceDescription = map (\(String s) -> s) (V.toList descriptionText),
+                experienceURL         = url
         }
 
 parseEducation :: Value -> Education
 parseEducation (Object o) =
     let String  name            = o ! T.pack "name"
         Array   descriptionText = o ! T.pack "description"
-    in  
+        url                     = getJsonURL o
+     in  
         Education {
                 educationName        = name,
-                educationDescription = map (\(String s) -> s) (V.toList descriptionText)
+                educationDescription = map (\(String s) -> s) (V.toList descriptionText),
+                educationURL         = getJsonURL o
         }
 
 parseResume :: Value -> Resume
@@ -84,7 +95,7 @@ parseResume (Object o) =
         skills      = V.toList skillsVector
         experiences = V.toList experiencesVector
         educations  = V.toList educationsVector
-    in
+     in
         Resume (map parseSkill skills) (map parseExperience experiences) (map parseEducation educations)
 
 readResume :: IO Resume
