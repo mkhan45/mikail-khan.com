@@ -27,13 +27,15 @@ data Experience = Experience {
                         experienceName :: T.Text,
                         experienceDescription :: [T.Text],
                         experienceCategories :: [Category],
-                        experienceURL :: Maybe T.Text
+                        experienceURL :: Maybe T.Text,
+                        experienceTimeframe :: T.Text
                   } deriving Show
 
 data Education = Education {
                         educationName :: T.Text,
                         educationDescription :: [T.Text],
-                        educationURL :: Maybe T.Text
+                        educationURL :: Maybe T.Text,
+                        educationTimeframe :: Maybe T.Text
                  } deriving Show
 
 data Resume = Resume [Skill] [Experience] [Education] deriving Show
@@ -57,19 +59,21 @@ parseSkill (Object o) =
                 skillCategories = map parseCategory (V.toList categoriesText)
         }
 
-getJsonURL :: Object -> Maybe T.Text
-getJsonURL o = maybe Nothing (\(String u) -> Just u) urlValue
-                   where urlValue = lookup (T.pack "url") o
+getMaybeString :: T.Text -> Object -> Maybe T.Text
+getMaybeString key o = maybe Nothing (\(String s) -> Just s) value
+                       where value = lookup key o
 
 parseExperience :: Value -> Experience
 parseExperience (Object o) =
     let String  name            = o ! T.pack "name"
+        String timeframe        = o ! T.pack "timeframe"
         Array   categoriesText  = o ! T.pack "categories"
         Array   descriptionText = o ! T.pack "description"
-        url                     = getJsonURL o
+        url                     = getMaybeString "url" o
      in  
         Experience {
                 experienceName        = name,
+                experienceTimeframe   = timeframe,
                 experienceCategories  = map parseCategory (V.toList categoriesText),
                 experienceDescription = map (\(String s) -> s) (V.toList descriptionText),
                 experienceURL         = url
@@ -79,12 +83,14 @@ parseEducation :: Value -> Education
 parseEducation (Object o) =
     let String  name            = o ! T.pack "name"
         Array   descriptionText = o ! T.pack "description"
-        url                     = getJsonURL o
+        url                     = getMaybeString "url" o
+        timeframe               = getMaybeString "timeframe" o
      in  
         Education {
                 educationName        = name,
+                educationTimeframe   = timeframe,
                 educationDescription = map (\(String s) -> s) (V.toList descriptionText),
-                educationURL         = getJsonURL o
+                educationURL         = getMaybeString "url" o
         }
 
 parseResume :: Value -> Resume

@@ -254,6 +254,13 @@ a {
     padding-left: 0.125em;
 }
 
+h3 .timeframe {
+    font-size: 0.75em;
+    font-style: normal;
+    font-weight: normal;
+    padding-left: 1em;
+}
+
 @media only screen and (max-width: 768px) {
     .resume .resumeSection {
         margin-left: 0;

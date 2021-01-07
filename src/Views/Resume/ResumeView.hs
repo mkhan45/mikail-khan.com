@@ -50,9 +50,12 @@ linkIcon :: H.Html
 linkIcon = H.span ! A.class_ "link-icon" ! dataAttribute "icon" "ei-link" ! dataAttribute "size" "s" $ "Click: "
 
 addLink :: Maybe T.Text -> H.Html -> H.Html
+addLink Nothing h = h
 addLink (Just url) h = H.span ! A.class_ "lift" $
                         H.a ! A.href (H.toValue url) $ (h <> linkIcon)
-addLink Nothing h = h
+
+timeframeHTML :: T.Text -> H.Html
+timeframeHTML timeframe = H.span ! A.class_ "timeframe" $ H.toHtml $ "(" <> timeframe <> ")"
 
 experiencesHTML :: [Experience] -> H.Html
 experiencesHTML experiences = do
@@ -65,9 +68,10 @@ experienceEntry :: Experience -> H.Html
 experienceEntry experience = do
     H.div ! A.class_ "experienceEntry" $ do
         H.ul $ do
-            H.li $ H.h3 $ addLink (experienceURL experience) $ H.toHtml name
+            H.li $ H.h3 $ addLink (experienceURL experience) $ (name <> timeframe)
             mapM_ descEntry (experienceDescription experience)
     where name = H.toHtml $ experienceName experience
+          timeframe = timeframeHTML $ experienceTimeframe experience
 
 educationsHTML :: [Education] -> H.Html
 educationsHTML educations = do
@@ -80,9 +84,12 @@ educationEntry :: Education -> H.Html
 educationEntry education = do
     H.div ! A.class_ "educationEntry" $ do
         H.ul $ do
-            H.li $ H.h3 $ addLink (educationURL education) $ H.toHtml name
+            H.li $ H.h3 $ addLink (educationURL education) $ (name <> timeframe)
             mapM_ descEntry (educationDescription education)
     where name = H.toHtml $ educationName education
+          timeframe = case educationTimeframe education of
+                        Just t -> timeframeHTML t
+                        Nothing -> ""
 
 resumeHTML :: Resume -> H.Html
 resumeHTML (Resume skills experiences educations) =
