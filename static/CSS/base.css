@@ -137,12 +137,27 @@ a {
 .menu {
     display: flex;
     flex-wrap: wrap;
-    line-height: 4em;
     justify-content: center;
     text-align: center;
 }
 
+.smallmenu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+    margin: 0em;
+}
+
+.smallmenu .linkButton {
+    font-size: 1.5em;
+    padding: 0.5em;
+    min-width: 4em;
+}
+
 .linkButton {
+    display: inline-block;
     font-size: 1.8rem;
     padding: 0.5rem;
     color: var(--white);
@@ -157,8 +172,7 @@ a {
 .linkButton:hover {
     background: var(--white);
     color: var(--main);
-    font-size: 2em;
-    padding: 0.75rem;
+    transform: scale(1.2);
 }
 
 .resume {
@@ -361,5 +375,11 @@ h3 .timeframe {
 @media only screen and (max-width: 500px) {
     .skillTabs {
         min-height: 23.5em;
+    }
+}
+
+@media (prefers-reduced-motion) {
+    * {
+        transform: none !important;
     }
 }

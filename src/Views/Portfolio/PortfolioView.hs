@@ -12,6 +12,8 @@ import qualified Text.Blaze.Html5.Attributes    as A
 import           Views.Portfolio.PortfolioData
 import           Views.Portfolio.Projects
 
+import           Views.Util
+
 projectEntry :: Project -> H.Html
 projectEntry project = 
     H.div ! class_ "project" $ a ! href url $ do
@@ -34,6 +36,9 @@ portfolio projects =
             H.div ! class_ "flex-parent" $ H.div ! class_ "section" $ do
                 H.div ! class_ "header" $ do
                     h1 "Projects"
+                    H.nav ! class_ "body-center smallmenu" $ do
+                        H.div $ linkButton "/" "Home"
+                        H.div $ linkButton "/resume" "Resume"
                 H.div ! class_ "body-center" $ do
                     H.div ! class_ "project-grid" $ do 
                         mapM_ projectEntry projects

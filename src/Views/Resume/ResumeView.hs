@@ -12,10 +12,11 @@ import qualified Text.Blaze.Html5.Attributes    as A
 import           Control.Monad                  (forM_)
 
 import           Views.Resume.ResumeData
-import           Views.Index                    (githubIconBtn, linkedinIconBtn)
+import           Views.Util
 
 repeatStars :: Int -> H.Html
-repeatStars n = H.span $ forM_ [1..n] (\_ -> starHTML)
+repeatStars n = do
+    H.span $ forM_ [1..n] (\_ -> starHTML)
     where starID = H.toValue $ T.pack "ei-star"
           starHTML :: H.Html
           starHTML = H.span ! class_ "star-icon" ! dataAttribute "icon" starID ! dataAttribute "size" "s" $ "★"
@@ -132,6 +133,9 @@ resumeHTML (Resume skills experiences educations) =
                 H.h3 "mikail [at] mikail-khan [dot] com"
                 githubIconBtn
                 linkedinIconBtn
+                H.nav ! class_ "body-center smallmenu" $ do
+                    H.div $ linkButton "/" "Home"
+                    H.div $ linkButton "/portfolio" "Portfolio"
             H.div ! A.class_ "resume" $ do
                 skillsHTML skills
                 experiencesHTML experiences

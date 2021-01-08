@@ -10,25 +10,7 @@ import qualified Text.Blaze.Html5.Attributes    as A
 
 import           Views.Portfolio.PortfolioData
 
-iconBtn :: IconBtn -> H.Html
-iconBtn icon = 
-    a ! href url $ H.div ! class_ "icon-btn" ! dataAttribute "icon" id ! dataAttribute "size" "m" $ textFallback
-        where url = H.toValue $ iconURL icon
-              id = H.toValue $ iconID icon
-              textFallback = H.toHtml $ iconText icon
-
-githubIconBtn :: H.Html
-githubIconBtn = iconBtn (IconBtn { iconText="GitHub", iconURL="https://github.com/mkhan45", iconID="ei-sc-github" })
-
-linkedinIconBtn :: H.Html
-linkedinIconBtn = iconBtn (IconBtn { iconText="LinkedIn", iconURL="https://www.linkedin.com/in/mikail-khan-6121921a1/", iconID="ei-sc-linkedin" })
-
-blogIconBtn :: H.Html
-blogIconBtn = iconBtn (IconBtn { iconText="Blog", iconURL="https://mkhan45.github.io", iconID="ei-pencil" })
-
-linkButton :: T.Text -> T.Text -> H.Html
-linkButton url text = do
-    a ! class_ "linkButton" ! href (H.toValue url) $ H.toHtml text
+import           Views.Util
 
 index :: H.Html
 index =
@@ -47,6 +29,6 @@ index =
                 linkedinIconBtn
                 blogIconBtn
             H.div ! class_ "body-center menu" $ do
-                H.div $ do
+                H.nav $ do
                     linkButton "/portfolio" "Portfolio"
                     linkButton "/resume" "Resume"

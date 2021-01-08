@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 346833b968362b53a663f5f2bfe92feaea91cfa59ffc2cde5331ddc467900b15
+-- hash: 59095b4191bf553cd66fb7f5ea65ad7d435e823c32b6a8813115a226f8ba6c0e
 
 name:           hs-server-two
 version:        0.1.0.0
@@ -32,11 +32,13 @@ library
       Views.Memes.MemeData
       Views.Memes.MemeEdit
       Views.Memes.MemeView
+      Views.Navbar
       Views.Portfolio.PortfolioData
       Views.Portfolio.PortfolioView
       Views.Portfolio.Projects
       Views.Resume.ResumeData
       Views.Resume.ResumeView
+      Views.Util
   other-modules:
       Paths_hs_server_two
   hs-source-dirs:
