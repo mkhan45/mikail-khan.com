@@ -1,7 +1,7 @@
 :root {
 	/* --main: #FC6261; */
 	--main: #6192F4;
-	--white: #F6F5F4;
+	--white: #FFFFFF;
 }
 
 html, body {
@@ -82,7 +82,7 @@ h1, h2, h3, p {
 
 .project {
     margin: 1em;
-    background: #FFFFFF;
+    background: var(--white);
     flex-basis: 25em;
     overflow: hidden;
     border-radius: 0.2em;
@@ -182,7 +182,7 @@ a {
 }
 
 .resumeSection {
-    background: #FFFFFF;
+    background: var(--white);
     color: black;
     line-height: 2em;
     padding: 1em;
@@ -292,7 +292,7 @@ h3 .timeframe {
     display: inline-block;
     min-width: 5em;
     text-align: center;
-    background: white;
+    background: var(--white);
     padding: 0.25em;
     margin-right: 0.5em;
     position: relative;
@@ -314,7 +314,7 @@ h3 .timeframe {
 .skillTabContent {
     position: absolute;
     width: 100%;
-    background: white;
+    background: var(--white);
     top: 3em;
     left: 0;
     overflow: hidden;
@@ -332,7 +332,7 @@ h3 .timeframe {
 [type=radio]:checked ~ label {
     z-index: 2;
     background: var(--main);
-    color: white;
+    color: var(--white);
 }
 
 @media only screen and (max-width: 1000px) {
