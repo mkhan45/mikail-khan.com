@@ -20,7 +20,11 @@ html, body {
 .resumeHeader {
     text-align: center;
     flex-basis: 50vw;
-    line-height: 1em;
+    line-height: 1.15em;
+}
+
+.resumeHeader h1 {
+    line-height: 1.5em;
 }
 
 .header {
