@@ -6,6 +6,7 @@ import qualified Data.Text                      as T
 import           Data.List                      (partition)
 import           Text.Blaze.Html5               (script, meta, dataAttribute, h1, h2, img, html, a, li, ul, input, body, nav, link, (!))
 import qualified Text.Blaze.Html5               as H
+import           Text.Blaze.Html                (preEscapedToHtml)
 import           Text.Blaze.Html5.Attributes    (class_, rel, href, for, type_, src, content, name)
 import qualified Text.Blaze.Html5.Attributes    as A
 
@@ -19,7 +20,7 @@ repeatStars n = do
     H.span $ forM_ [1..n] (\_ -> starHTML)
     where starID = H.toValue $ T.pack "ei-star"
           starHTML :: H.Html
-          starHTML = H.span ! class_ "star-icon" ! dataAttribute "icon" starID ! dataAttribute "size" "s" $ "★"
+          starHTML = H.span ! class_ "star-icon" $ preEscapedToHtml $ svgFromPaths starSVGPaths
 
 skillsTab :: T.Text -> (Skill -> Bool) -> [Skill] -> Bool -> H.Html
 skillsTab name pred skillsUnfiltered isDefault = 
@@ -74,7 +75,7 @@ descEntry desc = do
     H.li $ H.toHtml desc
 
 linkIcon :: H.Html
-linkIcon = H.span ! A.class_ "link-icon" ! dataAttribute "icon" "ei-link" ! dataAttribute "size" "s" $ "Click: "
+linkIcon = H.span ! A.class_ "link-icon" $ preEscapedToHtml $ svgFromPaths linkSVGPaths
 
 addLink :: Maybe T.Text -> H.Html -> H.Html
 addLink Nothing h = h
@@ -124,8 +125,6 @@ resumeHTML (Resume skills experiences educations) =
         H.head $ do
             H.title "Mikail Khan"
             link ! rel "stylesheet" ! href "/CSS/base.css"
-            link ! rel "stylesheet" ! href "https://cdn.jsdelivr.net/npm/evil-icons@1.9.0/assets/evil-icons.min.css"
-            script ! src "https://cdn.jsdelivr.net/npm/evil-icons@1.9.0/assets/evil-icons.min.js" $ mempty
             meta ! name "viewport" ! content "width=device-width, initial-scale=1.0"
         body ! A.class_ "resumeContainer flex-center" $ do
             H.div ! class_ "resumeHeader" $ do

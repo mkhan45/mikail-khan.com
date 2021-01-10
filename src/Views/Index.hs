@@ -18,8 +18,6 @@ index =
         H.head $ do
             H.title "Mikail Khan"
             link ! rel "stylesheet" ! href "/CSS/base.css"
-            link ! rel "stylesheet" ! href "https://cdn.jsdelivr.net/npm/evil-icons@1.9.0/assets/evil-icons.min.css"
-            script ! src "https://cdn.jsdelivr.net/npm/evil-icons@1.9.0/assets/evil-icons.min.js" $ mempty
             meta ! name "viewport" ! content "width=device-width, initial-scale=1.0"
         body $ H.div ! class_ "flex-parent" $ H.div ! class_ "section" $ do
             H.div ! class_ "header center-page" $ do

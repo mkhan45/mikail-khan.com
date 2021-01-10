@@ -4,11 +4,6 @@ import Data.Aeson
 
 import qualified Data.Text as T
 
-data IconBtn = IconBtn { 
-                            iconText :: T.Text,
-                            iconURL :: T.Text,
-                            iconID :: T.Text 
-                       }
 
 data Project = Project { 
                             projectName :: T.Text,

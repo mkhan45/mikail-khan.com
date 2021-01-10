@@ -35,10 +35,6 @@ html, body {
     font-size: 2.75em;
 }
 
-.icon-btn {
-    fill: var(--white) !important;
-}
-
 .body-center {
     margin-left: 5vw;
     margin-right: 5vw;
@@ -123,11 +119,31 @@ h1, h2, h3, p {
 }
 
 .icon-btn {
+    display: inline-block;
     transition: all 200ms ease;
 }
 
 .icon-btn:hover {
     transform: scale(1.15);
+}
+
+.icon {
+    width: 2.5rem;
+    fill: var(--white);
+}
+
+.link-icon .icon {
+    stroke: var(--main);
+    fill: var(--main);
+    position: relative;
+    top: 0.5em;
+    padding-left: 0.125em;
+}
+
+.star-icon .icon {
+    stroke: var(--main);
+    fill: var(--main);
+    width: 1.5rem;
 }
 
 a {
@@ -260,13 +276,7 @@ a {
 
 .lift {
     position: relative;
-    top: -0.5em;
-}
-
-.link-icon {
-    stroke: var(--main);
-    top: 0.25em;
-    padding-left: 0.125em;
+    top: -1.25em;
 }
 
 h3 .timeframe {
