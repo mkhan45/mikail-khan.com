@@ -140,8 +140,11 @@ h1, h2, h3, p {
     stroke: var(--main);
     fill: var(--main);
     position: relative;
-    top: 0.5em;
+    top: 0.25em;
+    height: 1.25em;
+    padding: 0;
     padding-left: 0.125em;
+    margin: 0;
 }
 
 .star-icon .icon {
@@ -280,7 +283,7 @@ a {
 
 .lift {
     position: relative;
-    top: -1.25em;
+    top: -0.125em;
 }
 
 h3 .timeframe {
