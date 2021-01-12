@@ -1,35 +1,35 @@
 [[projects]]
-projName = "SIMple Mechanics"
+projectName = "SIMple Mechanics"
 projectURL = "https://github.com/mkhan45/SIMple-Mechanics"
 projectThumbnail = "https://mikail-khan.com/img/mech.png"
 projectDesc = "A 2D rigidbody simulator made to help learn and teach physics online."
 
 [[projects]]
-projName = "mikail-khan.com"
+projectName = "mikail-khan.com"
 projectURL = "https://github.com/mkhan45/mikail-khan.com"
 projectThumbnail = "https://mikail-khan.com/img/site.png"
 projectDesc = "My personal website. Built with Haskell's Scotty and Blaze-HTML"
 
 [[projects]]
-projName = "SIMple Gravity"
+projectName = "SIMple Gravity"
 projectURL = "https://github.com/mkhan45/SIMple-Gravity"
 projectThumbnail = "https://mikail-khan.com/img/gravity.png"
 projectDesc = "A Universal Gravitation simulator made to help learn and teach physics online."
 
 [[projects]]
-projName = "Pumice"
+projectName = "Pumice"
 projectURL = "https://github.com/mkhan45/pumice"
 projectThumbnail = "https://mikail-khan.com/img/pumice.png"
 projectDesc = "A vulkano-made light and brittle game engine that rocks."
 
 [[projects]]
-projName = "Tetrs"
+projectName = "Tetrs"
 projectURL = "https://github.com/mkhan45/tetrs"
 projectThumbnail = "https://mikail-khan.com/img/tetrs.png"
 projectDesc = "Tetris using Rust and ggez."
 
 [[projects]]
-projName = "ssshmup"
+projectName = "ssshmup"
 projectURL = "https://github.com/mkhan45/ssshmup"
 projectThumbnail = "https://mikail-khan.com/img/ssshmup.png"
 projectDesc = "A super small shoot 'em up"

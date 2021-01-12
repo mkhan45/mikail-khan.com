@@ -1,27 +1,61 @@
+{-# LANGUAGE DeriveGeneric #-}
 {-# LANGUAGE OverloadedStrings #-}
 
 module Views.Resume.ResumeData where
 
 import qualified Data.Text as T
+import Data.List hiding (lookup)
+import Data.Char
 import Prelude hiding (lookup)
 
 import Data.Aeson.Types
 import Data.Scientific
-import Data.HashMap.Strict hiding (map)
+import Data.HashMap.Strict hiding (map, foldr)
 import qualified Data.Vector as V
+
+import GHC.Generics
 
 import qualified System.IO.Strict as SIO
 
 import Text.Toml
 import Text.Toml.Types
 
-data Category = WebDev | ObjectOriented | Python | ProgLanguage | Misc deriving (Show, Eq)
+-- thanks @Noughtmare
+
+customOptions = defaultOptions
+                    { 
+                      fieldLabelModifier = map toLower . intercalate "_" . tail . splitCamel,
+                      constructorTagModifier = intercalate " " . splitCamel
+                    }
+
+splitCamel :: String -> [String]
+splitCamel = finish . foldr step (True, [""]) where
+    finish (_, "" : xs) = xs
+    finish (_, xs) = xs
+
+    step x ~(b', ys') = (b, stepList ys')
+        where
+            b = isUpper x
+            stepList
+                | b && not b' = newWord . newLetter x
+                | not b && b' = newLetter x . newWord
+                | otherwise = newLetter x
+
+    newWord ("" : xs) = "" : xs
+    newWord (x : xs) = "" : (x : xs)
+
+    newLetter c (x : xs) = (c : x) : xs
+
+type Category = T.Text
 
 data Skill = Skill {
                         skillName :: T.Text,
                         skillCategories :: [Category],
-                        skillExperience :: Int
-                   } deriving Show
+                        skillSkillLevel :: Int
+                   } deriving (Generic, Show)
+instance FromJSON Skill
+    where parseJSON = genericParseJSON customOptions
+
 
 data Experience = Experience {
                         experienceName :: T.Text,
@@ -29,85 +63,29 @@ data Experience = Experience {
                         experienceCategories :: [Category],
                         experienceURL :: Maybe T.Text,
                         experienceTimeframe :: T.Text
-                  } deriving Show
+                  } deriving (Generic, Show)
+instance FromJSON Experience
+    where parseJSON = genericParseJSON customOptions
+
 
 data Education = Education {
                         educationName :: T.Text,
                         educationDescription :: [T.Text],
                         educationURL :: Maybe T.Text,
                         educationTimeframe :: Maybe T.Text
-                 } deriving Show
+                 } deriving (Generic, Show)
+instance FromJSON Education
+    where parseJSON = genericParseJSON customOptions
 
-data Resume = Resume [Skill] [Experience] [Education] deriving Show
 
-parseCategory :: Value -> Category
-parseCategory (String "Object Oriented") = ObjectOriented
-parseCategory (String "Python") = Python
-parseCategory (String "Web Development") = WebDev
-parseCategory (String "Programming Language") = ProgLanguage
-parseCategory _ = Misc
-
-parseSkill :: Value -> Skill
-parseSkill (Object o) =
-    let String  name            = o ! T.pack "name"
-        Array   categoriesText  = o ! T.pack "categories"
-        Number  levelSci        = o ! T.pack "skill_level"
-        Right   skillLevel      = floatingOrInteger levelSci
-    in  
-        Skill {
-                skillName = name,
-                skillExperience = skillLevel,
-                skillCategories = map parseCategory (V.toList categoriesText)
-        }
-
-getMaybeString :: T.Text -> Object -> Maybe T.Text
-getMaybeString key o = maybe Nothing (\(String s) -> Just s) value
-                       where value = lookup key o
-
-parseExperience :: Value -> Experience
-parseExperience (Object o) =
-    let String  name            = o ! T.pack "name"
-        String timeframe        = o ! T.pack "timeframe"
-        Array   categoriesText  = o ! T.pack "categories"
-        Array   descriptionText = o ! T.pack "description"
-        url                     = getMaybeString "url" o
-     in  
-        Experience {
-                experienceName        = name,
-                experienceTimeframe   = timeframe,
-                experienceCategories  = map parseCategory (V.toList categoriesText),
-                experienceDescription = map (\(String s) -> s) (V.toList descriptionText),
-                experienceURL         = url
-        }
-
-parseEducation :: Value -> Education
-parseEducation (Object o) =
-    let String  name            = o ! T.pack "name"
-        Array   descriptionText = o ! T.pack "description"
-        url                     = getMaybeString "url" o
-        timeframe               = getMaybeString "timeframe" o
-     in  
-        Education {
-                educationName        = name,
-                educationTimeframe   = timeframe,
-                educationDescription = map (\(String s) -> s) (V.toList descriptionText),
-                educationURL         = getMaybeString "url" o
-        }
-
-parseResume :: Value -> Resume
-parseResume (Object o) =
-    let Array skillsVector      = o ! T.pack "skills"
-        Array experiencesVector = o ! T.pack "experience"
-        Array educationsVector  = o ! T.pack "education"
-        skills      = V.toList skillsVector
-        experiences = V.toList experiencesVector
-        educations  = V.toList educationsVector
-     in
-        Resume (map parseSkill skills) (map parseExperience experiences) (map parseEducation educations)
+data Resume = Resume [Skill] [Experience] [Education] deriving (Show)
+instance FromJSON Resume
+    where parseJSON (Object o) = Resume <$> o .: "skills" <*> o .: "experience" <*> o.: "education"
 
 readResume :: IO Resume
 readResume = do
     contents <- SIO.readFile "static/Assets/resume.toml"
     let Right t = parseTomlDoc "" $ T.pack contents
         resumeJSON = toJSON t
-    return $ parseResume resumeJSON
+        Success r = fromJSON resumeJSON
+    return r
