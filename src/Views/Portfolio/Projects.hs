@@ -21,18 +21,16 @@ getProjectsTOML = do
     let Right t = parseTomlDoc "" $ T.pack contents
     return t
 
-parseProject :: Value -> IO Project
-parseProject (Object o) = do
-    let String name = o ! T.pack "projName"
-        String url = o ! T.pack "projectURL"
-        String thumbnail = o ! T.pack "projectThumbnail"
-        String desc = o ! T.pack "projectDesc"
-    return Project { projectName=name, projectURL=url, projectThumbnail=thumbnail, projectDesc=desc }
+filterResults :: [Result a] -> [a]
+filterResults ls = [getSuccess r | r <- ls, isSuccess r]
+    where isSuccess  (Success _) = True
+          isSuccess  _           = False
+          getSuccess (Success s) = s
 
 readProjects :: IO [Project]
 readProjects = do
     tomlIn <- getProjectsTOML
     let Object jsObj = toJSON tomlIn
         Array jsArr = jsObj ! T.pack "projects"
-    projects <- mapM parseProject jsArr
-    return $ V.toList projects
+        projects = fmap fromJSON (V.toList jsArr) :: [Result Project]
+    return $ filterResults projects

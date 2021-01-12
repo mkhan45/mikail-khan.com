@@ -49,9 +49,9 @@ skillsTab name pred skillsUnfiltered isDefault =
     where tabID = H.toValue $ name <> "_tab"
           skills = filter pred skillsUnfiltered
 
-          (five_year, less_five) = partition ((>=5) . skillExperience) skills
-          (three_year, less_three) = partition ((>=3) . skillExperience) less_five
-          one_year = filter ((>=1) . skillExperience) less_three
+          (five_year, less_five) = partition ((>=5) . skillSkillLevel) skills
+          (three_year, less_three) = partition ((>=3) . skillSkillLevel) less_five
+          one_year = filter ((>=1) . skillSkillLevel) less_three
 
           skillString :: [Skill] -> T.Text
           skillString ls = T.intercalate ", " $ map skillName ls
@@ -66,9 +66,9 @@ skillsHTML skills = do
         H.hr
         H.div ! A.class_ "skillTabs" $ do
             skillsTab "All" (const True) skills True
-            skillsTab "Programming Languages" ((elem ProgLanguage) . skillCategories) skills False
-            skillsTab "Object Oriented" ((elem ObjectOriented) . skillCategories) skills False
-            skillsTab "Web Dev" ((elem WebDev) . skillCategories) skills False
+            skillsTab "Programming Languages" ((elem "Programming Language") . skillCategories) skills False
+            skillsTab "Object Oriented" ((elem "Object Oriented") . skillCategories) skills False
+            skillsTab "Web Dev" ((elem "Web Development") . skillCategories) skills False
 
 descEntry :: T.Text -> H.Html
 descEntry desc = do

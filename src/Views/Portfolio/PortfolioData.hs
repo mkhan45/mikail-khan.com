@@ -1,7 +1,10 @@
+{-# LANGUAGE DeriveGeneric #-}
+{-# LANGUAGE OverloadedStrings #-}
+
 module Views.Portfolio.PortfolioData where
 
 import Data.Aeson
-
+import GHC.Generics
 import qualified Data.Text as T
 
 
@@ -10,4 +13,6 @@ data Project = Project {
                             projectURL :: T.Text,
                             projectThumbnail :: T.Text,
                             projectDesc :: T.Text 
-                       }
+                       } deriving (Generic, Show)
+
+instance FromJSON Project
