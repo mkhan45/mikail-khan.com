@@ -18,6 +18,7 @@ index =
         H.head $ do
             H.title "Mikail Khan"
             link ! rel "stylesheet" ! href "/CSS/base.css"
+            link ! rel "shortcut icon" ! href "/img/favicon.ico"
             meta ! name "viewport" ! content "width=device-width, initial-scale=1.0"
         body $ H.div ! class_ "flex-parent" $ H.div ! class_ "section" $ do
             H.div ! class_ "header center-page" $ do
