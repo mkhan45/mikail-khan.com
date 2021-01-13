@@ -128,12 +128,19 @@ h1, h2, h3, p {
 }
 
 .icon-btn:hover {
-    transform: scale(1.15);
+    transform: scale(1.25);
 }
 
 .icon {
-    width: 2.5rem;
+    width: 3.5rem;
     fill: var(--white);
+    stroke: var(--white);
+    transition: all 200ms ease;
+}
+
+.icon:hover {
+    fill: var(--main);
+    stroke: var(--white);
 }
 
 .link-icon .icon {
