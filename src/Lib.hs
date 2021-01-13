@@ -53,11 +53,13 @@ server = scottyApp $ do
     get "/" $ do
         html $ renderHtml index
     get "/portfolio" $ do
-        projects <- liftIO readProjects
-        html $ renderHtml $ portfolio projects
+        file "generated/portfolio.html"
+    get "/reload_cache" $ do
+        liftIO reloadResumeCache
+        liftIO reloadProjectCache
+        text "success"
     get "/resume" $ do
-        resume <- liftIO readResume
-        html $ renderHtml $ resumeHTML resume
+        file "generated/resume.html"
     get "/memes/edit" $ do
         memes <- liftIO $ readMemeFile 0
         html $ renderHtml $ memeEditHTML memes

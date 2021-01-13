@@ -3,12 +3,16 @@
 module Views.Resume.ResumeView where
 
 import qualified Data.Text                      as T
+import qualified Data.Text.Lazy                 as LT
 import           Data.List                      (partition)
+import           Text.Blaze.Html.Renderer.Text (renderHtml)
 import           Text.Blaze.Html5               (script, meta, dataAttribute, h1, h2, img, html, a, li, ul, input, body, nav, link, (!))
 import qualified Text.Blaze.Html5               as H
 import           Text.Blaze.Html                (preEscapedToHtml)
 import           Text.Blaze.Html5.Attributes    (class_, rel, href, for, type_, src, content, name)
 import qualified Text.Blaze.Html5.Attributes    as A
+
+import           System.IO                      (writeFile)
 
 import           Control.Monad                  (forM_)
 
@@ -139,3 +143,9 @@ resumeHTML (Resume skills experiences educations) =
                 skillsHTML skills
                 experiencesHTML experiences
                 educationsHTML educations
+
+reloadResumeCache :: IO ()
+reloadResumeCache = do
+    resume <- readResume
+    let htmlOut = LT.unpack $ renderHtml $ resumeHTML resume
+    writeFile "generated/resume.html" htmlOut

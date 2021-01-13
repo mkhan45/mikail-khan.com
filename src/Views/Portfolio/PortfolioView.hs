@@ -3,11 +3,16 @@
 module Views.Portfolio.PortfolioView where
 
 import qualified Data.Text                      as T
+import qualified Data.Text.Lazy as LT
 
 import           Text.Blaze.Html5               (script, meta, dataAttribute, h1, h2, img, html, a, li, ul, input, body, nav, link, (!))
 import qualified Text.Blaze.Html5               as H
 import           Text.Blaze.Html5.Attributes    (class_, rel, href, for, type_, src, content, name)
 import qualified Text.Blaze.Html5.Attributes    as A
+
+import Text.Blaze.Html.Renderer.Text (renderHtml)
+
+import System.IO (writeFile)
 
 import           Views.Portfolio.PortfolioData
 import           Views.Portfolio.Projects
@@ -42,3 +47,9 @@ portfolio projects =
                 H.div ! class_ "body-center" $ do
                     H.div ! class_ "project-grid" $ do 
                         mapM_ projectEntry projects
+
+reloadProjectCache :: IO ()
+reloadProjectCache = do
+    projects <- readProjects
+    let htmlOut = LT.unpack $ renderHtml $ portfolio projects
+    writeFile "generated/portfolio.html" htmlOut
