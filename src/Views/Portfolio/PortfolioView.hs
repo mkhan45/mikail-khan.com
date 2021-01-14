@@ -48,8 +48,8 @@ portfolio projects =
                     H.div ! class_ "project-grid" $ do 
                         mapM_ projectEntry projects
 
-reloadProjectCache :: IO ()
-reloadProjectCache = do
+reloadPortfolioCache :: IO ()
+reloadPortfolioCache = do
     projects <- readProjects
     let htmlOut = LT.unpack $ renderHtml $ portfolio projects
     writeFile "generated/portfolio.html" htmlOut

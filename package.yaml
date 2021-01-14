@@ -1,6 +1,6 @@
 name:                hs-server-two
 version:             0.1.0.0
-github:              "mkhan45/hs-server-two"
+github:              "mkhan45/mikail-khan.com"
 license:             BSD3
 author:              "Mikail Khan"
 maintainer:          "mikail.khan@protonmail.com"
@@ -17,12 +17,11 @@ extra-source-files:
 # To avoid duplicated efforts in documentation and dealing with the
 # complications of embedding Haddock markup inside cabal files, it is
 # common to point users to the README.md file.
-description:         Please see the README on GitHub at <https://github.com/mkhan45/hs-server-two#readme>
+description:         Please see the README on GitHub at <https://github.com/mkhan45/mikail-khan.com#readme>
 
 dependencies:
 - base >= 4.7 && < 5
 - blaze-html
-- scotty
 - text
 - wai
 - wai-extra
@@ -36,7 +35,9 @@ dependencies:
 - htoml
 - unordered-containers
 - vector
-- scientific
+- servant-server
+- servant-blaze
+- http-api-data
 
 library:
   source-dirs: src

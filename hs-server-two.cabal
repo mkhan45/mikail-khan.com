@@ -3,14 +3,12 @@ cabal-version: 1.12
 -- This file has been generated from package.yaml by hpack version 0.34.2.
 --
 -- see: https://github.com/sol/hpack
---
--- hash: 59095b4191bf553cd66fb7f5ea65ad7d435e823c32b6a8813115a226f8ba6c0e
 
 name:           hs-server-two
 version:        0.1.0.0
-description:    Please see the README on GitHub at <https://github.com/mkhan45/hs-server-two#readme>
-homepage:       https://github.com/mkhan45/hs-server-two#readme
-bug-reports:    https://github.com/mkhan45/hs-server-two/issues
+description:    Please see the README on GitHub at <https://github.com/mkhan45/mikail-khan.com#readme>
+homepage:       https://github.com/mkhan45/mikail-khan.com#readme
+bug-reports:    https://github.com/mkhan45/mikail-khan.com/issues
 author:         Mikail Khan
 maintainer:     mikail.khan@protonmail.com
 copyright:      Mikail Khan
@@ -23,7 +21,7 @@ extra-source-files:
 
 source-repository head
   type: git
-  location: https://github.com/mkhan45/hs-server-two
+  location: https://github.com/mkhan45/mikail-khan.com
 
 library
   exposed-modules:
@@ -50,8 +48,9 @@ library
     , blaze-html
     , bytestring
     , htoml
-    , scientific
-    , scotty
+    , http-api-data
+    , servant-blaze
+    , servant-server
     , strict
     , text
     , unordered-containers
@@ -78,8 +77,9 @@ executable hs-server-two-exe
     , bytestring
     , hs-server-two
     , htoml
-    , scientific
-    , scotty
+    , http-api-data
+    , servant-blaze
+    , servant-server
     , strict
     , text
     , unordered-containers
@@ -107,8 +107,9 @@ test-suite hs-server-two-test
     , bytestring
     , hs-server-two
     , htoml
-    , scientific
-    , scotty
+    , http-api-data
+    , servant-blaze
+    , servant-server
     , strict
     , text
     , unordered-containers
