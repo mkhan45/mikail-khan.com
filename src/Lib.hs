@@ -8,6 +8,7 @@ import           Web.Scotty
 import           Network.Wai (Application)
 import           Network.Wai.Middleware.RequestLogger
 import           Network.Wai.Middleware.Static
+import           Network.Wai.Middleware.Gzip
 import           Network.Wai.Handler.Warp (defaultSettings, setPort)
 import           Text.Blaze.Html (Html)
 import qualified Text.Blaze.Html5 as H
@@ -45,6 +46,7 @@ server = scottyApp $ do
     let config = setPort 443 defaultSettings
 
     middleware logStdoutDev
+    middleware $ gzip $ def { gzipFiles = GzipCompress }
     middleware $ staticPolicy (noDots >-> addBase "static")
     --get "/" $ do
     --    visitCount <- liftIO getVisitCount
@@ -52,13 +54,15 @@ server = scottyApp $ do
     --    liftIO $ updateVisitCount visitCount
     get "/" $ do
         html $ renderHtml index
-    get "/portfolio" $ do
-        file "generated/portfolio.html"
     get "/reload_cache" $ do
         liftIO reloadResumeCache
         liftIO reloadProjectCache
         text "success"
+    get "/portfolio" $ do
+        setHeader "content-type" "text/html"
+        file "generated/portfolio.html"
     get "/resume" $ do
+        setHeader "content-type" "text/html"
         file "generated/resume.html"
     get "/memes/edit" $ do
         memes <- liftIO $ readMemeFile 0
