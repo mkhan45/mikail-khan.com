@@ -24,7 +24,7 @@ import Text.Toml.Types
 customOptions = defaultOptions
                     { 
                       fieldLabelModifier = map toLower . intercalate "_" . tail . splitCamel,
-                      constructorTagModifier = intercalate " " . splitCamel
+                      constructorTagModifier = unwords . splitCamel
                     }
 
 splitCamel :: String -> [String]

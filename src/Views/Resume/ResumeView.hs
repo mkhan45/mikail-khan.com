@@ -21,7 +21,7 @@ import           Views.Util
 
 repeatStars :: Int -> H.Html
 repeatStars n = do
-    H.span $ forM_ [1..n] (\_ -> starHTML)
+    H.span $ forM_ [1..n] (const starHTML)
     where starID = H.toValue $ T.pack "ei-star"
           starHTML :: H.Html
           starHTML = H.span ! class_ "star-icon" $ preEscapedToHtml $ svgFromPaths starSVGPaths
@@ -100,7 +100,7 @@ experienceEntry :: Experience -> H.Html
 experienceEntry experience = do
     H.div ! A.class_ "experienceEntry" $ do
         H.ul $ do
-            H.li $ H.h3 $ addLink (experienceURL experience) $ (name <> timeframe)
+            H.li $ H.h3 $ addLink (experienceURL experience) (name <> timeframe)
             mapM_ descEntry (experienceDescription experience)
     where name = H.toHtml $ experienceName experience
           timeframe = timeframeHTML $ experienceTimeframe experience
@@ -116,12 +116,10 @@ educationEntry :: Education -> H.Html
 educationEntry education = do
     H.div ! A.class_ "educationEntry" $ do
         H.ul $ do
-            H.li $ H.h3 $ addLink (educationURL education) $ (name <> timeframe)
+            H.li $ H.h3 $ addLink (educationURL education) (name <> timeframe)
             mapM_ descEntry (educationDescription education)
     where name = H.toHtml $ educationName education
-          timeframe = case educationTimeframe education of
-                        Just t -> timeframeHTML t
-                        Nothing -> ""
+          timeframe = maybe "" timeframeHTML (educationTimeframe education)
 
 resumeHTML :: Resume -> H.Html
 resumeHTML (Resume skills experiences educations) =

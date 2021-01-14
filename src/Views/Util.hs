@@ -25,7 +25,7 @@ linkButton url text = do
 
 iconBtn :: IconBtn -> H.Html
 iconBtn icon = 
-    a ! href url $ H.span ! class_ "icon-btn" $ (preEscapedToHtml $ svgFromPaths $ iconPaths icon)
+    a ! href url $ H.span ! class_ "icon-btn" $ preEscapedToHtml (svgFromPaths $ iconPaths icon)
         where url = H.toValue $ iconURL icon
               textFallback = H.toHtml $ iconText icon
 

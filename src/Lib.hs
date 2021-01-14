@@ -1,5 +1,4 @@
 {-# LANGUAGE DataKinds         #-}
-{-# LANGUAGE TemplateHaskell   #-}
 {-# LANGUAGE TypeOperators     #-}
 {-# LANGUAGE OverloadedStrings #-}
 module Lib
@@ -47,7 +46,7 @@ type API =                                          Get '[HTML] H.Html
 type MemeSubReq = ReqBody '[FormUrlEncoded] MemeSubmitInfo
 
 app :: Application
-app = serve api $ server
+app = serve api server
 
 api :: Proxy API
 api = Proxy
@@ -58,9 +57,7 @@ readHTMLFile f = do
     return $ preEscapedToHtml contents
 
 serveHTML :: String -> Handler H.Html
-serveHTML f = do
-    h <- liftIO $ readHTMLFile f
-    return h
+serveHTML f = liftIO $ readHTMLFile f
 
 server :: Server API
 server = return index
