@@ -9,7 +9,6 @@ import Data.Char
 import Prelude hiding (lookup)
 
 import Data.Aeson.Types
-import Data.Scientific
 import Data.HashMap.Strict hiding (map, foldr)
 import qualified Data.Vector as V
 

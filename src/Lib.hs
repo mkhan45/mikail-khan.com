@@ -1,87 +1,108 @@
+{-# LANGUAGE DataKinds         #-}
+{-# LANGUAGE TemplateHaskell   #-}
+{-# LANGUAGE TypeOperators     #-}
 {-# LANGUAGE OverloadedStrings #-}
-
 module Lib
-    ( server
-    ) where
+    ( app ) where
 
-import           Web.Scotty
-import           Network.Wai (Application)
-import           Network.Wai.Middleware.RequestLogger
-import           Network.Wai.Middleware.Static
-import           Network.Wai.Middleware.Gzip
-import           Network.Wai.Handler.Warp (defaultSettings, setPort)
-import           Text.Blaze.Html (Html)
-import qualified Text.Blaze.Html5 as H
-import           Text.Blaze.Html.Renderer.Text (renderHtml)
-import qualified Data.Text as T
-import           Data.Monoid ((<>))
-import           Control.Monad.IO.Class (liftIO)
+import Data.Aeson
+import Data.Aeson.TH
+import Servant
+import Servant.HTML.Blaze
+
+import Network.Wai
+import Network.Wai.Handler.Warp
+import Network.Wai.Handler.WarpTLS
 
 import qualified System.IO.Strict as SIO
 
-import           Views.Index
-import           Views.Portfolio.Projects
-import           Views.Portfolio.PortfolioView
-import           Views.Resume.ResumeView
-import           Views.Resume.ResumeData
-import           Views.Memes.MemeData
-import           Views.Memes.MemeView
-import           Views.Memes.MemeEdit
+import qualified Text.Blaze.Html5 as H
+import Text.Blaze.Html (preEscapedToHtml)
 
-import           System.Environment
+import Control.Monad.IO.Class (liftIO)
 
-updateVisitCount :: Int -> IO ()
-updateVisitCount visitCount = do
-    writeFile "visitCount.txt" (show $ visitCount + 1)
-    return ()
+import qualified Data.Text as T
 
-getVisitCount :: IO Int
-getVisitCount = do
-    contents <- SIO.readFile "visitCount.txt"
-    let visitCount = read contents :: Int
-    return visitCount
+import System.Environment
 
-server :: IO Application
-server = scottyApp $ do
-    let config = setPort 443 defaultSettings
+import Web.FormUrlEncoded (FromForm, fromForm, parseUnique)
 
-    middleware logStdoutDev
-    middleware $ gzip $ def { gzipFiles = GzipCompress }
-    middleware $ staticPolicy (noDots >-> addBase "static")
-    --get "/" $ do
-    --    visitCount <- liftIO getVisitCount
-    --    html $ renderHtml $ index (visitCount + 1)
-    --    liftIO $ updateVisitCount visitCount
-    get "/" $ do
-        html $ renderHtml index
-    get "/reload_cache" $ do
-        liftIO reloadResumeCache
-        liftIO reloadProjectCache
-        text "success"
-    get "/portfolio" $ do
-        setHeader "content-type" "text/html"
-        file "generated/portfolio.html"
-    get "/resume" $ do
-        setHeader "content-type" "text/html"
-        file "generated/resume.html"
-    get "/memes/edit" $ do
-        memes <- liftIO $ readMemeFile 0
-        html $ renderHtml $ memeEditHTML memes
-    post "/memes/meme_submit" $ do
-        ty <- param "type"
-        title <- param "title"
-        url <- param "url"
-        passwd <- param "password"
-        passHash <- liftIO $ getEnv "PASSHASH"
-        if checkPass passwd passHash then do
-            liftIO $ addMeme (T.pack ty) title url
-            redirect "/memes/edit"
-        else
-            redirect "/memes/edit"
-    get "/memes" $ do
-        redirect "/memes/0"
-    get "/memes/:pagenum" $ do
-        pagenumStr <- param "pagenum"
-        let pagenum = read pagenumStr :: Int
-        memes <- liftIO $ readMemeFile pagenum
-        html $ renderHtml $ memeHTML pagenum memes
+import Views.Index
+import Views.Resume.ResumeView
+import Views.Portfolio.PortfolioView
+import Views.Memes.MemeData
+import Views.Memes.MemeEdit
+import Views.Memes.MemeView
+
+type API =                                      Get '[HTML] H.Html
+     :<|> "portfolio"                        :> Get '[HTML] H.Html
+     :<|> "resume"                           :> Get '[HTML] H.Html
+     :<|> "reload_cache"                     :> Get '[PlainText] String
+     :<|> "memes"                            :> Get '[HTML] H.Html
+     :<|> "memes" :> Capture "pagenum" Int   :> Get '[HTML] H.Html
+     :<|> "memes" :> "edit"                  :> Get '[HTML] H.Html
+     :<|> "memes" :> "meme_submit" :> ReqBody '[FormUrlEncoded] MemeSubmitInfo :> Post '[HTML] H.Html
+     :<|> "Assets"                           :> Raw
+     :<|> "CSS"                              :> Raw
+     :<|> "img"                              :> Raw
+
+app :: Application
+app = serve api $ server
+
+api :: Proxy API
+api = Proxy
+
+readHTMLFile :: String -> IO H.Html
+readHTMLFile f = do
+    contents <- SIO.readFile f
+    return $ preEscapedToHtml contents
+
+serveHTML :: String -> Handler H.Html
+serveHTML f = do
+    h <- liftIO $ readHTMLFile f
+    return h
+
+memeEndpoint :: Int -> Handler H.Html
+memeEndpoint pagenum = do
+    memes <- liftIO $ readMemeFile pagenum
+    return $ memeHTML pagenum memes
+
+data MemeSubmitInfo = MemeSubmitInfo
+    { submitTy    :: T.Text
+    , submitTitle :: T.Text
+    , submitURL   :: T.Text
+    , submitPass  :: String }
+
+instance FromForm MemeSubmitInfo where
+    fromForm f = MemeSubmitInfo
+        <$> parseUnique "type" f
+        <*> parseUnique "title" f
+        <*> parseUnique "url" f
+        <*> parseUnique "password" f
+
+memeSubmitHandler :: MemeSubmitInfo -> Handler H.Html
+memeSubmitHandler inf = do
+    passHash <- liftIO $ getEnv "PASSHASH"
+    if checkPass (submitPass inf) passHash then do
+        liftIO $ addMeme (submitTy inf) (submitTitle inf) (submitURL inf)
+        throwError err301 { errHeaders = [("Location", "/memes/edit")] }
+    else
+        throwError err301 { errHeaders = [("Location", "/memes/edit")] }
+
+server :: Server API
+server = return index
+    :<|> serveHTML "generated/portfolio.html"
+    :<|> serveHTML "generated/resume.html"
+    :<|> do 
+            liftIO reloadResumeCache
+            liftIO reloadPortfolioCache
+            return "success"
+    :<|> throwError err301 { errHeaders = [("Location", "/memes/0")] }
+    :<|> memeEndpoint
+    :<|> do
+            memes <- liftIO $ readMemeFile 0
+            return $ memeEditHTML memes
+    :<|> memeSubmitHandler
+    :<|> serveDirectoryWebApp "static/Assets"
+    :<|> serveDirectoryWebApp "static/CSS"
+    :<|> serveDirectoryWebApp "static/img"

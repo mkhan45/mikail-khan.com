@@ -1,9 +1,11 @@
 module Main where
 
-import Lib
-import Network.Wai.Handler.WarpTLS (runTLS, tlsSettings, TLSSettings)
-import Network.Wai.Handler.Warp (defaultSettings, setPort)
 import System.Environment
+import Network.Wai
+import Network.Wai.Handler.Warp
+import Network.Wai.Handler.WarpTLS
+
+import Lib
 
 getTLSConfig :: IO TLSSettings
 getTLSConfig = do
@@ -16,5 +18,4 @@ main = do
     tlsConfig <- getTLSConfig
     let config = setPort 8443 defaultSettings
 
-    waiApp <- server
-    runTLS tlsConfig config waiApp
+    runTLS tlsConfig config app
