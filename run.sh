@@ -1,5 +1,6 @@
 #!/bin/sh
 
+mkdir generated
 stack build
 env \
 	FULLCHAIN=/etc/letsencrypt/live/mikail-khan.com/fullchain.pem \
