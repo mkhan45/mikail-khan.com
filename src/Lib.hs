@@ -25,8 +25,6 @@ import qualified Data.Text as T
 
 import System.Environment
 
-import Web.FormUrlEncoded (FromForm, fromForm, parseUnique)
-
 import Views.Index
 import Views.Resume.ResumeView
 import Views.Portfolio.PortfolioView
@@ -34,17 +32,19 @@ import Views.Memes.MemeData
 import Views.Memes.MemeEdit
 import Views.Memes.MemeView
 
-type API =                                      Get '[HTML] H.Html
-     :<|> "portfolio"                        :> Get '[HTML] H.Html
-     :<|> "resume"                           :> Get '[HTML] H.Html
-     :<|> "reload_cache"                     :> Get '[PlainText] String
-     :<|> "memes"                            :> Get '[HTML] H.Html
-     :<|> "memes" :> Capture "pagenum" Int   :> Get '[HTML] H.Html
-     :<|> "memes" :> "edit"                  :> Get '[HTML] H.Html
-     :<|> "memes" :> "meme_submit" :> ReqBody '[FormUrlEncoded] MemeSubmitInfo :> Post '[HTML] H.Html
-     :<|> "Assets"                           :> Raw
-     :<|> "CSS"                              :> Raw
-     :<|> "img"                              :> Raw
+type API =                                          Get '[HTML] H.Html
+     :<|> "portfolio"                            :> Get '[HTML] H.Html
+     :<|> "resume"                               :> Get '[HTML] H.Html
+     :<|> "reload_cache"                         :> Get '[PlainText] String
+     :<|> "memes"                                :> Get '[HTML] H.Html
+     :<|> "memes" :> Capture "pagenum" Int       :> Get '[HTML] H.Html
+     :<|> "memes" :> "edit"                      :> Get '[HTML] H.Html
+     :<|> "memes" :> "meme_submit" :> MemeSubReq :> Post '[HTML] H.Html
+     :<|> "Assets"                               :> Raw
+     :<|> "CSS"                                  :> Raw
+     :<|> "img"                                  :> Raw
+
+type MemeSubReq = ReqBody '[FormUrlEncoded] MemeSubmitInfo
 
 app :: Application
 app = serve api $ server
@@ -61,33 +61,6 @@ serveHTML :: String -> Handler H.Html
 serveHTML f = do
     h <- liftIO $ readHTMLFile f
     return h
-
-memeEndpoint :: Int -> Handler H.Html
-memeEndpoint pagenum = do
-    memes <- liftIO $ readMemeFile pagenum
-    return $ memeHTML pagenum memes
-
-data MemeSubmitInfo = MemeSubmitInfo
-    { submitTy    :: T.Text
-    , submitTitle :: T.Text
-    , submitURL   :: T.Text
-    , submitPass  :: String }
-
-instance FromForm MemeSubmitInfo where
-    fromForm f = MemeSubmitInfo
-        <$> parseUnique "type" f
-        <*> parseUnique "title" f
-        <*> parseUnique "url" f
-        <*> parseUnique "password" f
-
-memeSubmitHandler :: MemeSubmitInfo -> Handler H.Html
-memeSubmitHandler inf = do
-    passHash <- liftIO $ getEnv "PASSHASH"
-    if checkPass (submitPass inf) passHash then do
-        liftIO $ addMeme (submitTy inf) (submitTitle inf) (submitURL inf)
-        throwError err301 { errHeaders = [("Location", "/memes/edit")] }
-    else
-        throwError err301 { errHeaders = [("Location", "/memes/edit")] }
 
 server :: Server API
 server = return index
@@ -106,3 +79,17 @@ server = return index
     :<|> serveDirectoryWebApp "static/Assets"
     :<|> serveDirectoryWebApp "static/CSS"
     :<|> serveDirectoryWebApp "static/img"
+
+memeEndpoint :: Int -> Handler H.Html
+memeEndpoint pagenum = do
+    memes <- liftIO $ readMemeFile pagenum
+    return $ memeHTML pagenum memes
+
+memeSubmitHandler :: MemeSubmitInfo -> Handler H.Html
+memeSubmitHandler inf = do
+    passHash <- liftIO $ getEnv "PASSHASH"
+    if checkPass (submitPass inf) passHash then do
+        liftIO $ addMeme (submitTy inf) (submitTitle inf) (submitURL inf)
+        throwError err301 { errHeaders = [("Location", "/memes/edit")] }
+    else
+        throwError err301 { errHeaders = [("Location", "/memes/edit")] }
