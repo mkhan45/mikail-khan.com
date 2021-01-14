@@ -88,8 +88,8 @@ memeEndpoint pagenum = do
 memeSubmitHandler :: MemeSubmitInfo -> Handler H.Html
 memeSubmitHandler inf = do
     passHash <- liftIO $ getEnv "PASSHASH"
-    if checkPass (submitPass inf) passHash then do
+    if checkPass passHash (submitPass inf) then do
         liftIO $ addMeme (submitTy inf) (submitTitle inf) (submitURL inf)
-        throwError err301 { errHeaders = [("Location", "/memes/edit")] }
+        throwError err303 { errHeaders = [("Location", "/memes/edit")] }
     else
-        throwError err301 { errHeaders = [("Location", "/memes/edit")] }
+        throwError err303 { errHeaders = [("Location", "/memes/edit")] }
