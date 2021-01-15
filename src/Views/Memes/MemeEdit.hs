@@ -14,22 +14,7 @@ import qualified Data.ByteString.Char8          as BS
 import qualified Data.List                      as L
 import           Crypto.BCrypt
 
-import Web.FormUrlEncoded (FromForm, fromForm, parseUnique)
-
 import           Views.Memes.MemeData
-
-data MemeSubmitInfo = MemeSubmitInfo
-    { submitTy    :: T.Text
-    , submitTitle :: T.Text
-    , submitURL   :: T.Text
-    , submitPass  :: String }
-
-instance FromForm MemeSubmitInfo where
-    fromForm f = MemeSubmitInfo
-        <$> parseUnique "type" f
-        <*> parseUnique "title" f
-        <*> parseUnique "url" f
-        <*> parseUnique "password" f
 
 memeRowHTML :: Meme -> H.Html
 memeRowHTML Meme {memeTy=ty, memeTitle=title, memeURL=url} =

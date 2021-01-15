@@ -27,23 +27,16 @@ import System.Environment
 import Views.Index
 import Views.Resume.ResumeView
 import Views.Portfolio.PortfolioView
-import Views.Memes.MemeData
-import Views.Memes.MemeEdit
-import Views.Memes.MemeView
+
+import Views.Memes.MemeAPI
+import StaticAPI
 
 type API =                                          Get '[HTML] H.Html
      :<|> "portfolio"                            :> Get '[HTML] H.Html
      :<|> "resume"                               :> Get '[HTML] H.Html
      :<|> "reload_cache"                         :> Get '[PlainText] String
-     :<|> "memes"                                :> Get '[HTML] H.Html
-     :<|> "memes" :> Capture "pagenum" Int       :> Get '[HTML] H.Html
-     :<|> "memes" :> "edit"                      :> Get '[HTML] H.Html
-     :<|> "memes" :> "meme_submit" :> MemeSubReq :> Post '[HTML] H.Html
-     :<|> "Assets"                               :> Raw
-     :<|> "CSS"                                  :> Raw
-     :<|> "img"                                  :> Raw
-
-type MemeSubReq = ReqBody '[FormUrlEncoded] MemeSubmitInfo
+     :<|> MemeAPI
+     :<|> StaticAPI
 
 app :: Application
 app = serve api server
@@ -67,26 +60,5 @@ server = return index
             liftIO reloadResumeCache
             liftIO reloadPortfolioCache
             return "success"
-    :<|> throwError err301 { errHeaders = [("Location", "/memes/0")] }
-    :<|> memeEndpoint
-    :<|> do
-            memes <- liftIO $ readMemeFile 0
-            return $ memeEditHTML memes
-    :<|> memeSubmitHandler
-    :<|> serveDirectoryWebApp "static/Assets"
-    :<|> serveDirectoryWebApp "static/CSS"
-    :<|> serveDirectoryWebApp "static/img"
-
-memeEndpoint :: Int -> Handler H.Html
-memeEndpoint pagenum = do
-    memes <- liftIO $ readMemeFile pagenum
-    return $ memeHTML pagenum memes
-
-memeSubmitHandler :: MemeSubmitInfo -> Handler H.Html
-memeSubmitHandler inf = do
-    passHash <- liftIO $ getEnv "PASSHASH"
-    if checkPass passHash (submitPass inf) then do
-        liftIO $ addMeme (submitTy inf) (submitTitle inf) (submitURL inf)
-        throwError err303 { errHeaders = [("Location", "/memes/edit")] }
-    else
-        throwError err303 { errHeaders = [("Location", "/memes/edit")] }
+    :<|> memeServer
+    :<|> staticServer
