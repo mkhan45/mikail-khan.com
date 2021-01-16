@@ -31,10 +31,10 @@ import Views.Portfolio.PortfolioView
 import Views.Memes.MemeAPI
 import StaticAPI
 
-type API =                                          Get '[HTML] H.Html
-     :<|> "portfolio"                            :> Get '[HTML] H.Html
-     :<|> "resume"                               :> Get '[HTML] H.Html
-     :<|> "reload_cache"                         :> Get '[PlainText] String
+type API =                  Get '[HTML] H.Html
+     :<|> "portfolio"    :> Get '[HTML] H.Html
+     :<|> "resume"       :> Get '[HTML] H.Html
+     :<|> "reload_cache" :> Get '[PlainText] String
      :<|> MemeAPI
      :<|> StaticAPI
 
@@ -50,7 +50,7 @@ readHTMLFile f = do
     return $ preEscapedToHtml contents
 
 serveHTML :: String -> Handler H.Html
-serveHTML f = liftIO $ readHTMLFile f
+serveHTML = liftIO . readHTMLFile
 
 server :: Server API
 server = return index

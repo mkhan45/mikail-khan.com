@@ -76,8 +76,16 @@ data Education = Education {
 instance FromJSON Education
     where parseJSON = genericParseJSON customOptions
 
+data Skills = Skills [Skill] deriving (Show, Generic)
+instance FromJSON Skills
 
-data Resume = Resume [Skill] [Experience] [Education] deriving (Show)
+data Experiences = Experiences [Experience] deriving (Show, Generic)
+instance FromJSON Experiences
+
+data Educations = Educations [Education] deriving (Show, Generic)
+instance FromJSON Educations
+
+data Resume = Resume Skills Experiences Educations deriving Show
 instance FromJSON Resume
     where parseJSON (Object o) = Resume <$> o .: "skills" <*> o .: "experience" <*> o.: "education"
 

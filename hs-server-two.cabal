@@ -32,7 +32,6 @@ library
       Views.Memes.MemeData
       Views.Memes.MemeEdit
       Views.Memes.MemeView
-      Views.Navbar
       Views.Portfolio.PortfolioData
       Views.Portfolio.PortfolioView
       Views.Portfolio.Projects
@@ -48,6 +47,7 @@ library
     , base >=4.7 && <5
     , bcrypt
     , blaze-html
+    , blaze-markup
     , bytestring
     , htoml
     , http-api-data
@@ -76,6 +76,7 @@ executable hs-server-two-exe
     , base >=4.7 && <5
     , bcrypt
     , blaze-html
+    , blaze-markup
     , bytestring
     , hs-server-two
     , htoml
@@ -106,6 +107,7 @@ test-suite hs-server-two-test
     , base >=4.7 && <5
     , bcrypt
     , blaze-html
+    , blaze-markup
     , bytestring
     , hs-server-two
     , htoml

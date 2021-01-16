@@ -5,6 +5,8 @@ module Views.Resume.ResumeView where
 import qualified Data.Text                      as T
 import qualified Data.Text.Lazy                 as LT
 import           Data.List                      (partition)
+
+import           Text.Blaze
 import           Text.Blaze.Html.Renderer.Text (renderHtml)
 import           Text.Blaze.Html5               (script, meta, dataAttribute, h1, h2, img, html, a, li, ul, input, body, nav, link, (!))
 import qualified Text.Blaze.Html5               as H
@@ -63,16 +65,16 @@ skillsTab name pred skillsUnfiltered isDefault =
           checked = if isDefault then A.checked mempty
                                  else mempty
 
-skillsHTML :: [Skill] -> H.Html
-skillsHTML skills = do
-    H.div ! A.class_ "resumeSection skills" $ do
-        H.h2 "Skills"
-        H.hr
-        H.div ! A.class_ "skillTabs" $ do
-            skillsTab "All" (const True) skills True
-            skillsTab "Programming Languages" ((elem "Programming Language") . skillCategories) skills False
-            skillsTab "Object Oriented" ((elem "Object Oriented") . skillCategories) skills False
-            skillsTab "Web Dev" ((elem "Web Development") . skillCategories) skills False
+instance ToMarkup Skills where
+    toMarkup (Skills skills) = do
+        H.div ! A.class_ "resumeSection skills" $ do
+            H.h2 "Skills"
+            H.hr
+            H.div ! A.class_ "skillTabs" $ do
+                skillsTab "All" (const True) skills True
+                skillsTab "Programming Languages" ((elem "Programming Language") . skillCategories) skills False
+                skillsTab "Object Oriented" ((elem "Object Oriented") . skillCategories) skills False
+                skillsTab "Web Dev" ((elem "Web Development") . skillCategories) skills False
 
 descEntry :: T.Text -> H.Html
 descEntry desc = do
@@ -89,37 +91,37 @@ addLink (Just url) h = H.span ! A.class_ "lift" $
 timeframeHTML :: T.Text -> H.Html
 timeframeHTML timeframe = H.span ! A.class_ "timeframe" $ H.toHtml $ "(" <> timeframe <> ")"
 
-experiencesHTML :: [Experience] -> H.Html
-experiencesHTML experiences = do
-    H.div ! A.class_ "resumeSection experienceList" $ do
-        H.h2 "Experience"
-        H.hr
-        mapM_ experienceEntry experiences
+instance ToMarkup Experiences where
+    toMarkup (Experiences experiences) = do
+        H.div ! A.class_ "resumeSection experienceList" $ do
+            H.h2 "Experience"
+            H.hr
+            mapM_ H.toHtml experiences
 
-experienceEntry :: Experience -> H.Html
-experienceEntry experience = do
-    H.div ! A.class_ "experienceEntry" $ do
-        H.ul $ do
-            H.li $ H.h3 $ addLink (experienceURL experience) (name <> timeframe)
-            mapM_ descEntry (experienceDescription experience)
-    where name = H.toHtml $ experienceName experience
-          timeframe = timeframeHTML $ experienceTimeframe experience
+instance ToMarkup Experience where
+    toMarkup experience = do
+        H.div ! A.class_ "experienceEntry" $ do
+            H.ul $ do
+                H.li $ H.h3 $ addLink (experienceURL experience) (name <> timeframe)
+                mapM_ descEntry (experienceDescription experience)
+        where name = H.toHtml $ experienceName experience
+              timeframe = timeframeHTML $ experienceTimeframe experience
 
-educationsHTML :: [Education] -> H.Html
-educationsHTML educations = do
-    H.div ! A.class_ "resumeSection educationList" $ do
-        H.h2 "Education"
-        H.hr
-        mapM_ educationEntry educations
+instance ToMarkup Educations where
+    toMarkup (Educations educations) = do
+        H.div ! A.class_ "resumeSection educationList" $ do
+            H.h2 "Education"
+            H.hr
+        mapM_ H.toHtml educations
 
-educationEntry :: Education -> H.Html
-educationEntry education = do
-    H.div ! A.class_ "educationEntry" $ do
-        H.ul $ do
-            H.li $ H.h3 $ addLink (educationURL education) (name <> timeframe)
-            mapM_ descEntry (educationDescription education)
-    where name = H.toHtml $ educationName education
-          timeframe = maybe "" timeframeHTML (educationTimeframe education)
+instance ToMarkup Education where
+    toMarkup education = do
+        H.div ! A.class_ "educationEntry" $ do
+            H.ul $ do
+                H.li $ H.h3 $ addLink (educationURL education) (name <> timeframe)
+                mapM_ descEntry (educationDescription education)
+        where name = H.toHtml $ educationName education
+              timeframe = maybe "" timeframeHTML (educationTimeframe education)
 
 resumeHTML :: Resume -> H.Html
 resumeHTML (Resume skills experiences educations) =
@@ -138,9 +140,9 @@ resumeHTML (Resume skills experiences educations) =
                     H.div $ linkButton "/" "Home"
                     H.div $ linkButton "/portfolio" "Portfolio"
             H.div ! A.class_ "resume" $ do
-                skillsHTML skills
-                experiencesHTML experiences
-                educationsHTML educations
+                H.toHtml skills
+                H.toHtml experiences
+                H.toHtml educations
 
 reloadResumeCache :: IO ()
 reloadResumeCache = do
