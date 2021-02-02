@@ -7,3 +7,4 @@ env \
 	PRIVKEY=/etc/letsencrypt/live/mikail-khan.com/privkey.pem \
 	PASSHASH=$(cat ~/passhash.txt) \
 	nohup stack run &
+curl https://mikail-khan.com/reload_cache
