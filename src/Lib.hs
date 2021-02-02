@@ -26,6 +26,7 @@ import System.Environment
 
 import Views.Index
 import Views.Resume.ResumeView
+import Views.Resume.ResumePrintView
 import Views.Portfolio.PortfolioView
 
 import Views.Memes.MemeAPI
@@ -34,6 +35,7 @@ import StaticAPI
 type API =                  Get '[HTML] H.Html
      :<|> "portfolio"    :> Get '[HTML] H.Html
      :<|> "resume"       :> Get '[HTML] H.Html
+     :<|> "resume_print" :> Get '[HTML] H.Html
      :<|> "reload_cache" :> Get '[PlainText] String
      :<|> MemeAPI
      :<|> StaticAPI
@@ -56,7 +58,9 @@ server :: Server API
 server = return index
     :<|> serveHTML "generated/portfolio.html"
     :<|> serveHTML "generated/resume.html"
+    :<|> serveHTML "generated/resume_print.html"
     :<|> do 
+            liftIO reloadResumePrintCache
             liftIO reloadResumeCache
             liftIO reloadPortfolioCache
             return "success"

@@ -36,6 +36,7 @@ library
       Views.Portfolio.PortfolioView
       Views.Portfolio.Projects
       Views.Resume.ResumeData
+      Views.Resume.ResumePrintView
       Views.Resume.ResumeView
       Views.Util
   other-modules:
