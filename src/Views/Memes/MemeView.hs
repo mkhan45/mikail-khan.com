@@ -13,6 +13,8 @@ import           Control.Monad                  (forM_)
 
 import           Views.Memes.MemeData
 
+import           Views.Util
+
 navButtons :: Int -> H.Html
 navButtons pageNum =
     H.div ! style "display: flex; justify-content: space-between; width: 98vw" $ do
@@ -48,6 +50,7 @@ memeHTML :: Int -> [Meme] -> H.Html
 memeHTML pageNum memes =
     H.html $ do
         H.head $ do
+            counterDevLink
             H.title $ tToHTML "bad memes"
             H.link ! A.rel "stylesheet" ! href "/CSS/Memes.css"
         H.body $ do

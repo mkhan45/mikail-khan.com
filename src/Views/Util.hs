@@ -71,3 +71,6 @@ svgFromPaths :: [SVGPath] -> T.Text
 svgFromPaths ls = "<svg class='icon' viewBox='0 0 50 50'>" <> pathsHTML <> "</svg>"
     where pathToHtml p = "<path d='" <> p <> "'></path>"
           pathsHTML = foldl (\a p -> a <> pathToHtml p) "" ls 
+
+counterDevLink :: H.Html
+counterDevLink = script "if(!sessionStorage.getItem(\"_swa\")&&document.referrer.indexOf(location.protocol+\"//\"+location.host)!== 0){fetch(\"https://counter.dev/track?\"+new URLSearchParams({referrer:document.referrer,screen:screen.width+\"x\"+screen.height,user:\"fish\",utcoffset:\"-5\"}))};sessionStorage.setItem(\"_swa\",\"1\");"

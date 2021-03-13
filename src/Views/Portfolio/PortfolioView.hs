@@ -36,6 +36,7 @@ portfolio projects =
     html $ do
         H.head $ do
             H.title "Mikail Khan"
+            counterDevLink
             link ! rel "stylesheet" ! href "/CSS/base.css"
             meta ! name "viewport" ! content "width=device-width, initial-scale=1.0"
         body $ do

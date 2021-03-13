@@ -8,13 +8,25 @@ projectDesc = "A 2D rigidbody simulator made to help learn and teach physics onl
 projectName = "mikail-khan.com"
 projectURL = "https://github.com/mkhan45/mikail-khan.com"
 projectThumbnail = "https://mikail-khan.com/img/site.png"
-projectDesc = "My personal website. Built with Haskell's Scotty and Blaze-HTML"
+projectDesc = "My personal website. Built with Haskell's Servant and Blaze-HTML"
 
 [[projects]]
 projectName = "SIMple Gravity"
 projectURL = "https://github.com/mkhan45/SIMple-Gravity"
 projectThumbnail = "https://mikail-khan.com/img/gravity.png"
 projectDesc = "A Universal Gravitation simulator made to help learn and teach physics online."
+
+[[projects]]
+projectName = "CalcuLaTeX"
+projectURL = "https://calcula.tech"
+projectThumbnail = "https://mikail-khan.com/img/calculatex.png"
+projectDesc = "A pretty printing calculator with support for units and realtime output"
+
+[[projects]]
+projectName = "slang"
+projectURL = "https://github.com/mkhan45/slang-v2"
+projectThumbnail = "https://mikail-khan.com/img/slang.png"
+projectDesc = "A simple scripting language interpreter"
 
 [[projects]]
 projectName = "Pumice"

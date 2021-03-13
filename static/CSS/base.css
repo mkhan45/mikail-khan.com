@@ -206,7 +206,7 @@ a {
 }
 
 .resume {
-    max-width: 1000px;
+    max-width: 100ch;
     margin: 1em;
     margin-top: 0em;
 }
@@ -257,7 +257,7 @@ a {
     position: relative;
     margin: 0;
     padding-bottom: 0.75em;
-    line-height: 1.1em;
+    line-height: 1.4em;
     list-style-type: none;
 } 
 
@@ -302,10 +302,12 @@ h3 .timeframe {
 
 .skillTabs {
     position: relative;
-    min-height: 18em;
+    min-height: 20em;
     clear: both;
     margin: 1em 0;
     transition: min-height 200ms ease;
+    display: flex;
+    justify-content: center;
 }
 
 .skillTab {
@@ -361,7 +363,7 @@ h3 .timeframe {
 
 @media only screen and (max-width: 1000px) {
     .skillTabs {
-        min-height: 20.5em;
+        min-height: 21.5em;
     }
 }
 
@@ -392,7 +394,7 @@ h3 .timeframe {
 
 @media only screen and (max-width: 600px) {
     .skillTabs {
-        min-height: 19em;
+        min-height: 20em;
     }
 }
 

@@ -112,7 +112,7 @@ instance ToMarkup Educations where
         H.div ! A.class_ "resumeSection educationList" $ do
             H.h2 "Education"
             H.hr
-        mapM_ H.toHtml educations
+            mapM_ H.toHtml educations
 
 instance ToMarkup Education where
     toMarkup education = do
@@ -128,6 +128,7 @@ resumeHTML (Resume skills experiences educations) =
     html $ do
         H.head $ do
             H.title "Mikail Khan"
+            counterDevLink
             link ! rel "stylesheet" ! href "/CSS/base.css"
             meta ! name "viewport" ! content "width=device-width, initial-scale=1.0"
         body ! A.class_ "resumeContainer flex-center" $ do
