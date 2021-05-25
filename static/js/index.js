@@ -47,7 +47,14 @@ document.onmousemove = e => {
     mouse_y = e.clientY + top_edge;
 };
 
+
+const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 pixiApp.ticker.add(delta => {
+    if (mediaQuery.matches) {
+        circle_geom.clear();
+        return;
+    }
+
     // integrate and damping
     circles.forEach(circle => {
         circle.x += circle.vx;
