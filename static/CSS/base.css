@@ -202,7 +202,7 @@ a {
 .linkButton:hover {
     background: var(--white);
     color: var(--main);
-    transform: scale(1.2);
+    transform: scale(1.075);
 }
 
 .resume {

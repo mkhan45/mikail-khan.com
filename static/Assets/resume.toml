@@ -107,7 +107,7 @@ skill_level = 5
 [[skills]]
 name = "JavaScript"
 categories = ["Programming Language", "Web Development", "Object Oriented"]
-skill_level = 5
+skill_level = 3
 
 [[skills]]
 name = "HTML"
@@ -137,6 +137,11 @@ skill_level = 3
 [[skills]]
 name = "Rust"
 categories = ["Programming Language"]
+skill_level = 5
+
+[[skills]]
+name = "Elixir"
+categories = ["Programming Language"]
 skill_level = 3
 
 [[skills]]
@@ -150,7 +155,7 @@ categories = []
 skill_level = 3
 
 [[skills]]
-name = "REST API Development"
+name = "REST APIs"
 categories = ["Web Development"]
 skill_level = 3
 

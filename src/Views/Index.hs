@@ -17,14 +17,14 @@ index =
     html $ do
         H.head $ do
             H.title "Mikail Khan"
-	    counterDevLink
+            counterDevLink
             link ! rel "stylesheet" ! href "/CSS/base.css"
             link ! rel "shortcut icon" ! href "/img/favicon.ico"
             meta ! name "viewport" ! content "width=device-width, initial-scale=1.0"
         body $ H.div ! class_ "flex-parent" $ H.div ! class_ "section" $ do
             H.div ! class_ "header center-page" $ do
                 h1 "Mikail Khan"
-                h2 "Math + CS @ Purdue"
+                h2 "Math + CS @ Purdue '24"
                 githubIconBtn
                 linkedinIconBtn
                 blogIconBtn

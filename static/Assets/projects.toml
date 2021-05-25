@@ -29,10 +29,22 @@ projectThumbnail = "https://mikail-khan.com/img/slang.png"
 projectDesc = "A simple scripting language interpreter"
 
 [[projects]]
+projectName = "RustScript"
+projectURL = "https://github.com/mkhan45/RustScript"
+projectThumbnail = "https://mikail-khan.com/img/rustscript.png"
+projectDesc = "A functional scripting language with as much relation to Rust as JavaScript has to Java"
+
+[[projects]]
 projectName = "Pumice"
 projectURL = "https://github.com/mkhan45/pumice"
 projectThumbnail = "https://mikail-khan.com/img/pumice.png"
 projectDesc = "A vulkano-made light and brittle game engine that rocks."
+
+[[projects]]
+projectName = "TinyVM"
+projectURL = "https://github.com/mkhan45/tinyvm"
+projectThumbnail = "https://mikail-khan.com/img/tinyvm.png"
+projectDesc = "A tiny stack based bytecode VM that interprets a Turing complete instruction set."
 
 [[projects]]
 projectName = "Tetrs"
