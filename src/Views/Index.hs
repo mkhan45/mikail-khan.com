@@ -23,6 +23,7 @@ index =
             meta ! name "viewport" ! content "width=device-width, initial-scale=1.0"
             script ! src "/js/pixi.min.js" $ mempty
         body $ do
+            H.canvas ! A.id "bg" $ mempty
             H.main $ do
                 H.div ! class_ "flex-parent" $ H.div ! class_ "section" $ do
                     H.div ! class_ "header center-page" $ do
@@ -35,5 +36,4 @@ index =
                         H.nav $ do
                             linkButton "/portfolio" "Portfolio"
                             linkButton "/resume" "Resume"
-            H.canvas ! A.id "bg" $ mempty
-	    script ! src "/js/index.js" $ mempty
+            script ! src "/js/index.js" $ mempty
