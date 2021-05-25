@@ -51,6 +51,7 @@ document.onmousemove = e => {
 const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 pixiApp.ticker.add(delta => {
     if (mediaQuery.matches) {
+        circle_geom.clear();
         return;
     }
 

@@ -1996,3 +1996,13 @@ data: end of file
 [36mGET[0m /resume
 [37m  Accept: [0mtext/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8
 [37m  Status: [0m[32m200 OK[0m 0.000188924s
+/root/hs-server-2/hs-server-two.cabal was modified manually. Ignoring /root/hs-server-2/package.yaml in favor of the cabal file.
+If you want to use the package.yaml file instead of the cabal file,
+then please delete the cabal file.
+/root/hs-server-2/hs-server-two.cabal was modified manually. Ignoring /root/hs-server-2/package.yaml in favor of the cabal file.
+If you want to use the package.yaml file instead of the cabal file,
+then please delete the cabal file.
+data: end of file
+data: end of file
+data: end of file
+data: end of file
