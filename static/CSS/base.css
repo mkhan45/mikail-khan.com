@@ -21,7 +21,6 @@ html, body {
 
 .resumeHeader {
     text-align: center;
-    flex-basis: 50vw;
     line-height: 1.15em;
 }
 
@@ -30,7 +29,7 @@ html, body {
 }
 
 .opaque {
-    background: var(--main);
+    /* background: var(--main); */
 }
 
 .header {
@@ -69,6 +68,10 @@ html, body {
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;
+}
+
+.resumeContainer {
+    flex-direction: column;
 }
 
 .resumeContainer h1 {
