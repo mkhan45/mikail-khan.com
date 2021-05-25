@@ -36,9 +36,11 @@ for (let i = 0; i < num_cols; i += 1) {
     }
 }
 
-// batch all the circles into one mesh for performance
+// batch circles and lines into one mesh for performance
 let circle_geom = new PIXI.Graphics();
+let line_geom = new PIXI.Graphics();
 pixiApp.stage.addChild(circle_geom);
+pixiApp.stage.addChild(line_geom);
 
 // get mouse position
 let mouse_x = 0;
@@ -106,6 +108,7 @@ pixiApp.ticker.add(delta => {
 
     // render
     circle_geom.clear();
+    line_geom.clear();
     circles.forEach(circle => {
         // draw circle
         circle_geom.beginFill(0xffffff).drawCircle(circle.x, circle.y, radius).endFill();
@@ -116,8 +119,7 @@ pixiApp.ticker.add(delta => {
             let y_rad = (circle.y - mouse_y);
             let rad_sqr = x_rad * x_rad + y_rad * y_rad;
 
-            circle_geom.lineStyle(rad_sqr / 15000, 0xffffff).moveTo(mouse_x, mouse_y).lineTo(circle.x, circle.y);
-            circle_geom.position.set(0, 0);
+            line_geom.lineStyle(Math.min(5000 / Math.max(rad_sqr, 1), 5), 0xffffff).moveTo(mouse_x, mouse_y).lineTo(circle.x, circle.y);
         }
     });
 });
