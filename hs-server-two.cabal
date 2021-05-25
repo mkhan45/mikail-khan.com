@@ -27,6 +27,7 @@ library
   exposed-modules:
       Lib
       StaticAPI
+      Views.CCS.CCSAPI
       Views.Index
       Views.Memes.MemeAPI
       Views.Memes.MemeData

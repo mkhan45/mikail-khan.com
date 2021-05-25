@@ -10,8 +10,10 @@ import Servant.HTML.Blaze
 type StaticAPI = "Assets" :> Raw
             :<|> "CSS"    :> Raw
             :<|> "img"    :> Raw
+            :<|> "js"     :> Raw
 
 staticServer :: Server StaticAPI
 staticServer = serveDirectoryWebApp "static/Assets"
           :<|> serveDirectoryWebApp "static/CSS"
           :<|> serveDirectoryWebApp "static/img"
+          :<|> serveDirectoryWebApp "static/js"
