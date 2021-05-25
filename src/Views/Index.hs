@@ -21,14 +21,19 @@ index =
             link ! rel "stylesheet" ! href "/CSS/base.css"
             link ! rel "shortcut icon" ! href "/img/favicon.ico"
             meta ! name "viewport" ! content "width=device-width, initial-scale=1.0"
-        body $ H.div ! class_ "flex-parent" $ H.div ! class_ "section" $ do
-            H.div ! class_ "header center-page" $ do
-                h1 "Mikail Khan"
-                h2 "Math + CS @ Purdue '24"
-                githubIconBtn
-                linkedinIconBtn
-                blogIconBtn
-            H.div ! class_ "body-center menu" $ do
-                H.nav $ do
-                    linkButton "/portfolio" "Portfolio"
-                    linkButton "/resume" "Resume"
+            script ! src "/js/pixi.min.js" $ mempty
+        body $ do
+            H.main $ do
+                H.div ! class_ "flex-parent" $ H.div ! class_ "section" $ do
+                    H.div ! class_ "header center-page" $ do
+                        h1 "Mikail Khan"
+                        h2 "Math + CS @ Purdue"
+                        githubIconBtn
+                        linkedinIconBtn
+                        blogIconBtn
+                    H.div ! class_ "body-center menu" $ do
+                        H.nav $ do
+                            linkButton "/portfolio" "Portfolio"
+                            linkButton "/resume" "Resume"
+            H.canvas ! A.id "bg" $ mempty
+	    script ! src "/js/index.js" $ mempty

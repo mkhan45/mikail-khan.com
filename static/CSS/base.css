@@ -1,6 +1,7 @@
 :root {
 	/* --main: #FC6261; */
 	--main: #6192F4;
+	/* --main: #000000; */
 	--white: #FFFFFF;
 }
 
@@ -12,6 +13,7 @@ html, body {
 }
 
 .flex-parent {
+    margin: auto;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -30,7 +32,7 @@ html, body {
 .header {
     margin-left: 10vw;
     margin-right: 10vw;
-    margin-top: 20vh;
+    margin-top: 17.5vh;
     padding: 2em;
     text-align: center;
 }
@@ -359,6 +361,18 @@ h3 .timeframe {
     z-index: 2;
     background: var(--main);
     color: var(--white);
+}
+
+#bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+main {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
 }
 
 @media only screen and (max-width: 1000px) {
