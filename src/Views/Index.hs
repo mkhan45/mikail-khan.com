@@ -26,13 +26,13 @@ index =
             H.canvas ! A.id "bg" $ mempty
             H.main $ do
                 H.div ! class_ "flex-parent" $ H.div ! class_ "section" $ do
-                    H.div ! class_ "header center-page" $ do
+                    H.div ! class_ "header center-page opaque" $ do
                         h1 "Mikail Khan"
                         h2 "Math + CS @ Purdue"
                         githubIconBtn
                         linkedinIconBtn
                         blogIconBtn
-                    H.div ! class_ "body-center menu" $ do
+                    H.div ! class_ "body-center menu opaque" $ do
                         H.nav $ do
                             linkButton "/portfolio" "Portfolio"
                             linkButton "/resume" "Resume"

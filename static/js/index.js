@@ -32,12 +32,6 @@ for (let i = 0; i < num_cols; i += 1) {
         const x = left_edge + radius * 2 + i * offset;
         let y = top_edge + radius * 2 + j * offset;
 
-        if (Math.abs(x) < 200 && Math.abs(y) < 200) {
-            continue;
-        }
-
-	y -= 50;
-
         circles.push({x: x, y: y, vx: 0, vy: 0, start_x: x, start_y: y, mouse_interact: false})
     }
 }
