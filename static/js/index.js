@@ -20,27 +20,28 @@ const top_edge = -pixiApp.screen.height / 2;
 const left_edge = -pixiApp.screen.width / 2;
 
 const radius = 2.5;
-let circles = [];
 
-{
-    const offset = radius * 25;
-    for (let i = 0; i < pixiApp.screen.width / offset; i += 1) {
-        for (let j = 0; j < pixiApp.screen.height / offset; j += 1) {
-            const x = left_edge + radius * 2 + i * offset;
-            const y = top_edge + radius * 2 + j * offset;
+// initialize circles
+const offset = radius * 25;
+const num_rows = pixiApp.screen.height / offset;
+const num_cols = pixiApp.screen.width / offset;
+let circles = new Array(Math.ceil(num_rows * num_cols));
 
-            if (Math.abs(x) < 200 && Math.abs(y) < 175) {
-                continue;
-            }
+for (let i = 0; i < num_cols; i += 1) {
+    for (let j = 0; j < num_rows; j += 1) {
+        const x = left_edge + radius * 2 + i * offset;
+        const y = top_edge + radius * 2 + j * offset;
 
-            circles.push({x: x, y: y, vx: 0, vy: 0, start_x: x, start_y: y, mouse_interact: false})
+        if (Math.abs(x) < 200 && Math.abs(y) < 175) {
+            continue;
         }
+
+        circles.push({x: x, y: y, vx: 0, vy: 0, start_x: x, start_y: y, mouse_interact: false})
     }
 }
 
 let circle_geom = new PIXI.Graphics();
 pixiApp.stage.addChild(circle_geom);
-// circles.forEach(c => pixiApp.stage.addChild(c));
 
 let mouse_x = 0;
 let mouse_y = 0;
@@ -50,14 +51,7 @@ document.onmousemove = e => {
     mouse_y = e.clientY + top_edge;
 };
 
-let tick = 0;
-
 pixiApp.ticker.add(delta => {
-    if (tick % 100 == 0) {
-        console.log(delta);
-    }
-    tick += 1;
-
     // integrate and damping
     circles.forEach(circle => {
         circle.x += circle.vx;
