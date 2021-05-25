@@ -131,19 +131,24 @@ resumeHTML (Resume skills experiences educations) =
             counterDevLink
             link ! rel "stylesheet" ! href "/CSS/base.css"
             meta ! name "viewport" ! content "width=device-width, initial-scale=1.0"
-        body ! A.class_ "resumeContainer flex-center" $ do
-            H.div ! class_ "resumeHeader" $ do
-                H.h1 "Mikail Khan"
-                H.h3 "mikail [at] mikail-khan [dot] com"
-                githubIconBtn
-                linkedinIconBtn
-                H.nav ! class_ "body-center smallmenu" $ do
-                    H.div $ linkButton "/" "Home"
-                    H.div $ linkButton "/portfolio" "Portfolio"
-            H.div ! A.class_ "resume" $ do
-                H.toHtml skills
-                H.toHtml experiences
-                H.toHtml educations
+            script ! src "/js/pixi.min.js" $ mempty
+        body $ do
+            H.canvas ! A.id "bg" $ mempty
+            H.main $ do
+                H.div ! A.class_ "resumeContainer flex-center" $ do
+                    H.div ! class_ "resumeHeader opaque" $ do
+                        H.h1 "Mikail Khan"
+                        H.h3 "mikail [at] mikail-khan [dot] com"
+                        githubIconBtn
+                        linkedinIconBtn
+                        H.nav ! class_ "body-center smallmenu" $ do
+                            H.div $ linkButton "/" "Home"
+                            H.div $ linkButton "/portfolio" "Portfolio"
+                    H.div ! A.class_ "resume opaque" $ do
+                        H.toHtml skills
+                        H.toHtml experiences
+                        H.toHtml educations
+            script ! src "/js/index.js" $ mempty
 
 reloadResumeCache :: IO ()
 reloadResumeCache = do

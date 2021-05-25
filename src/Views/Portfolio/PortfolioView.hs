@@ -39,16 +39,20 @@ portfolio projects =
             counterDevLink
             link ! rel "stylesheet" ! href "/CSS/base.css"
             meta ! name "viewport" ! content "width=device-width, initial-scale=1.0"
+            script ! src "/js/pixi.min.js" $ mempty
         body $ do
-            H.div ! class_ "flex-parent" $ H.div ! class_ "section" $ do
-                H.div ! class_ "header" $ do
-                    h1 "Projects"
-                    H.nav ! class_ "body-center smallmenu" $ do
-                        H.div $ linkButton "/" "Home"
-                        H.div $ linkButton "/resume" "Resume"
-                H.div ! class_ "body-center" $ do
-                    H.div ! class_ "project-grid" $ do 
-                        mapM_ H.toHtml projects
+            H.canvas ! A.id "bg" $ mempty
+            H.main $ do
+                H.div ! class_ "flex-parent" $ H.div ! class_ "section" $ do
+                    H.div ! class_ "header opaque" $ do
+                        h1 "Projects"
+                        H.nav ! class_ "body-center smallmenu" $ do
+                            H.div $ linkButton "/" "Home"
+                            H.div $ linkButton "/resume" "Resume"
+                    H.div ! class_ "body-center" $ do
+                        H.div ! class_ "project-grid" $ do 
+                            mapM_ H.toHtml projects
+            script ! src "/js/index.js" $ mempty
 
 reloadPortfolioCache :: IO ()
 reloadPortfolioCache = do
