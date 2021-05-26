@@ -21,37 +21,43 @@ const left_edge = -pixiApp.screen.width / 2;
 
 const obstructingElements = [...document.querySelectorAll(".opaque")];
 
-// initialize circles
+// initialize circles into particle container
 const radius = 2.75;
 const offset = radius * 27.5;
-const num_rows = pixiApp.screen.height / offset + 1;
+const num_rows = pixiApp.screen.height / offset;
 const num_cols = pixiApp.screen.width / offset;
-let circles = new Array(Math.ceil(num_rows * num_cols));
+
+let container = new PIXI.ParticleContainer();
+let circle_geom = new PIXI.Graphics().beginFill(0xffffff).drawCircle(0, 0, radius).endFill();
+let circle_texture = pixiApp.renderer.generateTexture(circle_geom);
+let circles = [];
 
 for (let i = 0; i < num_cols; i += 1) {
     for (let j = 0; j < num_rows; j += 1) {
-        const x = left_edge + radius * 2 + i * offset;
-        const y = top_edge + radius * 2 + j * offset;
+        const x = left_edge + i * offset;
+        const y = top_edge + j * offset;
 
-	const obstructed = obstructingElements.some(e => {
-	    let bounding_box = e.getBoundingClientRect();
-	    bounding_box.x += left_edge;
-	    bounding_box.y += top_edge;
-	
-	    return x > bounding_box.x && x < bounding_box.x + bounding_box.width
-	        && y > bounding_box.y && y < bounding_box.y + bounding_box.height;
-	});
+        const obstructed = obstructingElements.some(e => {
+            let bounding_box = e.getBoundingClientRect();
+            bounding_box.x += left_edge;
+            bounding_box.y += top_edge;
+        
+            return x > bounding_box.x && x < bounding_box.x + bounding_box.width
+                && y > bounding_box.y && y < bounding_box.y + bounding_box.height;
+        });
 
-	if (!obstructed)
-    	    circles.push({x: x, y: y, vx: 0, vy: 0, start_x: x, start_y: y, mouse_interact: false});
+        if (!obstructed) {
+            let sprite = new PIXI.Sprite(circle_texture);
+            sprite.x = x;
+            sprite.y = y;
+            circles.push({sprite: sprite, vx: 0, vy: 0, start_x: x, start_y: y, mouse_interact: false});
+            container.addChild(sprite);
+        }
     }
 }
+pixiApp.stage.addChild(container);
 
-// batch circles and lines into one mesh for performance
-let container = new PIXI.ParticleContainer();
-let circle_geom = new PIXI.Graphics();
 let line_geom = new PIXI.Graphics();
-pixiApp.stage.addChild(circle_geom);
 pixiApp.stage.addChild(line_geom);
 
 // get mouse position
@@ -66,14 +72,15 @@ document.onmousemove = e => {
 const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 pixiApp.ticker.add(delta => {
     if (mediaQuery.matches) {
-        circle_geom.clear();
+        container.clear();
+        line_geom.clear();
         return;
     }
 
     // integration and damping
     circles.forEach(circle => {
-        circle.x += circle.vx;
-        circle.y += circle.vy;
+        circle.sprite.x += circle.vx;
+        circle.sprite.y += circle.vy;
 
         circle.vx *= 0.8;
         circle.vy *= 0.8;
@@ -81,8 +88,8 @@ pixiApp.ticker.add(delta => {
 
     // mouse gravity
     circles.forEach(circle => {
-        let x_rad = (circle.x - mouse_x);
-        let y_rad = (circle.y - mouse_y);
+        let x_rad = (circle.sprite.x - mouse_x);
+        let y_rad = (circle.sprite.y - mouse_y);
 
         let dist_sqr = x_rad * x_rad + y_rad * y_rad;
 
@@ -104,8 +111,8 @@ pixiApp.ticker.add(delta => {
     circles.forEach(circle => {
         if (circle.mouse_interact) return;
 
-        let x_rad = -(circle.x - circle.start_x);
-        let y_rad = -(circle.y - circle.start_y);
+        let x_rad = -(circle.sprite.x - circle.start_x);
+        let y_rad = -(circle.sprite.y - circle.start_y);
 
         let dist_sqr = x_rad * x_rad + y_rad * y_rad;
 
@@ -118,20 +125,15 @@ pixiApp.ticker.add(delta => {
         circle.vy += grav * Math.sign(y_rad) * delta;
     });
 
-    // render
-    circle_geom.clear();
+    // render lines
     line_geom.clear();
     circles.forEach(circle => {
-        // draw circle
-        circle_geom.beginFill(0xffffff).drawCircle(circle.x, circle.y, radius).endFill();
-
-        // draw lines
         if (circle.mouse_interact) {
-            let x_rad = (circle.x - mouse_x);
-            let y_rad = (circle.y - mouse_y);
+            let x_rad = (circle.sprite.x - mouse_x);
+            let y_rad = (circle.sprite.y - mouse_y);
             let rad_sqr = x_rad * x_rad + y_rad * y_rad;
 
-            line_geom.lineStyle(Math.min(5000 / Math.max(rad_sqr, 1), 5), 0xffffff).moveTo(mouse_x, mouse_y).lineTo(circle.x, circle.y);
+            line_geom.lineStyle(Math.min(5000 / Math.max(rad_sqr, 1), 5), 0xffffff).moveTo(mouse_x, mouse_y).lineTo(circle.sprite.x + radius, circle.sprite.y + radius);
         }
     });
 });
