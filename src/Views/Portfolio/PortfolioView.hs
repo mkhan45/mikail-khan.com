@@ -50,7 +50,7 @@ portfolio projects =
                             H.div $ linkButton "/" "Home"
                             H.div $ linkButton "/resume" "Resume"
                     H.div ! class_ "body-center" $ do
-                        H.div ! class_ "project-grid" $ do 
+                        H.div ! class_ "project-grid opaque" $ do 
                             mapM_ H.toHtml projects
             script ! src "/js/index.js" $ mempty
 

@@ -2,6 +2,33 @@ name = "Mikail Khan"
 email = "mikail [at] mikail-khan [dot] com"
 
 [[experience]]
+name = "Intern, Mun Lang"
+url = "https://mun-lang.org/"
+timeframe = "2021 Summer"
+categories = ["PL Dev", "Rust"]
+description = [
+    """
+    Mun Lang is an embeddable programming language empowering 
+    creation through iteration. Inspired by Lua and Rust, it is
+    early in development and open-source.
+    """,
+
+    """
+    Over the course of this summer, I will be working closely with
+    the core team to design and implement various language features
+    such as rules around mutability and generic types.
+    """,
+]
+
+[[experience]]
+name = "Intern, Frontier Technology, Inc."
+url = "https://www.fti-net.com/"
+timeframe = "2021 Summer"
+categories = ["C++"]
+description = []
+
+
+[[experience]]
 name = "Co-founder, Krypton Tutors"
 url = "https://kryptontutors.com"
 timeframe = "2020-Present"
@@ -43,8 +70,12 @@ timeframe = "2020-Present"
 url = "https://engineering.purdue.edu/AMP/"
 categories = ["Simulation Development", "Machine Learning", "Unity", "C#"]
 description = [
-    "Working with a team of students from the undergraduate to PhD level to design a self driving car that will avoid obstacles and overtake other cars at high speeds.",
-    "Primarily write software, including simulator work along with convolutional and recurrent neural networks using Python and PyTorch."
+    "Working under Dr. Aly El-Gamal's group AMP (Autonomous Motorsports Purdue) to develop software for a self-driving racecar.",
+
+    "Designing a Convolutional Neural Network to plot driving waypoints from image data (camera input).",
+
+    "CNN built using PyTorch and is inspired by NVIDIA's paper on the PilotNet architecture.
+Creating VR Environments for testing, racing, and data collection in the Unity Game Engine",
 ]
 
 [[experience]]
@@ -62,7 +93,7 @@ timeframe = "2020-Present"
 url = "https://www.purdue.edu/"
 description = [
     "Math + Computer Science Major",
-    "4.0 GPA"
+    "3.9 GPA"
 ]
 
 [[education]]
@@ -91,7 +122,7 @@ description = [
 
     "Fall: Statistics for Undergraduates, Physics 172 Mechanics",
 
-    "Spring: Programming I, Discrete Math"
+    "Spring: Programming I, Chemistry 115"
 ]
 
 [[skills]]
