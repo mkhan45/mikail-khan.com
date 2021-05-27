@@ -324,6 +324,7 @@ h3 .timeframe {
 
 .skillTab {
     float: left;
+    overflow: hidden;
 }
 
 .skillTab label {
@@ -398,7 +399,8 @@ main {
     }
 
     .skillTabs {
-        min-height: 18em;
+        min-height: 18.5em;
+	max-width: 85vw;
     }
 
     .skillTab label {
@@ -407,6 +409,18 @@ main {
 
     .skillTabContent {
         top: -0.5em;
+    }
+
+    .project {
+        margin-left: 0.0em;
+        margin-right: 0.0em;
+    }
+
+    .body-center {
+        padding-left: 0.25em;
+        padding-right: 0.25em;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
     }
 }
 
@@ -423,8 +437,19 @@ main {
 }
 
 @media only screen and (max-width: 500px) {
+    .resume {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
     .skillTabs {
-        min-height: 23.5em;
+        min-height: 24em;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .skillTabs {
+        min-height: 25em;
     }
 }
 
