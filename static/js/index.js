@@ -1,4 +1,5 @@
-if (screen.width >= 768) {
+const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+if (screen.width >= 768 && !mediaQuery.matches) {
 	const pixiApp = new PIXI.Application({ 
 	    view: document.querySelector("#bg"),
 	    antialias: true,
@@ -24,7 +25,7 @@ if (screen.width >= 768) {
 
 	// initialize circles into particle container
 	const radius = 2.75;
-	const offset = radius * 27.5;
+	const offset = radius * 30.0;
 	const num_rows = pixiApp.screen.height / offset;
 	const num_cols = pixiApp.screen.width / offset;
 
@@ -69,15 +70,7 @@ if (screen.width >= 768) {
 	    mouse_y = e.clientY + top_edge;
 	};
 
-	// disable if prefers reduced motion
-	const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
 	pixiApp.ticker.add(delta => {
-	    if (mediaQuery.matches) {
-		container.clear();
-		line_geom.clear();
-		return;
-	    }
-
 	    // integration and damping
 	    circles.forEach(circle => {
 		circle.sprite.x += circle.vx;
@@ -134,7 +127,10 @@ if (screen.width >= 768) {
 		    let y_rad = (circle.sprite.y - mouse_y);
 		    let rad_sqr = x_rad * x_rad + y_rad * y_rad;
 
-		    line_geom.lineStyle(Math.min(5000 / Math.max(rad_sqr, 1), 5), 0xffffff).moveTo(mouse_x, mouse_y).lineTo(circle.sprite.x + radius, circle.sprite.y + radius);
+		    line_geom
+			.lineStyle(Math.min(5000 / Math.max(rad_sqr, 1), 5), 0xffffff)
+			.moveTo(mouse_x, mouse_y)
+			.lineTo(circle.sprite.x + radius, circle.sprite.y + radius);
 		}
 	    });
 	});
