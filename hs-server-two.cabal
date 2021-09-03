@@ -1,6 +1,6 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.34.2.
+-- This file has been generated from package.yaml by hpack version 0.34.4.
 --
 -- see: https://github.com/sol/hpack
 
@@ -35,6 +35,7 @@ library
       Views.Memes.MemeView
       Views.Portfolio.PortfolioData
       Views.Portfolio.PortfolioView
+      Views.Portfolio.ProjectDetails
       Views.Portfolio.Projects
       Views.Resume.ResumeData
       Views.Resume.ResumePrintView

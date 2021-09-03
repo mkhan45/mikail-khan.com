@@ -2006,3 +2006,50 @@ data: end of file
 data: end of file
 data: end of file
 data: end of file
+Linking /home/mk/.stack/setup-exe-cache/x86_64-linux-tinfo6/tmp-Cabal-simple_mPHDZzAJ_3.0.1.0_ghc-8.8.4 ...
+/usr/bin/ld.gold: error: cannot find -lgmp
+/home/mk/.stack/programs/x86_64-linux/ghc-tinfo6-8.8.4/lib/ghc-8.8.4/integer-gmp-1.0.2.0/libHSinteger-gmp-1.0.2.0.a(Type.o):function integerzmwiredzmin_GHCziIntegerziType_zdwplusBigNatWord_info: error: undefined reference to '__gmpn_add_1'
+/home/mk/.stack/programs/x86_64-linux/ghc-tinfo6-8.8.4/lib/ghc-8.8.4/integer-gmp-1.0.2.0/libHSinteger-gmp-1.0.2.0.a(Type.o):function integerzmwiredzmin_GHCziIntegerziType_zdwminusBigNatWord_info: error: undefined reference to '__gmpn_sub_1'
+/home/mk/.stack/programs/x86_64-linux/ghc-tinfo6-8.8.4/lib/ghc-8.8.4/integer-gmp-1.0.2.0/libHSinteger-gmp-1.0.2.0.a(Type.o):function integerzmwiredzmin_GHCziIntegerziType_zdwtimesBigNatWord_info: error: undefined reference to '__gmpn_mul_1'
+/home/mk/.stack/programs/x86_64-linux/ghc-tinfo6-8.8.4/lib/ghc-8.8.4/integer-gmp-1.0.2.0/libHSinteger-gmp-1.0.2.0.a(Type.o):function integerzmwiredzmin_GHCziIntegerziType_zdwgo_info: error: undefined reference to '__gmpn_add'
+/home/mk/.stack/programs/x86_64-linux/ghc-tinfo6-8.8.4/lib/ghc-8.8.4/integer-gmp-1.0.2.0/libHSinteger-gmp-1.0.2.0.a(Type.o):function integerzmwiredzmin_GHCziIntegerziType_zdwminusBigNat_info: error: undefined reference to '__gmpn_sub'
+/home/mk/.stack/programs/x86_64-linux/ghc-tinfo6-8.8.4/lib/ghc-8.8.4/integer-gmp-1.0.2.0/libHSinteger-gmp-1.0.2.0.a(Type.o):function integerzmwiredzmin_GHCziIntegerziType_zdwtimesBigNat_info: error: undefined reference to '__gmpn_mul'
+/home/mk/.stack/programs/x86_64-linux/ghc-tinfo6-8.8.4/lib/ghc-8.8.4/integer-gmp-1.0.2.0/libHSinteger-gmp-1.0.2.0.a(Type.o):function integerzmwiredzmin_GHCziIntegerziType_neqIntegerzh_info: error: undefined reference to '__gmpn_cmp'
+/home/mk/.stack/programs/x86_64-linux/ghc-tinfo6-8.8.4/lib/ghc-8.8.4/integer-gmp-1.0.2.0/libHSinteger-gmp-1.0.2.0.a(Type.o):function integerzmwiredzmin_GHCziIntegerziType_neqIntegerzh_info: error: undefined reference to '__gmpn_cmp'
+/home/mk/.stack/programs/x86_64-linux/ghc-tinfo6-8.8.4/lib/ghc-8.8.4/integer-gmp-1.0.2.0/libHSinteger-gmp-1.0.2.0.a(Type.o):function integerzmwiredzmin_GHCziIntegerziType_eqIntegerzh_info: error: undefined reference to '__gmpn_cmp'
+/home/mk/.stack/programs/x86_64-linux/ghc-tinfo6-8.8.4/lib/ghc-8.8.4/integer-gmp-1.0.2.0/libHSinteger-gmp-1.0.2.0.a(Type.o):function integerzmwiredzmin_GHCziIntegerziType_eqIntegerzh_info: error: undefined reference to '__gmpn_cmp'
+/home/mk/.stack/programs/x86_64-linux/ghc-tinfo6-8.8.4/lib/ghc-8.8.4/integer-gmp-1.0.2.0/libHSinteger-gmp-1.0.2.0.a(Type.o):function integerzmwiredzmin_GHCziIntegerziType_zdwquotBigNatWord_info: error: undefined reference to '__gmpn_divrem_1'
+/home/mk/.stack/programs/x86_64-linux/ghc-tinfo6-8.8.4/lib/ghc-8.8.4/integer-gmp-1.0.2.0/libHSinteger-gmp-1.0.2.0.a(Type.o):function integerzmwiredzmin_GHCziIntegerziType_orInteger_info: error: undefined reference to '__gmpn_sub_1'
+/home/mk/.stack/programs/x86_64-linux/ghc-tinfo6-8.8.4/lib/ghc-8.8.4/integer-gmp-1.0.2.0/libHSinteger-gmp-1.0.2.0.a(Type.o):function integerzmwiredzmin_GHCziIntegerziType_orInteger_info: error: undefined reference to '__gmpn_sub_1'
+/home/mk/.stack/programs/x86_64-linux/ghc-tinfo6-8.8.4/lib/ghc-8.8.4/integer-gmp-1.0.2.0/libHSinteger-gmp-1.0.2.0.a(Type.o):function integerzmwiredzmin_GHCziIntegerziType_orInteger_info: error: undefined reference to '__gmpn_sub_1'
+/home/mk/.stack/programs/x86_64-linux/ghc-tinfo6-8.8.4/lib/ghc-8.8.4/integer-gmp-1.0.2.0/libHSinteger-gmp-1.0.2.0.a(Type.o):function integerzmwiredzmin_GHCziIntegerziType_zdwquotRemBigNat_info: error: undefined reference to '__gmpn_tdiv_qr'
+/home/mk/.stack/programs/x86_64-linux/ghc-tinfo6-8.8.4/lib/ghc-8.8.4/integer-gmp-1.0.2.0/libHSinteger-gmp-1.0.2.0.a(Type.o):function integerzmwiredzmin_GHCziIntegerziType_quotRemInteger_info: error: undefined reference to '__gmpn_divrem_1'
+/home/mk/.stack/programs/x86_64-linux/ghc-tinfo6-8.8.4/lib/ghc-8.8.4/integer-gmp-1.0.2.0/libHSinteger-gmp-1.0.2.0.a(Type.o):function integerzmwiredzmin_GHCziIntegerziType_quotRemInteger_info: error: undefined reference to '__gmpn_divrem_1'
+/home/mk/.stack/programs/x86_64-linux/ghc-tinfo6-8.8.4/lib/ghc-8.8.4/integer-gmp-1.0.2.0/libHSinteger-gmp-1.0.2.0.a(Type.o):function integerzmwiredzmin_GHCziIntegerziType_quotRemInteger_info: error: undefined reference to '__gmpn_divrem_1'
+/home/mk/.stack/programs/x86_64-linux/ghc-tinfo6-8.8.4/lib/ghc-8.8.4/integer-gmp-1.0.2.0/libHSinteger-gmp-1.0.2.0.a(Type.o):function integerzmwiredzmin_GHCziIntegerziType_remInteger_info: error: undefined reference to '__gmpn_mod_1'
+/home/mk/.stack/programs/x86_64-linux/ghc-tinfo6-8.8.4/lib/ghc-8.8.4/integer-gmp-1.0.2.0/libHSinteger-gmp-1.0.2.0.a(Type.o):function integerzmwiredzmin_GHCziIntegerziType_remInteger_info: error: undefined reference to '__gmpn_mod_1'
+/home/mk/.stack/programs/x86_64-linux/ghc-tinfo6-8.8.4/lib/ghc-8.8.4/integer-gmp-1.0.2.0/libHSinteger-gmp-1.0.2.0.a(wrappers.o):wrappers.c:function integer_gmp_mpn_rshift: error: undefined reference to '__gmpn_rshift'
+/home/mk/.stack/programs/x86_64-linux/ghc-tinfo6-8.8.4/lib/ghc-8.8.4/integer-gmp-1.0.2.0/libHSinteger-gmp-1.0.2.0.a(wrappers.o):wrappers.c:function integer_gmp_mpn_rshift_2c: error: undefined reference to '__gmpn_rshift'
+/home/mk/.stack/programs/x86_64-linux/ghc-tinfo6-8.8.4/lib/ghc-8.8.4/integer-gmp-1.0.2.0/libHSinteger-gmp-1.0.2.0.a(wrappers.o):wrappers.c:function integer_gmp_mpn_lshift: error: undefined reference to '__gmpn_lshift'
+/home/mk/.stack/programs/x86_64-linux/ghc-tinfo6-8.8.4/lib/ghc-8.8.4/integer-gmp-1.0.2.0/libHSinteger-gmp-1.0.2.0.a(wrappers.o):wrappers.c:function integer_gmp_mpn_get_d: error: undefined reference to '__gmpz_get_d'
+/home/mk/.stack/programs/x86_64-linux/ghc-tinfo6-8.8.4/lib/ghc-8.8.4/integer-gmp-1.0.2.0/libHSinteger-gmp-1.0.2.0.a(wrappers.o):wrappers.c:function integer_gmp_mpn_get_d: error: undefined reference to '__gmpz_get_d_2exp'
+/home/mk/.stack/programs/x86_64-linux/ghc-tinfo6-8.8.4/lib/ghc-8.8.4/integer-gmp-1.0.2.0/libHSinteger-gmp-1.0.2.0.a(wrappers.o):wrappers.c:function integer_gmp_gcd_word: error: undefined reference to '__gmpn_gcd_1'
+/home/mk/.stack/programs/x86_64-linux/ghc-tinfo6-8.8.4/lib/ghc-8.8.4/integer-gmp-1.0.2.0/libHSinteger-gmp-1.0.2.0.a(wrappers.o):wrappers.c:function integer_gmp_mpn_gcd_1: error: undefined reference to '__gmpn_gcd_1'
+/home/mk/.stack/programs/x86_64-linux/ghc-tinfo6-8.8.4/lib/ghc-8.8.4/integer-gmp-1.0.2.0/libHSinteger-gmp-1.0.2.0.a(wrappers.o):wrappers.c:function integer_gmp_mpn_gcd_1: error: undefined reference to '__gmpn_gcd_1'
+/home/mk/.stack/programs/x86_64-linux/ghc-tinfo6-8.8.4/lib/ghc-8.8.4/integer-gmp-1.0.2.0/libHSinteger-gmp-1.0.2.0.a(wrappers.o):wrappers.c:function integer_gmp_mpn_gcd: error: undefined reference to '__gmpz_init'
+/home/mk/.stack/programs/x86_64-linux/ghc-tinfo6-8.8.4/lib/ghc-8.8.4/integer-gmp-1.0.2.0/libHSinteger-gmp-1.0.2.0.a(wrappers.o):wrappers.c:function integer_gmp_mpn_gcd: error: undefined reference to '__gmpz_gcd'
+/home/mk/.stack/programs/x86_64-linux/ghc-tinfo6-8.8.4/lib/ghc-8.8.4/integer-gmp-1.0.2.0/libHSinteger-gmp-1.0.2.0.a(wrappers.o):wrappers.c:function integer_gmp_mpn_gcd: error: undefined reference to '__gmpz_clear'
+/home/mk/.stack/programs/x86_64-linux/ghc-tinfo6-8.8.4/lib/ghc-8.8.4/integer-gmp-1.0.2.0/libHSinteger-gmp-1.0.2.0.a(wrappers.o):wrappers.c:function integer_gmp_mpn_tdiv_q: error: undefined reference to '__gmpn_tdiv_qr'
+/home/mk/.stack/programs/x86_64-linux/ghc-tinfo6-8.8.4/lib/ghc-8.8.4/integer-gmp-1.0.2.0/libHSinteger-gmp-1.0.2.0.a(wrappers.o):wrappers.c:function integer_gmp_mpn_tdiv_q: error: undefined reference to '__gmpn_tdiv_qr'
+/home/mk/.stack/programs/x86_64-linux/ghc-tinfo6-8.8.4/lib/ghc-8.8.4/integer-gmp-1.0.2.0/libHSinteger-gmp-1.0.2.0.a(wrappers.o):wrappers.c:function integer_gmp_mpn_tdiv_r: error: undefined reference to '__gmpn_tdiv_qr'
+/home/mk/.stack/programs/x86_64-linux/ghc-tinfo6-8.8.4/lib/ghc-8.8.4/integer-gmp-1.0.2.0/libHSinteger-gmp-1.0.2.0.a(wrappers.o):wrappers.c:function integer_gmp_mpn_and_n: error: undefined reference to '__gmpn_and_n'
+/home/mk/.stack/programs/x86_64-linux/ghc-tinfo6-8.8.4/lib/ghc-8.8.4/integer-gmp-1.0.2.0/libHSinteger-gmp-1.0.2.0.a(wrappers.o):wrappers.c:function integer_gmp_mpn_andn_n: error: undefined reference to '__gmpn_andn_n'
+/home/mk/.stack/programs/x86_64-linux/ghc-tinfo6-8.8.4/lib/ghc-8.8.4/integer-gmp-1.0.2.0/libHSinteger-gmp-1.0.2.0.a(wrappers.o):wrappers.c:function integer_gmp_mpn_ior_n: error: undefined reference to '__gmpn_ior_n'
+collect2: error: ld returned 1 exit status
+`gcc' failed in phase `Linker'. (Exit code: 1)
+
+--  While building simple Setup.hs (scroll up to its section to see the error) using:
+      /home/mk/.stack/programs/x86_64-linux/ghc-tinfo6-8.8.4/bin/ghc-8.8.4 -rtsopts -threaded -clear-package-db -global-package-db -hide-all-packages -package base -main-is StackSetupShim.mainOverride -package Cabal-3.0.1.0 /home/mk/.stack/setup-exe-src/setup-mPHDZzAJ.hs /home/mk/.stack/setup-exe-src/setup-shim-mPHDZzAJ.hs -o /home/mk/.stack/setup-exe-cache/x86_64-linux-tinfo6/tmp-Cabal-simple_mPHDZzAJ_3.0.1.0_ghc-8.8.4
+    Process exited with code: ExitFailure 1
+hs-server-two-exe: Network.Socket.bind: permission denied (Permission denied)
+hs-server-two-exe: Network.Socket.bind: permission denied (Permission denied)

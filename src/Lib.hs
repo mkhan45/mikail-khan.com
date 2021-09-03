@@ -28,6 +28,7 @@ import Views.Index
 import Views.Resume.ResumeView
 import Views.Resume.ResumePrintView
 import Views.Portfolio.PortfolioView
+import Views.Portfolio.ProjectDetails
 
 import Views.Memes.MemeAPI
 import StaticAPI
@@ -39,6 +40,7 @@ type API =                  Get '[HTML] H.Html
      :<|> "reload_cache" :> Get '[PlainText] String
      :<|> MemeAPI
      :<|> StaticAPI
+     :<|> ProjectDetailAPI
 
 app :: Application
 app = serve api server
@@ -66,3 +68,4 @@ server = return index
             return "success"
     :<|> memeServer
     :<|> staticServer
+    :<|> projectDetailServer
