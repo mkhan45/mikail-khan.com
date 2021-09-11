@@ -26,7 +26,7 @@ instance ToMarkup Project where
             H.span ! class_ "align-center" $ h1 nameHtml
             img ! src thumbnail
             H.div ! class_ "project-desc" $ discHtml
-        where url = H.toValue $ projectURL project
+        where url = H.toValue ("/portfolio/details/" <> (projectName project))
               nameHtml = H.toHtml $ projectName project
               thumbnail = H.toValue $ projectThumbnail project
               discHtml = H.toHtml $ projectDesc project

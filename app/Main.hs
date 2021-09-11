@@ -15,7 +15,8 @@ getTLSConfig = do
 
 main :: IO ()
 main = do
-    tlsConfig <- getTLSConfig
+    -- tlsConfig <- getTLSConfig
     let config = setPort 8443 defaultSettings
 
-    runTLS tlsConfig config app
+    -- runTLS tlsConfig config app
+    run 8443 app

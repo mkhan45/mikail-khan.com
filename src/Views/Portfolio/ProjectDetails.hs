@@ -46,12 +46,30 @@ projectDetailHTML :: Project -> H.Html
 projectDetailHTML project = do
     H.html $ do
         H.head $ do
+            H.title $ H.toHtml projName
             counterDevLink
-            H.title $ H.toHtml name
+            link ! rel "stylesheet" ! href "/CSS/base.css"
+            meta ! name "viewport" ! content "width=device-width, initial-scale=1.0"
+            script ! src "/js/pixi.min.js" $ mempty
     H.body $ do
-        H.h1 $ do
-            H.toHtml name
-        H.p $ do
-            H.toHtml desc
-    where name = projectName project
-          desc = projectDesc project
+        H.canvas ! A.id "bg" $ mempty
+        H.main $ do
+            H.div ! A.class_ "detail-container flex-parent" $ do
+                H.div ! A.class_ "header detail-header opaque" $ do
+                    H.h1 $ H.toHtml projName
+                    H.div ! A.class_ "detail-link" $ do
+                        H.a ! A.href (H.toValue url) $ H.toHtml url
+                    H.nav ! class_ "body-center smallmenu" $ do
+                        H.div $ linkButton "/" "Home"
+                        H.div $ linkButton "/portfolio" "Portfolio"
+                H.div ! A.class_ "body-center detail-body" $ do
+                    H.div ! A.class_ "detail-card opaque" $ do
+                        H.div ! A.class_ "detail-img-container" $ do
+                            H.img ! A.src thumbnail ! A.class_ "detail-img"
+                        H.p $ do
+                            H.toHtml desc
+        script ! src "/js/index.js" $ mempty
+    where projName = projectName project
+          desc = H.preEscapedToHtml $ projectDetailDesc project
+          thumbnail = H.toValue $ projectThumbnail project
+          url = projectURL project

@@ -11,7 +11,8 @@ data Project = Project {
                             projectName :: T.Text,
                             projectURL :: T.Text,
                             projectThumbnail :: T.Text,
-                            projectDesc :: T.Text 
+                            projectDesc :: T.Text,
+                            projectDetailDesc :: T.Text 
                        } deriving (Generic, Show)
 
 instance FromJSON Project
