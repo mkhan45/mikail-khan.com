@@ -420,7 +420,6 @@ h3 .timeframe {
     padding: 2em;
     padding-top: 1em;
     border-radius: 2.5% 2.5%;
-    min-width: 80ch;
     /* box-shadow: 0px 0px 15px #000; */
 }
 
@@ -432,8 +431,8 @@ h3 .timeframe {
 .detail-img-container {
     background-color: var(--main);
     text-align: center;
-    margin-left: -5%;
-    width: 110%;
+    width: calc(100% + 4em);
+    margin-left: -2em;
 }
 
 .detail-img {
