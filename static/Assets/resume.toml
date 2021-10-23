@@ -2,6 +2,18 @@ name = "Mikail Khan"
 email = "mikail [at] mikail-khan [dot] com"
 
 [[experience]]
+name = "Intern, Frontier Technology, Inc."
+url = "https://www.fti-net.com/"
+timeframe = "2021 Summer"
+categories = ["C++, Python"]
+description = [
+    "Overhauled internal web application UX to improve employee efficiency",
+    "Completed core application features using Python/Django backend, JavaScript/jQuery frontend",
+    "Deployed essential company services to the cloud using Docker, Kubernetes, and OpenFaaS",
+    "Presented accomplishments, technical decisions and tradeoffs, to company leadership",
+]
+
+[[experience]]
 name = "Intern, Mun Lang"
 url = "https://mun-lang.org/"
 timeframe = "2021 Summer"
@@ -13,19 +25,10 @@ description = [
     early in development and open-source.
     """,
 
-    """
-    Over the course of this summer, I will be working closely with
-    the core team to design and implement various language features
-    such as rules around mutability and generic types.
-    """,
-]
+    "Implemented compiler features using the Rust programming language",
 
-[[experience]]
-name = "Intern, Frontier Technology, Inc."
-url = "https://www.fti-net.com/"
-timeframe = "2021 Summer"
-categories = ["C++"]
-description = []
+    "Discussed language design specifics with the core team",
+]
 
 
 [[experience]]
@@ -35,34 +38,31 @@ timeframe = "2020-Present"
 categories = ["Web Development", "Teaching", "Management"]
 description = [
     """
-    Organized an online platform which connects tutors with students. 
-    I was encouraged by the demand for Middle and High School Students
-    to have the opportunity to be taught by tutors who offer fresh and 
-    practical perspectives of current topics not offered by traditional 
-    tutoring business and tutors.
+    Established an online platform which connects tutors with students, especially with 
+    regard to niche subjects such as competition math, Artificial intelligence, or Web Development
     """,
 
-    "Manage technical aspects of marketing, and development of our website.",
+    "Managed technical aspects of marketing, and development of our website",
 
-    "Interview students, parents, and tutors to identify needs and design curriculum.",
+    "Interviewed students, parents, and tutors to identify needs and design curriculum",
 
-    "Tutor AP Computer Science, Competition Math, and English.",
+    "Managed eight tutors, earned tens of thousands of dollars in revenue",
 ]
 
-[[experience]]
-name = "Founder, SIMple Physics"
-url = "https://mkhan45.github.io/SIMple-Physics/tabs/about/"
-timeframe = "2019-Present"
-categories = ["Simulation Development", "Rust", "Physics"]
-description = [
-    """
-    Architected and developed a set of physics simulators designed
-    to help teach physics. Each simulator helps teachers teach concepts
-    intuitively and conduct educational labs without expensive equipment.
-    """,
+# [[experience]]
+# name = "Founder, SIMple Physics"
+# url = "https://mkhan45.github.io/SIMple-Physics/tabs/about/"
+# timeframe = "2019-Present"
+# categories = ["Simulation Development", "Rust", "Physics"]
+# description = [
+#     """
+#     Architected and developed a set of physics simulators designed
+#     to help teach physics. Each simulator helps teachers teach concepts
+#     intuitively and conduct educational labs without expensive equipment.
+#     """,
 
-    "Written in Rust using extensive Linear Algebra and Differential Equations.",
-]
+#     "Written in Rust using extensive Linear Algebra and Differential Equations.",
+# ]
 
 [[experience]]
 name = "Software Engineer, Indy Autonomous Challenge Research"
@@ -70,22 +70,26 @@ timeframe = "2020-Present"
 url = "https://engineering.purdue.edu/AMP/"
 categories = ["Simulation Development", "Machine Learning", "Unity", "C#"]
 description = [
-    "Working under Dr. Aly El-Gamal's group AMP (Autonomous Motorsports Purdue) to develop software for a self-driving racecar.",
+    "Collaborated with a team of students from the undergraduate to PhD level to design a self-driving car that will avoid obstacles and overtake other cars at high speeds",
 
-    "Designing a Convolutional Neural Network to plot driving waypoints from image data (camera input).",
-
-    "CNN built using PyTorch and is inspired by NVIDIA's paper on the PilotNet architecture.
-Creating VR Environments for testing, racing, and data collection in the Unity Game Engine",
+    "Architected and built a simulator, vehicle PID controller, and convolutional/recurrent neural networks using Python and PyTorch"
 ]
 
 [[experience]]
-name = "President, Assistive Technology Club"
-timeframe = "2016-2020"
-categories = ["Arduino", "C++", "Leadership"]
-description = [
-    "Collaborated to create products to help special ed children. Skills used include HTML/CSS/JavaScript, Arduino, and C++.",
-    "Organized meetings, recruited members, and worked with Fairfax County Public School officials and special ed teachers."
-]
+name = "Projects"
+url = "https://mikail-khan.com/portfolio"
+timeframe = "2018-Present"
+categories = []
+description = ["Read about my most notable projects on my portfolio page"]
+
+# [[experience]]
+# name = "President, Assistive Technology Club"
+# timeframe = "2016-2020"
+# categories = ["Arduino", "C++", "Leadership"]
+# description = [
+#     "Collaborated to create products to help special ed children. Skills used include HTML/CSS/JavaScript, Arduino, and C++.",
+#     "Organized meetings, recruited members, and worked with Fairfax County Public School officials and special ed teachers."
+# ]
 
 [[education]]
 name = "Purdue University"
@@ -101,9 +105,7 @@ name = "MIT Beaver Works Cog*Works"
 timeframe = "2019"
 url = "https://beaverworks.ll.mit.edu/CMS/bw/BWSI_Course_Autonomous_Cognitive_Assistance"
 description = [
-    "MIT summer program requiring an eight week long online class admission process",
     "Advanced machine learning including audio recognition, image classification, and natural language processing, primarily in Python.",
-    "4 weeks, 160+ hours of in class lecture and hands-on projects."
 ]
 
 [[education]]
